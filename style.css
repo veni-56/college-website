@@ -1,5 +1,4 @@
    .header-section {
-  background-color: #ffffff;
   padding: 10px 30px;
   display: flex;
   align-items: center;
@@ -16,26 +15,26 @@
 }
 
 .college-title {
-  font-size: 20px;
+  font-size: 19px;
   font-weight: bold;
-  color: #004080;
+  color: #003366;
 }
 
 .college-subtitle-affiliation {
-  font-size: 19px;
+  font-size: 16px;
   font-weight: bold;
-  color: #004080;
+  color: #003366;
 }
 
 .college-subtitle-address {
-  font-size: 17px;
+  font-size: 15px;
   font-weight: bold;
-  color:#004080;
+  color:#003366;
 }
 
   .staff-login-btn,
   .student-login-btn {
-    background-color: #004080;
+    background-color: #003366;
     color: white;
     border: none;
     border-radius: 1.5rem;
@@ -266,4 +265,99 @@
       margin-top: 15px;
       font-weight: bold;
     }
-  
+.full-about {
+  max-width: 100%;
+}
+
+/* Heading + Divider */
+.full-about .about-heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #004080;
+}
+
+.full-about .about-divider {
+  width: 80px;
+  height: 4px;
+  background: #006400;
+  border: none;
+  margin-bottom: 20px;
+}
+
+/* Flex layout for first block */
+.about-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.about-text {
+  flex: 1 1 60%;
+  padding: 10px;
+  text-align: justify;
+}
+
+.about-image {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Full width content */
+.full-about .about-content {
+  font-size: 17px;
+  color: #222;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .about-block {
+    flex-direction: column;
+  }
+}
+.about-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  flex: 1 1 55%;
+  padding: 10px;
+  text-align: justify;
+}
+
+.about-image {
+  flex: 1 1 40%;
+  padding: 10px;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.about-full {
+  width: 100%;
+  padding: 10px;
+}
+
+.about-content {
+  margin-bottom: 20px;
+  font-size: 17px;
+  line-height: 1.8;
+  text-align: justify;
+}

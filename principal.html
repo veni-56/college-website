@@ -132,6 +132,133 @@
   </div>
 </div>
 
+  <style>
+    .about-block {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    /* Text left side */
+    .about-text {
+      flex: 1 1 55%;
+      padding: 10px;
+      color: black;
+      font-size: 18px;
+      line-height: 1.8;
+      text-align: justify;
+      order: 1;
+    }
+
+    /* Image right side */
+    .about-image {
+      flex: 1 1 40%;
+      padding: 10px;
+      text-align: center;
+      margin-top: 130px;
+      order: 2;
+    }
+
+    .about-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .about-image img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Heading style */
+    .about-heading {
+      font-weight: bold;
+      font-size: 22px;
+      margin-bottom: 5px;
+      color: #004080;
+    }
+
+    /* Divider style for headings only */
+    .about-divider {
+      width: 70px;
+      height: 4px;
+      background-color: #006400;
+      margin-bottom: 20px;
+      border: none;
+    }
+
+    /* Content text style */
+    .about-content {
+      font-size: 17px;
+      font-weight: bold;
+      color: #111;
+      line-height: 1.8;
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+
+    /* Mobile view */
+    @media (max-width: 768px) {
+      .about-block {
+        flex-direction: column;
+      }
+
+      .about-text, .about-image {
+        flex: 1 1 100%;
+        order: unset;
+      }
+
+      .about-image {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- PAGE CONTENT -->
+  <div class="container my-5">
+    <div class="about-block">
+      <!-- Text Block Left -->
+      <div class="about-text">
+        <div class="about-heading">PRINCIPAL MESSAGE</div>
+        <hr class="about-divider">
+        <div class="about-content">
+          <strong>Dear Staff, Students, and Parents,</strong><br><br>
+          A warm welcome to all of you!<br>
+          Our website offers a glimpse into the vibrant life of our college. Our vision is to collaborate closely with students, parents, and the wider community to foster a positive and inclusive environment where high-quality teaching and learning thrive, and where every individual feels valued and respected. Education, to us, is not merely the transmission of knowledge for future employment but a lifelong journey that instills strong moral and ethical values, shaping our students to become the hopeful leaders of tomorrow.
+        </div>
+      </div>
+      <!-- Image Block Right -->
+      <div class="about-image">
+        <img src="static/images/principal.jpg" alt="Principal">
+      </div>
+    </div>
+
+    <!-- About Us Full Width -->
+    <div class="about-text">
+      <div class="about-content">
+        We are committed to creating an environment that nurtures the intellectual, spiritual, emotional, and physical growth of our students in a supportive and joyful atmosphere. 
+        We encourage our students to strive for excellence, pursue their dreams with determination, excel academically, and develop respect for the rights and needs of others. 
+      </div>
+    </div>
+
+    <!-- Courses Offered Full Width -->
+    <div class="about-text">
+      <div class="about-content">
+        Our dedicated faculty consistently work to refine the curriculum, ensuring our students receive the best possible academic experience. 
+        We also aim to build a community where every stakeholder—students, parents, and teachers—works together for success.
+      </div>
+      <div class="about-content">
+        Thank you for your continued support of our college. We invite you to visit our website often and stay connected with our community.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
 <style>
 .footer img{   max-width: 100%;
     border-radius: 8px;
