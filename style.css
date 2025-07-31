@@ -361,3 +361,79 @@
   line-height: 1.8;
   text-align: justify;
 }
+.page-title {
+  text-align: center;
+  font-weight: bold;
+  color: #004080;
+  margin-bottom: 30px;
+}
+
+
+.page-title {
+  text-align: center;
+  font-weight: bold;
+  color: #004080;
+  margin-bottom: 30px;
+}
+
+.event-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.event-date {
+  text-align: center;
+  background: #004080;
+  color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  margin-right: 15px;
+  min-width: 70px;
+}
+
+.event-date .day {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.event-date .month {
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.event-date .year {
+  display: block;
+  font-size: 12px;
+}
+
+.event-info h5 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.event-info a {
+  color: #004080;
+  text-decoration: none;
+}
+
+.event-info a:hover {
+  text-decoration: underline;
+}
+
+.venue {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #555;
+}
