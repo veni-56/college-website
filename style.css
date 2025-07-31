@@ -437,3 +437,48 @@
   font-size: 14px;
   color: #555;
 }
+/* Code of Conduct Container */
+.code-of-conduct-container {
+  font-weight: bold;
+  font-size: 26px; /* increased from 20px */
+  color: #222;
+  line-height: 1.9;
+  padding: 25px;
+  background-color: #f9f9f9;
+  border-left: 6px solid #004080;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+/* Common Heading Style (for h2, h3, etc.) */
+.section-heading {
+  color: #004080;
+  font-size: 26px;  /* increased font size */
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 8px;
+}
+
+/* List Styling */
+.code-of-conduct-container ul {
+  padding-left: 23px;
+  font-size: 22px; /* larger font for list */
+}
+
+.code-of-conduct-container ul li {
+  margin-bottom: 10px;
+  font-size: 22px; /* larger font for each item */
+}
+/* Remove border-bottom from list group items */
+.list-group-item {
+  border: none !important;
+  font-size: 17px;
+}
+.about-divider {
+      width: 70px;
+      height: 4px;
+      background-color: #006400;
+      margin-bottom: 20px;
+      border: none;
+    }
