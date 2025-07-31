@@ -32,24 +32,7 @@
   color:#003366;
 }
 
-  .staff-login-btn,
-  .student-login-btn {
-    background-color: #003366;
-    color: white;
-    border: none;
-    border-radius: 1.5rem;
-    padding: 6px 16px;
-    font-size: 14px;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-    margin-left: 10px;
-  }
-
-  .staff-login-btn:hover,
-  .student-login-btn:hover {
-    background-color: #003366;
-    color: #fff;
-  }
+ 
 
   .dropdown-submenu {
     position: relative;
@@ -482,3 +465,19 @@
       margin-bottom: 20px;
       border: none;
     }
+.login-button {
+  background-color: #004080;
+  color: #fff;
+  border-radius: 25px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #f5c518;
+  color: #004080;
+  border: 2px solid #004080;
+  text-decoration: none;
+}

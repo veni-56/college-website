@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grievance Redressal Section</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: Arial, sans-serif;
+    }
+
+    th, td {
+      border: 1px solid #555;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #004080;
+      color: white;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    .nav-tabs .nav-link.active {
+      background-color: #004080;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container my-5">
+  <h2 class="text-center mb-4" style="color:#004080;">Grievance Redressal Cell</h2>
+
+  <!-- Tabs -->
+  <ul class="nav nav-tabs" id="grievanceTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="cell-tab" data-bs-toggle="tab" data-bs-target="#cell" type="button" role="tab">Grievance Redressal Cell</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="committee-tab" data-bs-toggle="tab" data-bs-target="#committee" type="button" role="tab">Committee</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab">Register</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="report-tab" data-bs-toggle="tab" data-bs-target="#report" type="button" role="tab">Report</button>
+    </li>
+  </ul>
+
+  <!-- Tab Contents -->
+  <div class="tab-content pt-4" id="grievanceTabContent">
+
+    <!-- Grievance Redressal Cell -->
+    <div class="tab-pane fade show active" id="cell" role="tabpanel">
+      <p>The Grievance Redressal Cell aims to resolve complaints and provide a platform for students to voice their concerns. Our objective is to maintain a healthy educational environment.</p>
+    </div>
+
+    <!-- Committee -->
+    <div class="tab-pane fade" id="committee" role="tabpanel">
+      <div class="table-responsive">
+        <table class="table table-bordered mt-3">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Department</th>
+              <th>Email</th>
+              <th>Mobile Number</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dr.S. Manjula Devi</td>
+              <td>BBA</td>
+              <td><a href="mailto:grievancecell@gmail.com">grievancecell@gmail.com</a></td>
+              <td>8098089377</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Register -->
+    
+<!DOCTYPE html>
+<html>
+<head>
+ 
+  <style>
+    .container-form {
+      display: flex;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .left-side {
+      width: 40%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .icon-box {
+      text-align: center;
+      cursor: pointer;
+      padding: 15px;
+      width: 120px;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      font-size: 30px;
+    }
+
+    .icon-box:hover {
+      background-color: #f0f0f0;
+      border-color: #888;
+      transform: scale(1.05);
+    }
+
+    .icon-box p {
+      margin-top: 8px;
+      font-weight: bold;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .right-side {
+      width: 60%;
+      padding: 40px;
+    }
+
+    .tab {
+      display: none;
+    }
+
+    .tab.active {
+      display: block;
+    }
+
+    form label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .radio-group {
+      margin-top: 10px;
+    }
+
+    .radio-group label {
+      display: inline-block;
+      margin-right: 15px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+<div class="tab-pane fade" id="register" role="tabpanel">
+<div class="container-form">
+  <div class="left-side">
+    <div class="icon-box" onclick="showTab('student')">
+      🎓
+      <p>Student</p>
+    </div>
+    <div class="icon-box" onclick="showTab('parent')">
+      👪
+      <p>Parent</p>
+    </div>
+    <div class="icon-box" onclick="showTab('faculty')">
+      👨‍🏫
+      <p>Faculty</p>
+    </div>
+    <div class="icon-box" onclick="showTab('alumni')">
+      🧑‍🎓
+      <p>Alumni</p>
+    </div>
+  </div>
+
+  <div class="right-side">
+    
+
+    <!-- Student Form -->
+    <div id="student" class="tab active">
+      <h3>Student Grievance Form</h3>
+      <form>
+        <label>Roll Number</label>
+        <input type="text" required>
+
+        <label>Student Name</label>
+        <input type="text" required>
+
+        <label>Date of Birth</label>
+        <input type="date" required>
+
+        <label>Department</label>
+        <input type="text" required>
+
+        <label>Mobile Number</label>
+        <input type="tel" required>
+
+        <label>Email</label>
+        <input type="email" required>
+
+        <label>Type of Grievance</label>
+        <div class="radio-group">
+          <label><input type="radio" name="grievance-student" value="General"> General</label>
+          <label><input type="radio" name="grievance-student" value="College"> College</label>
+          <label><input type="radio" name="grievance-student" value="Hostel"> Hostel</label>
+          <label><input type="radio" name="grievance-student" value="Transport"> Transport</label>
+        </div>
+
+        <label>Give Your Grievance</label>
+        <textarea rows="4" required></textarea>
+
+        <button type="submit">Register Now</button>
+      </form>
+    </div>
+
+    <!-- Parent Form -->
+    <div id="parent" class="tab">
+      <h3>Parent Grievance Form</h3>
+      <form>
+        <label>Parent Name</label>
+        <input type="text" required>
+
+        <label>Student Name</label>
+        <input type="text" required>
+
+        <label>Date of Birth</label>
+        <input type="date" required>
+
+        <label>Department</label>
+        <input type="text" required>
+
+        <label>Mobile Number</label>
+        <input type="tel" required>
+
+        <label>Email</label>
+        <input type="email" required>
+
+        <label>Type of Grievance</label>
+        <div class="radio-group">
+          <label><input type="radio" name="grievance-parent" value="General"> General</label>
+          <label><input type="radio" name="grievance-parent" value="College"> College</label>
+          <label><input type="radio" name="grievance-parent" value="Hostel"> Hostel</label>
+          <label><input type="radio" name="grievance-parent" value="Transport"> Transport</label>
+        </div>
+
+        <label>Give Your Grievance</label>
+        <textarea rows="4" required></textarea>
+
+        <button type="submit">Register Now</button>
+      </form>
+    </div>
+
+    <!-- Faculty Form -->
+    <div id="faculty" class="tab">
+      <h3>Faculty Grievance Form</h3>
+      <form>
+        <label>Employee ID</label>
+        <input type="text" required>
+
+        <label>Employee Name</label>
+        <input type="text" required>
+
+        <label>Department</label>
+        <input type="text" required>
+
+        <label>Mobile Number</label>
+        <input type="tel" required>
+
+        <label>Email</label>
+        <input type="email" required>
+
+        <label>Type of Grievance</label>
+        <div class="radio-group">
+          <label><input type="radio" name="grievance-faculty" value="General"> General</label>
+          <label><input type="radio" name="grievance-faculty" value="College"> College</label>
+          <label><input type="radio" name="grievance-faculty" value="Hostel"> Hostel</label>
+          <label><input type="radio" name="grievance-faculty" value="Transport"> Transport</label>
+        </div>
+
+        <label>Give Your Grievance</label>
+        <textarea rows="4" required></textarea>
+
+        <button type="submit">Register Now</button>
+      </form>
+    </div>
+
+    <!-- Alumni Form -->
+    <div id="alumni" class="tab">
+      <h3>Alumni Grievance Form</h3>
+      <form>
+        <label>Registration Number</label>
+        <input type="text" required>
+
+        <label>Name</label>
+        <input type="text" required>
+
+        <label>Mobile Number</label>
+        <input type="tel" required>
+
+        <label>Email</label>
+        <input type="email" required>
+
+        <label>Type of Grievance</label>
+        <div class="radio-group">
+          <label><input type="radio" name="grievance-alumni" value="General"> General</label>
+          <label><input type="radio" name="grievance-alumni" value="College"> College</label>
+          <label><input type="radio" name="grievance-alumni" value="Hostel"> Hostel</label>
+          <label><input type="radio" name="grievance-alumni" value="Transport"> Transport</label>
+        </div>
+
+        <label>Give Your Grievance</label>
+        <textarea rows="4" required></textarea>
+
+        <button type="submit">Register Now</button>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+  function showTab(tabId) {
+    var tabs = document.querySelectorAll('.tab');
+    tabs.forEach(function(tab) {
+      tab.classList.remove('active');
+    });
+    document.getElementById(tabId).classList.add('active');
+  }
+</script>
+
+</body>
+</html> 
+    <!-- Report -->
+    <div class="tab-pane fade" id="report" role="tabpanel">
+     
+<div class="container my-4">
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped mt-3">
+      <thead class="table-dark text-center">
+        <tr>
+          <th>S.No.</th>
+          <th>Date</th>
+          <th>Report</th>
+        </tr>
+      </thead>
+      <tbody class="text-center">
+        <tr>
+<td></td>
+          <td>Nil</td>
+<td></td>
+            </tbody>
+    </table>
+  </div>
+</div></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
