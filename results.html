@@ -136,211 +136,218 @@
   <meta charset="UTF-8">
   <title>UG Results</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <style>
-    .animated-btn {
-      border-radius: 25px;
-      font-weight: 600;
-      padding: 6px 16px;
-      border: 2px solid #004080;
-      transition: all 0.3s ease;
-      background-color: white;
-      color: #004080;
-    }
-    .animated-btn:hover {
-      background-color: #004080;
-      color: white;
-    }
+  
   </style>
 </head>
 <body>
-  <!DOCTYPE html>
+  
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>UG & PG Results - 2025</title>
+  <title>Results - UG & PG</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    .result-card {
-      border: 1px solid #004080;
-      border-radius: 10px;
-      padding: 20px;
-      background-color: #f8f9fa;
-      transition: 0.3s;
-    }
-    .result-card:hover {
-      background-color: #eaf0ff;
-    }
-    .result-card h5 {
-      color: #004080;
-    }
-    .result-card a {
-      display: block;
-      color: #004080;
-      font-weight: 500;
-      margin-bottom: 5px;
-    }
     .section-title {
       color: #004080;
-      margin-top: 30px;
-      border-bottom: 2px solid #004080;
-      padding-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .result-button {
+      display: block;
+      width: 100%;
+      text-align: left;
+      background-color: #f8f9fa;
+      color: #004080;
+      border: 2px solid #004080;
+      padding: 10px 15px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      font-weight: 500;
+      transition: 0.3s ease-in-out;
+      text-decoration: none;
+    }
+
+    .result-button:hover {
+      background-color: #004080;
+      color: white;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Results - UG & PG</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .dept-link {
+      display: block;
+      padding: 12px;
+      background-color: #004080;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: 6px;
+      transition: background 0.3s;
+      margin-bottom: 15px;
+    }
+
+    .dept-link:hover {
+      background-color: #f5c518;
+      color: #004080;
+    }
+
+    .section-title {
+      color: #004080;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .reval-button {
+      display: inline-block;
+      margin: 6px 10px 20px 0;
+      padding: 10px 16px;
+      background-color: #198754;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .reval-button:hover {
+      background-color: #0dcaf0;
+      color: #000;
     }
   </style>
 </head>
 <body>
+
 <div class="container mt-5">
-  <h3 class="section-title">UG Results - 2025</h3>
-  <div class="row g-4">
 
-    <!-- BA -->
-    <div class="col-md-6">
-      <div class="result-card">
-        <h5>B.A. Tamil</h5>
-        <a href="https://example.com/results/ba-april2023" target="_blank">📄 April 2023 Result</a>
-        <a href="https://example.com/results/ba-nov2023" target="_blank">📄 November 2023 Result</a>
-      </div>
-    </div>
-
-    <!-- BSc -->
-    <div class="col-md-6">
-      <div class="result-card">
-        <h5>B.Sc. Computer Science</h5>
-        <a href="https://example.com/results/bsc-april2023" target="_blank">📄 April 2023 Result</a>
-        <a href="https://example.com/results/bsc-nov2023" target="_blank">📄 November 2023 Result</a>
-      </div>
-    </div>
-
-    <!-- B.Com -->
-    <div class="col-md-6">
-      <div class="result-card">
-        <h5>B.Com</h5>
-        <a href="https://example.com/results/bcom-april2023" target="_blank">📄 April 2023 Result</a>
-        <a href="https://example.com/results/bcom-nov2023" target="_blank">📄 November 2023 Result</a>
-      </div>
-    </div>
-
-    <!-- BBA -->
-    <div class="col-md-6">
-      <div class="result-card">
-        <h5>B.B.A</h5>
-        <a href="https://example.com/results/bba-april2023" target="_blank">📄 April 2023 Result</a>
-        <a href="https://example.com/results/bba-nov2023" target="_blank">📄 November 2023 Result</a>
-      </div>
-    </div>
-
+  <!-- UG Results Section -->
+  <h3 class="section-title">UG Results</h3>
+  <div class="row">
+    <div class="col-md-6"><a href="ba_results.html" class="dept-link">B.A English</a></div>
+    <div class="col-md-6"><a href="bsc_results.html" class="dept-link">B.Sc Computer Science</a></div>
+    <div class="col-md-6"><a href="bcom_results.html" class="dept-link">B.Com</a></div>
+    <div class="col-md-6"><a href="bba_results.html" class="dept-link">BBA</a></div>
+  </div>
+  <div>
+    <a href="ug_revaluation_result.pdf" class="reval-button" target="_blank">UG Revaluation Result</a>
   </div>
 
-  <!-- UG Revaluation -->
-  <div class="mt-4">
-    <h6 class="text-primary">🔁 UG Revaluation Form</h6>
-    <a href="https://example.com/forms/ug-reval" target="_blank">Click here to download UG Revaluation Form</a>
+  <!-- PG Results Section -->
+  <h3 class="section-title">PG Results</h3>
+  <div class="row">
+    <div class="col-md-6"><a href="ma_english_results.html" class="dept-link">M.A English</a></div>
+    <div class="col-md-6"><a href="msc_maths_results.html" class="dept-link">M.Sc Mathematics</a></div>
+    <div class="col-md-6"><a href="mcom_results.html" class="dept-link">M.Com</a></div>
+  </div>
+  <div>
+    <a href="pg_revaluation_result.pdf" class="reval-button" target="_blank"> PG Revaluation Result</a>
   </div>
 
-  <!-- PG Section -->
-  <h3 class="section-title mt-5">PG Results - 2025</h3>
-  <div class="row g-4">
-
-    <!-- M.A. English -->
-    <div class="col-md-6">
-      <div class="result-card">
-        <h5>M.A. English</h5>
-        <a href="https://example.com/results/ma-eng-april2023" target="_blank">📄 April 2023 Result</a>
-        <a href="https://example.com/results/ma-eng-nov2023" target="_blank">📄 November 2023 Result</a>
-      </div>
-    </div>
-
-    <!-- M.Com -->
-    <div class="col-md-6">
-      <div class="result-card">
-        <h5>M.Com</h5>
-        <a href="https://example.com/results/mcom-april2023" target="_blank">📄 April 2023 Result</a>
-        <a href="https://example.com/results/mcom-nov2023" target="_blank">📄 November 2023 Result</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- PG Revaluation -->
-  <div class="mt-4">
-    <h6 class="text-primary">🔁 PG Revaluation Form</h6>
-    <a href="https://example.com/forms/pg-reval" target="_blank">Click here to download PG Revaluation Form</a>
-  </div>
 </div>
+
 </body>
 </html>
 
 <style>
-.footer img{   max-width: 100%;
-    border-radius: 8px;
-    border: 2px solid #004080;
-    margin-top: 10px;
-  }
+  .login-button {
+  background-color: #004080;
+  color: #fff;
+  border-radius: 25px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #f5c518;
+  color: #004080;
+  border: 2px solid #004080;
+  text-decoration: none;
+}
+    .header-section {
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-title-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-section img {
+      width: 80px;
+      height: auto;
+      margin-right: 15px;
+    }
+
+    .title-section {
+      color: #004080;
+    }
+
+    .college-title {
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    .college-subtitle-affiliation,
+    .college-subtitle-address {
+      font-size: 0.95rem;
+    }
+
+    .btn-online {
+      font-weight: 600;
+      color: #004080;
+      border: 2px solid #006400;
+      padding: 8px 18px;
+      transition: 0.3s ease-in-out;
+    }
+
+    .btn-online:hover {
+      background-color: #004080;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    .result-section {
+      background-color: #e9ecef;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    .result-section a {
+      color: #004080;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .result-section a:hover {
+      text-decoration: underline;
+      color: #003060;
+    }
+
+.animated-btn {
+  transition: 0.4s ease;
+}
+.animated-btn:hover {
+  transform: scale(1.05);
+  background-color: #004080;
+  color: white;
+}
+
+
 </style>
-
-<!-- FOOTER START -->
-<footer class="text-white mt-5 pt-4" style="background-color: #004080;">
-
-  <!-- 🔶 Yellow Info Bar -->
-  <div class="container-fluid px-5 py-4" style="background-color: #f5c518;">
-    <div class="row text-dark">
-
-      <!-- 📍 Reach Us -->
-      <div class="col-md-4 mb-3">
-        <h5><i class="fas fa-map-marker-alt"></i> Reach Us</h5>
-        <p>
-          <a href="https://maps.google.com/?q=160/3, Shenbaga Thoppu Road, Rajapalayam, Tamilnadu"
-             target="_blank" class="text-dark text-decoration-none">
-            160/3, Shenbaga Thoppu Road,<br>
-            Rajapalayam - 626117,<br>
-            Virudhunagar District, Tamilnadu.
-          </a>
-        </p>
-      </div>
-
-      <!-- 📞 Call Us -->
-      <div class="col-md-4 mb-3">
-        <h5><i class="fas fa-phone-alt"></i> Call Us</h5>
-        <p>
-          Office : <a href="tel:+914563221717" class="text-dark text-decoration-none">+91 - 4563 221717</a><br>
-          Admission : <a href="tel:+914563221717" class="text-dark text-decoration-none">+91 - 4563 221717</a><br>
-          Hostel : <a href="tel:+914563221717" class="text-dark text-decoration-none">+91 - 4563 221717</a><br>
-          WhatsApp : <a href="https://wa.me/914563221717" target="_blank" class="text-dark text-decoration-none">+91 - 4563 221717</a>
-        </p>
-      </div>
-
-      <!-- 📧 Email Us -->
-      <div class="col-md-4 mb-3">
-        <h5><i class="fas fa-envelope"></i> Email Us</h5>
-        <p>
-          Enquiry : <a href="mailto:akddr@yahoo.in" class="text-dark text-decoration-none">akddr@yahoo.in</a><br>
-          Admission : <a href="mailto:info@akddrect.co.in" class="text-dark text-decoration-none">info@akddrect.co.in</a><br>
-          Hostel : <a href="mailto:principal@akddrect.co.in" class="text-dark text-decoration-none">principal@akddrect.co.in</a>
-        </p>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- 🔷 Social Media & Copyright -->
-  <div class="text-center py-3 text-white">
-    <div class="mb-2">
-      <a href="https://facebook.com/" target="_blank" class="text-white me-3">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://instagram.com/akddrcollege" target="_blank" class="text-white me-3">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://youtube.com/" target="_blank" class="text-white me-3">
-        <i class="fab fa-youtube"></i>
-      </a>
-    </div>
-    &copy; 2025 <strong>A.K.D. Dharma Raja Women's College - Rajapalayam</strong>. All rights reserved.
-  </div>
-</footer>
-
-  <!-- Bootstrap JS (Optional if needed) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-</html>
-
 
