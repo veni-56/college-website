@@ -1,14 +1,168 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>A.K.D. Dharma Raja Women's College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS & Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* --- HEADER --- */
+    .header-section {
+      padding: 15px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
 
+    .logo-title-container {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-section img {
+      width: 80px;
+      height: auto;
+      margin-right: 15px;
+    }
+
+    .title-section {
+      color: #004080;
+    }
+
+    .college-title {
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    .college-subtitle-affiliation,
+    .college-subtitle-address {
+      font-size: 0.95rem;
+    }
+
+    .btn-online {
+      font-weight: 600;
+      color: #004080;
+      border: 2px solid #006400;
+      padding: 8px 18px;
+      transition: 0.3s ease-in-out;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .btn-online:hover {
+      background-color: #004080;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    .animated-btn {
+      transition: 0.4s ease;
+    }
+
+    .animated-btn:hover {
+      transform: scale(1.05);
+      background-color: #004080;
+      color: white;
+    }
+
+    /* --- SUB-NAVBAR --- */
+    .blue-navbar {
+      background: #004080;
+      padding: 5px 10px;
+    }
+
+    .blue-navbar a {
+      color: white;
+      font-size: 14px;
+    }
+
+    /* --- ABOUT SECTION --- */
+    .about-block {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .about-text {
+      flex: 1 1 55%;
+      padding: 10px;
+      font-size: 18px;
+      text-align: justify;
+    }
+
+    .about-image {
+      flex: 1 1 40%;
+      padding: 10px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .about-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .about-image img:hover {
+      transform: scale(1.03);
+    }
+
+    .about-heading {
+      font-weight: bold;
+      font-size: 22px;
+      margin-bottom: 5px;
+      color: #004080;
+    }
+
+    .about-divider {
+      width: 70px;
+      height: 4px;
+      background-color: #006400;
+      margin-bottom: 20px;
+      border: none;
+    }
+
+    .about-content {
+      font-size: 17px;
+      font-weight: bold;
+      color: #111;
+      line-height: 1.8;
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+
+    /* --- FOOTER --- */
+    footer img {
+      max-width: 100%;
+      border-radius: 8px;
+      border: 2px solid #004080;
+      margin-top: 10px;
+    }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 768px) {
+      .about-block {
+        flex-direction: column;
+      }
+
+      .about-image {
+        margin-top: 20px;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <!-- 🔷 Top Header -->
   <div class="header-section">
     <div class="logo-title-container">
       <div class="logo-section">
@@ -20,16 +174,11 @@
         <div class="college-subtitle-address">Rajapalayam - 626117, Tamilnadu</div>
       </div>
     </div>
-    <div>
-      <a href="application.html" class="btn btn-online">Online Application</a><br><br>
-      <a href="results.html" class="btn btn-outline-success animated-btn">View Results</a>
-
+    <div class="mt-2 text-end">
+      <a href="application.html" class="btn btn-online">Online Application</a><br>
+      <a href="results.html" class="btn btn-outline-success animated-btn mt-2">View Results</a>
     </div>
   </div>
-</body>
-</html>
-
-
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg w-100">
   <div class="container-fluid">
@@ -69,7 +218,7 @@
           </ul>
         </li>
 
-       <!-- STUDENT'S DESK -->
+   <!-- STUDENT'S DESK -->
 <li class="nav-item dropdown">
   <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">STUDENT'S DESK</a>
   <ul class="dropdown-menu">
@@ -80,7 +229,7 @@
     <li><a class="dropdown-item" href="conduct.html">Code of Conduct</a></li> <!-- ✅ Added this line -->
     <li><a class="dropdown-item" href="forms.html">Forms</a></li>
   </ul>
-</li>
+</li>     
 
         <!-- IQAC -->
         <li class="nav-item dropdown">
@@ -117,388 +266,99 @@
   </div>
 </nav>
 
-<!-- Blue sub-navbar with #004080 -->
-<div class="blue-navbar" style="background:#004080;">
-  <div class="container d-flex justify-content-between text-white">
-    <div>
-      <span>Email: <a href="mailto:akddr@yahoo.in" class="text-white">akddr@yahoo.in</a></span>
-      <span class="ms-3">📞 +4563 – 221717 / 231727 / 223097</span>
-    </div>
-    <div>
-      <a href="#" class="text-white me-3">Library</a>
-      <a href="#" class="text-white">Contact</a>
+
+  <!-- 🔷 Sub-navbar -->
+  <div class="blue-navbar">
+    <div class="container d-flex justify-content-between text-white flex-wrap">
+      <div>
+        <span>Email: <a href="mailto:akddr@yahoo.in" class="text-white">akddr@yahoo.in</a></span>
+        <span class="ms-3">📞 +4563 – 221717 / 231727 / 223097</span>
+      </div>
+      <div>
+        <a href="#" class="text-white me-3">Library</a>
+        <a href="#" class="text-white">Contact</a>
+      </div>
     </div>
   </div>
-</div>
 
-  <style>
-    .about-block {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: space-between;
-      margin-bottom: 20px;
-    }
-
-    /* Text left side */
-    .about-text {
-      flex: 1 1 55%;
-      padding: 10px;
-      color: black;
-      font-size: 18px;
-      line-height: 1.8;
-      text-align: justify;
-      order: 1;
-    }
-
-    /* Image right side */
-    .about-image {
-      flex: 1 1 40%;
-      padding: 10px;
-      text-align: center;
-      margin-top: 130px;
-      order: 2;
-    }
-
-    .about-image img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .about-image img:hover {
-      transform: scale(1.03);
-    }
-
-    /* Heading style */
-    .about-heading {
-      font-weight: bold;
-      font-size: 22px;
-      margin-bottom: 5px;
-      color: #004080;
-    }
-
-    /* Divider style for headings only */
-    .about-divider {
-      width: 70px;
-      height: 4px;
-      background-color: #006400;
-      margin-bottom: 20px;
-      border: none;
-    }
-
-    /* Content text style */
-    .about-content {
-      font-size: 17px;
-      font-weight: bold;
-      color: #111;
-      line-height: 1.8;
-      text-align: justify;
-      margin-bottom: 20px;
-    }
-
-    /* Mobile view */
-    @media (max-width: 768px) {
-      .about-block {
-        flex-direction: column;
-      }
-
-      .about-text, .about-image {
-        flex: 1 1 100%;
-        order: unset;
-      }
-
-      .about-image {
-        margin-top: 20px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <!-- PAGE CONTENT -->
+  <!-- 🔶 Page Content -->
   <div class="container my-5">
     <div class="about-block">
-      <!-- Text Block Left -->
       <div class="about-text">
         <div class="about-heading">PRINCIPAL MESSAGE</div>
         <hr class="about-divider">
         <div class="about-content">
           <strong>Dear Staff, Students, and Parents,</strong><br><br>
           A warm welcome to all of you!<br>
-          Our website offers a glimpse into the vibrant life of our college. Our vision is to collaborate closely with students, parents, and the wider community to foster a positive and inclusive environment where high-quality teaching and learning thrive, and where every individual feels valued and respected. Education, to us, is not merely the transmission of knowledge for future employment but a lifelong journey that instills strong moral and ethical values, shaping our students to become the hopeful leaders of tomorrow.
+A warm welcome to all of you!
+Our website offers a glimpse into the vibrant life of our college. Our vision is to collaborate closely with students, parents, and the wider community to foster a positive and inclusive environment where high-quality teaching and learning thrive, and where every individual feels valued and respected. Education, to us, is not merely the transmission of knowledge for future employment but a lifelong journey that instills strong moral and ethical values, shaping our students to become the hopeful leaders of tomorrow.
         </div>
       </div>
-      <!-- Image Block Right -->
       <div class="about-image">
         <img src="static/images/principal.jpg" alt="Principal">
       </div>
     </div>
 
-    <!-- About Us Full Width -->
     <div class="about-text">
       <div class="about-content">
-        We are committed to creating an environment that nurtures the intellectual, spiritual, emotional, and physical growth of our students in a supportive and joyful atmosphere. 
-        We encourage our students to strive for excellence, pursue their dreams with determination, excel academically, and develop respect for the rights and needs of others. 
+We are committed to creating an environment that nurtures the intellectual, spiritual, emotional, and physical growth of our students in a supportive and joyful atmosphere. We encourage our students to strive for excellence, pursue their dreams with determination, excel academically, and develop respect for the rights and needs of others.
       </div>
     </div>
 
-    <!-- Courses Offered Full Width -->
     <div class="about-text">
       <div class="about-content">
-        Our dedicated faculty consistently work to refine the curriculum, ensuring our students receive the best possible academic experience. 
-        We also aim to build a community where every stakeholder—students, parents, and teachers—works together for success.
+Our dedicated faculty consistently work to refine the curriculum, ensuring our students receive the best possible academic experience. We also aim to build a community where every stakeholder—students, parents, and teachers—works together for success.
       </div>
       <div class="about-content">
-        Thank you for your continued support of our college. We invite you to visit our website often and stay connected with our community.
+Thank you for your continued support of our college. We invite you to visit our website often and stay connected with our community.
       </div>
     </div>
   </div>
+
+  <!-- 🔷 Footer -->
+  <footer class="text-white mt-5 pt-4" style="background-color: #004080;">
+    <div class="container-fluid px-5 py-4" style="background-color: #f5c518;">
+      <div class="row text-dark">
+        <div class="col-md-4 mb-3">
+          <h5><i class="fas fa-map-marker-alt"></i> Reach Us</h5>
+          <p>
+            <a href="https://maps.google.com/?q=160/3, Shenbaga Thoppu Road, Rajapalayam" target="_blank" class="text-dark text-decoration-none">
+              160/3, Shenbaga Thoppu Road,<br>
+              Rajapalayam - 626117,<br>
+              Virudhunagar District, Tamilnadu.
+            </a>
+          </p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5><i class="fas fa-phone-alt"></i> Call Us</h5>
+          <p>
+            Office : <a href="tel:+914563221717" class="text-dark text-decoration-none">+91 - 4563 221717</a><br>
+            Admission : <a href="tel:+914563221717" class="text-dark text-decoration-none">+91 - 4563 221717</a><br>
+            Hostel : <a href="tel:+914563221717" class="text-dark text-decoration-none">+91 - 4563 221717</a><br>
+            WhatsApp : <a href="https://wa.me/914563221717" target="_blank" class="text-dark text-decoration-none">+91 - 4563 221717</a>
+          </p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5><i class="fas fa-envelope"></i> Email Us</h5>
+          <p>
+            Enquiry : <a href="mailto:akddr@yahoo.in" class="text-dark text-decoration-none">akddr@yahoo.in</a><br>
+            Admission : <a href="mailto:info@akddrect.co.in" class="text-dark text-decoration-none">info@akddrect.co.in</a><br>
+            Hostel : <a href="mailto:principal@akddrect.co.in" class="text-dark text-decoration-none">principal@akddrect.co.in</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center py-3 text-white">
+      <div class="mb-2">
+        <a href="https://facebook.com/" target="_blank" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/akddrcollege" target="_blank" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/" target="_blank" class="text-white me-3"><i class="fab fa-youtube"></i></a>
+      </div>
+      &copy; 2025 <strong>A.K.D. Dharma Raja Women's College - Rajapalayam</strong>. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-<style>
-.footer img{   max-width: 100%;
-    border-radius: 8px;
-    border: 2px solid #004080;
-    margin-top: 10px;
-  }
-</style>
-
-<!-- FOOTER START -->
-<footer class="text-white mt-5 pt-4" style="background-color: #004080;">
-
-  <!-- 🔶 Yellow Info Bar -->
-  <div class="container-fluid px-5 py-4" style="background-color: #f5c518;">
-    <div class="row text-dark">
-
-      <!-- 📍 Reach Us -->
-      <div class="col-md-4 mb-3">
-        <h5><i class="fas fa-map-marker-alt"></i> Reach Us</h5>
-        <p>
-          <a href="https://maps.google.com/?q=160/3, Shenbaga Thoppu Road, Rajapalayam, Tamilnadu"
-             target="_blank" class="text-dark text-decoration-none">
-            160/3, Shenbaga Thoppu Road,<br>
-            Rajapalayam - 626117,<br>
-            Virudhunagar District, Tamilnadu.
-          </a>
-        </p>
-      </div>
-
-      <!-- 📞 Call Us -->
-      <div class="col-md-4 mb-3">
-        <h5><i class="fas fa-phone-alt"></i> Call Us</h5>
-        <p>
-          Office : <a href="tel:+914563221717" class="text-dark text-decoration-none">+91 - 4563 221717</a><br>
-          Admission : <a href="tel:+914563221717" class="text-dark text-decoration-none">+91 - 4563 221717</a><br>
-          Hostel : <a href="tel:+914563221717" class="text-dark text-decoration-none">+91 - 4563 221717</a><br>
-          WhatsApp : <a href="https://wa.me/914563221717" target="_blank" class="text-dark text-decoration-none">+91 - 4563 221717</a>
-        </p>
-      </div>
-
-      <!-- 📧 Email Us -->
-      <div class="col-md-4 mb-3">
-        <h5><i class="fas fa-envelope"></i> Email Us</h5>
-        <p>
-          Enquiry : <a href="mailto:akddr@yahoo.in" class="text-dark text-decoration-none">akddr@yahoo.in</a><br>
-          Admission : <a href="mailto:info@akddrect.co.in" class="text-dark text-decoration-none">info@akddrect.co.in</a><br>
-          Hostel : <a href="mailto:principal@akddrect.co.in" class="text-dark text-decoration-none">principal@akddrect.co.in</a>
-        </p>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- 🔷 Social Media & Copyright -->
-  <div class="text-center py-3 text-white">
-    <div class="mb-2">
-      <a href="https://facebook.com/" target="_blank" class="text-white me-3">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://instagram.com/akddrcollege" target="_blank" class="text-white me-3">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://youtube.com/" target="_blank" class="text-white me-3">
-        <i class="fab fa-youtube"></i>
-      </a>
-    </div>
-    &copy; 2025 <strong>A.K.D. Dharma Raja Women's College - Rajapalayam</strong>. All rights reserved.
-  </div>
-</footer>
-
-  <!-- Bootstrap JS (Optional if needed) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-</html>
-
-<style>
-.footer img{   max-width: 100%;
-    border-radius: 8px;
-    border: 2px solid #004080;
-    margin-top: 10px;
-  }
-</style>
-
-<!-- FOOTER START -->
-<footer class="text-white mt-5 pt-4" style="background-color: #004080;">
-
-  <!-- 🔶 Yellow Info Bar -->
-  <div class="container-fluid px-5 py-4" style="background-color: #f5c518;">
-    <div class="row text-dark">
-
-      <!-- 📍 Reach Us -->
-      <div class="col-md-4 mb-3">
-        <h5><i class="fas fa-map-marker-alt"></i> Reach Us</h5>
-        <p>
-          <a href="https://maps.google.com/?q=160/3, Shenbaga Thoppu Road, Rajapalayam, Tamilnadu"
-             target="_blank" class="text-dark text-decoration-none">
-            160/3, Shenbaga Thoppu Road,<br>
-            Rajapalayam - 626117,<br>
-            Virudhunagar District, Tamilnadu.
-          </a>
-        </p>
-      </div>
-
-      <!-- 📞 Call Us -->
-      <div class="col-md-4 mb-3">
-        <h5><i class="fas fa-phone-alt"></i> Call Us</h5>
-        <p>
-          Office : <a href="tel:+914563221717" class="text-dark text-decoration-none">+91 - 4563 221717</a><br>
-          Admission : <a href="tel:+914563221717" class="text-dark text-decoration-none">+91 - 4563 221717</a><br>
-          Hostel : <a href="tel:+914563221717" class="text-dark text-decoration-none">+91 - 4563 221717</a><br>
-          WhatsApp : <a href="https://wa.me/914563221717" target="_blank" class="text-dark text-decoration-none">+91 - 4563 221717</a>
-        </p>
-      </div>
-
-      <!-- 📧 Email Us -->
-      <div class="col-md-4 mb-3">
-        <h5><i class="fas fa-envelope"></i> Email Us</h5>
-        <p>
-          Enquiry : <a href="mailto:akddr@yahoo.in" class="text-dark text-decoration-none">akddr@yahoo.in</a><br>
-          Admission : <a href="mailto:info@akddrect.co.in" class="text-dark text-decoration-none">info@akddrect.co.in</a><br>
-          Hostel : <a href="mailto:principal@akddrect.co.in" class="text-dark text-decoration-none">principal@akddrect.co.in</a>
-        </p>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- 🔷 Social Media & Copyright -->
-  <div class="text-center py-3 text-white">
-    <div class="mb-2">
-      <a href="https://facebook.com/" target="_blank" class="text-white me-3">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://instagram.com/akddrcollege" target="_blank" class="text-white me-3">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://youtube.com/" target="_blank" class="text-white me-3">
-        <i class="fab fa-youtube"></i>
-      </a>
-    </div>
-    &copy; 2025 <strong>A.K.D. Dharma Raja Women's College - Rajapalayam</strong>. All rights reserved.
-  </div>
-</footer>
-
-  <!-- Bootstrap JS (Optional if needed) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-</html>
-
-
-<style>
-  .login-button {
-  background-color: #004080;
-  color: #fff;
-  border-radius: 25px;
-  font-weight: 600;
-  padding: 6px 16px;
-  border: 2px solid transparent;
-  transition: all 0.3s ease;
-}
-
-.login-button:hover {
-  background-color: #f5c518;
-  color: #004080;
-  border: 2px solid #004080;
-  text-decoration: none;
-}
-    .header-section {
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo-title-container {
-      display: flex;
-      align-items: center;
-    }
-
-    .logo-section img {
-      width: 80px;
-      height: auto;
-      margin-right: 15px;
-    }
-
-    .title-section {
-      color: #004080;
-    }
-
-    .college-title {
-      font-size: 1.3rem;
-      font-weight: bold;
-    }
-
-    .college-subtitle-affiliation,
-    .college-subtitle-address {
-      font-size: 0.95rem;
-    }
-
-    .btn-online {
-      font-weight: 600;
-      color: #004080;
-      border: 2px solid #006400;
-      padding: 8px 18px;
-      transition: 0.3s ease-in-out;
-    }
-
-    .btn-online:hover {
-      background-color: #004080;
-      color: white;
-      transform: scale(1.05);
-    }
-
-    .result-section {
-      background-color: #e9ecef;
-      padding: 15px 20px;
-      text-align: center;
-    }
-
-    .result-section a {
-      color: #004080;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    .result-section a:hover {
-      text-decoration: underline;
-      color: #003060;
-    }
-
-.animated-btn {
-  transition: 0.4s ease;
-}
-.animated-btn:hover {
-  transform: scale(1.05);
-  background-color: #004080;
-  color: white;
-}
-
-
-</style>
-
