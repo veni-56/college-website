@@ -176,6 +176,30 @@
     opacity: 0;
   }
 }
+/* Default container flex layout - icons may be side by side */
+.info-box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* On small screens, stack vertically */
+@media (max-width: 576px) {
+  .info-box-container {
+    flex-direction: column !important;
+    align-items: center; /* center horizontally */
+  }
+
+  .info-box {
+    width: 90%; /* or 100% or a fixed max width */
+    margin-bottom: 20px;
+  }
+
+  .icon-circle {
+    margin: 0 auto 10px auto; /* center icon and add bottom spacing */
+  }
+}
 
 @media (hover: hover) {
   .info-box:hover {
