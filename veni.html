@@ -4,6 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>A.K.D. Dharma Raja Women's College</title>
+ <link rel="stylesheet" href="style.css"> 
+
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -51,29 +53,65 @@
     }
 
     /* HEADER (logo + title) */
-    .site-header{
-      background: #fff;
-      padding: 18px 0;
-      border-bottom: 1px solid #e6e6e6;
-    }
-    .site-logo img{
-      height: 84px;
-      width: auto;
-      border-radius: 6px;
+.site-header {
+  background: #fff;
+  padding: 18px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
 
-      background: #fff;
-    }
-    .site-title{
-      color: var(--brand-blue);
-      font-weight: 800;
-      font-size: 1.3rem;
-      letter-spacing: 0.2px;
-    }
-    .site-subtitle{
-      color: #333;
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
+.site-header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-logo img {
+  height: 84px;
+  width: auto;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.site-title {
+  color: var(--brand-blue);
+  font-weight: 800;
+  font-size: 1.3rem;
+  letter-spacing: 0.2px;
+  margin-top: 8px;
+}
+
+.site-subtitle {
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.9px;
+}
+
+/* Mobile View Fix */
+@media (max-width: 768px) {
+  .site-header {
+    padding: 10px;
+  }
+
+  .site-logo img {
+    height: 60px; /* smaller for mobile */
+    width: auto;
+    display: block;
+    margin: 0 auto; /* center */
+  }
+
+@media (max-width: 668px) {
+  .site-title {
+    font-size: 0.75rem; /* smaller so it fits */
+    font-weight: bold;
+    white-space: nowrap; /* keep in one line */
+  }
+}
+  .site-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+}
 
     /* NAVBAR */
     .main-nav .navbar{
@@ -122,76 +160,161 @@
     .news-bar a{ color:#003050; text-decoration: none; font-weight:700; }
     .news-bar a:hover{ text-decoration: underline; }
 
-   /* Info Section Container */
 .info-section {
   padding: 40px 0;
-  background-color: #003050/* light background */
+  background-color: #003050;
 }
 
-/* Each info box */
 .info-box {
-  background: white;
-  border-radius: 10px;
-  padding: 25px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1.5rem;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  min-height: 180px;
+  padding: 2rem 1.5rem;
   text-align: center;
-  box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: default;
+  background-color: transparent;
 }
 
-/* Icon styling */
-.info-box i {
-  font-size: 40px;
-  color: #004080; /* Bootstrap primary color */
-  margin-bottom: 15px;
-  display: inline-block;
-  transition: color 0.3s ease;
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  z-index: 1;
 }
 
-/* Title */
-.info-box h6 {
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: #333;
+.icon-circle i {
+  font-size: 32px;
 }
 
-/* Description text */
-.info-box p {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 0;
+.icon-circle::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  animation: pulse-ring 1.5s infinite;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
-/* Hover effect on desktop */
-.info-box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
 }
 
-.info-box:hover i {
-  color: #004080; /* darker blue on hover */
+@media (hover: hover) {
+  .info-box:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+
+  .info-box:hover .icon-circle {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px 4px rgba(255, 255, 255, 0.6);
+    transform: scale(1.1);
+  }
+
+  .info-box:hover .icon-circle::after {
+    opacity: 1;
+  }
 }
 
-/* Responsive tweaks for smaller screens */
-@media (max-width: 767px) {
+/* Responsive Icon Circle smaller on mobile */
+@media (max-width: 576px) {
+  .icon-circle {
+    width: 55px;
+    height: 55px;
+  }
+
   .info-box {
-    padding: 20px 15px;
+    padding: 1.2rem 0.8rem;
+    min-height: auto;
   }
-  
-  .info-box i {
-    font-size: 35px;
-    margin-bottom: 12px;
-  }
-  
+
   .info-box h6 {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
   }
-  
-  .info-box p {
-    font-size: 0.85rem;
+
+  .info-box i {
+    font-size: 1.5rem;
   }
 }
 
+h6{
+  color: var(--card-bg);
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  background-color: aliceblue;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.icon-circle i {
+  color: #004080;
+  font-size: 2rem;
+}
+
+.info-box {
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 20px 10px;
+  transition: 0.3s;
+}
+
+.info-box:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+.info-box h6 {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Responsive - Mobile */
+@media (max-width: 576px) {
+  .icon-circle {
+    width: 60px;
+    height: 60px;
+  }
+  .icon-circle i {
+    font-size: 1.6rem;
+  }
+  .info-box h6 {
+    font-size: 0.95rem;
+  }
+  .info-box p {
+    font-size: 0.8rem;
+  }
+}
 
  /* Login Buttons Common Style */
 .login-btn {
@@ -294,14 +417,28 @@
   }
 }
 
-    /* STATS */
-    .stats-section{
-      background: var(--brand-blue);
-      color: #fff;
-      padding: 36px 0;
-    }
-    .stat-box h2{ font-size: 2.2rem; font-weight: 800; margin-bottom:0; }
-    .stat-box p{ margin:0; color: rgba(255,255,255,0.9); font-weight:600; }
+.stats-section {
+  background: var(--brand-blue);
+  padding: 40px 0;
+}
+
+.stat-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.stat-box h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--brand-blue);
+}
+
+.stat-box p {
+  margin: 0;
+  font-weight: 500;
+}
 
     /* small tweaks */
     .btn-outline-gold{
@@ -320,8 +457,162 @@
       .header-buttons .btn{ margin:3px 4px; }
       .site-title{ font-size:1.05rem; }
     }
+/* ===== News & Events Section Background ===== */
+.news-events-section {
+  background: #f0f4ff; /* Light blue shade */
+  padding: 20px;
+  border-radius: 12px;
+}
 
-  </style>
+/* ===== About Title Styling ===== */
+.about-title {
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  color: #1a237e; /* Deep blue */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-underline {
+  width: 80px;
+  height: 4px;
+  background: #ff9800; /* Golden orange */
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+/* ===== News & Events Card ===== */
+.news-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+/* Title Bar */
+.news-title {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+/* News List */
+.news-list {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.news-item {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  animation: slideUp 9s linear infinite;
+  background: #fafafa;
+}
+
+.news-item:nth-child(even) {
+  background: #f5f5f5;
+}
+
+/* Links */
+.news-item a {
+  display: block;
+  color: #1a237e;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.news-item a:hover {
+  color: #ff9800;
+}
+
+/* Animation - Vertical Scroll */
+@keyframes slideUp {
+  0% { transform: translateY(0); }
+  33% { transform: translateY(-100%); }
+  66% { transform: translateY(-200%); }
+  100% { transform: translateY(0); }
+}
+
+/* Pause Animation on Hover */
+.news-list:hover .news-item {
+  animation-play-state: paused;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .news-list {
+    height: 150px;
+  }
+}
+
+.footer img {
+  max-width: 500px;
+  border-radius: 8px;
+  border: 2px solid #004080;
+  margin-top: 10px;
+}
+
+/* Optional: link hover color */
+.footer a.text-dark:hover {
+  color: #004080;
+  text-decoration: underline;
+}
+
+/* Map container - smaller size */
+.map-container {
+  position: relative;
+  width: 200px; /* reduced from 250px */
+  max-width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #004080;
+}
+
+/* Map image - smaller with scaling */
+.map-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+  cursor: pointer;
+}
+
+/* Zoom icons */
+.map-zoom-icons {
+  position: absolute;
+  top: 6px; /* slightly closer */
+  right: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* tighter spacing */
+  user-select: none;
+}
+
+.map-zoom-icons span {
+  background: rgba(0, 64, 128, 0.85);
+  color: white;
+  font-weight: bold;
+  font-size: 16px; /* slightly smaller icons */
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Bold text inside footer */
+.footer p,
+.footer a {
+  font-weight: bold;
+}
+</style>
 </head>
 <body>
 
@@ -335,12 +626,16 @@
       </div>
 
       <div class="right d-flex align-items-center gap-2 right-group mt-2 mt-md-0">
+                <a href="results.html" class="btn btn-outline-gold me-2">View Results</a>
+
         <a href="application.html" class="btn btn-sm btn-apply ms-1">Online Application</a>
 
         <!-- Search -->
-        <form class="d-flex ms-2" role="search" onsubmit="event.preventDefault();alert('Search function placeholder');">
-          <input class="form-control form-control-sm search-input" type="search" placeholder="Search site..." aria-label="Search">
-        </form>
+<!-- Search -->
+<form class="d-flex ms-2" role="search" onsubmit="return siteSearch();">
+  <input id="siteSearchInput" class="form-control form-control-sm search-input" type="search" placeholder="Search site..." aria-label="Search">
+</form>
+
       </div>
     </div>
   </div>
@@ -358,10 +653,6 @@
         <div class="site-subtitle">(Affiliated to Madurai Kamaraj University) <br> Rajapalayam - 626117, Tamilnadu</div>
       </div>
 
-      <div class="ms-auto d-none d-md-block text-end">
-        <a href="results.html" class="btn btn-outline-gold me-2">View Results</a>
-        <a href="contact.html" class="btn btn-outline-gold">Contact</a>
-      </div>
     </div>
   </header>
 
@@ -412,7 +703,7 @@
     <li><a class="dropdown-item" href="scholarships.html">Scholarships</a></li>
     <li><a class="dropdown-item" href="rank.html">Rank Holders</a></li>
     <li><a class="dropdown-item" href="awards.html">Endowment Awards</a></li>
-    <li><a class="dropdown-item" href="conduct.html">Code of Conduct</a></li> <!-- ✅ Added this line -->
+    <li><a class="dropdown-item" href="conduct.html">Code of Conduct</a></li>
     <li><a class="dropdown-item" href="forms.html">Forms</a></li>
   </ul>
 </li>
@@ -440,6 +731,8 @@
             <li><a class="dropdown-item" href="iic.html">IIC</a></li>
           </ul>
         </li>
+            <li class="nav-item"><a class="nav-link" href="contact.html" style="letter-spacing: 0.cqmax;">Contact</a></li>
+
             <!-- Small-screen login buttons -->
 <a href="staff_login.html" class="login-btn staff-btn">
     👩‍🏫 Staff Login
@@ -501,165 +794,132 @@
   </button>
 </div>
 
-  <!-- ICON / INFO SECTION -->
-  <section class="info-section">
-    <div class="container">
-      <div class="row g-3">
-        <div class="col-md-3 col-sm-6">
+<!-- ICON / INFO  -->
+<section class="info-section">
+  <div class="container">
+    <div class="row g-3">
+      
+      <div class="col-md-3 col-sm-6">
+        <a href="college-video.html" class="text-decoration-none">
           <div class="info-box">
-            <i class="fa fa-video"></i>
-            <h6>College Video</h6>
-            <p class="text-muted small mb-0">Overview & campus tour</p>
-          </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6">
-          <div class="info-box">
-            <i class="fa fa-mortar-board"></i>
-            <h6>Graduation</h6>
-            <p class="text-muted small mb-0">Convocation & ceremonies</p>
-          </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6">
-          <div class="info-box">
-            <i class="fa fa-briefcase"></i>
-            <h6>Placement Cell</h6>
-            <p class="text-muted small mb-0">Industry tie-ups & training</p>
-          </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6">
-          <div class="info-box">
-            <i class="fa fa-hands-helping"></i>
-            <h6>Extension Activities</h6>
-            <p class="text-muted small mb-0">Community outreach</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT + STATS -->
-  <section class="container my-5">
-    <div class="row g-4">
-      <div class="col-lg-7">
-        <h3 style="color:var(--brand-blue)">About Our College</h3>
-        <hr style="width:80px;height:4px;background:#006400;border:none">
-        <p>
-          A.K.D. Dharma Raja Women's College is a renowned Arts & Science institution in Southern India and is affiliated
-          to Madurai Kamaraj University. Established in 1990, to gratify the long-felt educational need of the women of Rajapalayam and neighboring community.
-          The college campus is located amidst the green serenity of the Western Ghats, at Shenbagathoppu Road, Rajapalayam.
-        </p>
-        <p class="mb-0 text-muted">(Replace this text with the full about content for the college.)</p>
-      </div>
-
-      <div class="col-lg-5">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title text-primary text-center">News & Events</h5>
-            <div style="height:200px; overflow:hidden;">
-              <marquee behavior="scroll" direction="up" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();" height="180px">
-                <ul class="list-unstyled">
-                  <li class="mb-3"><small class="text-muted">📅 29-07-2025</small><br><a href="orientation.pdf">Orientation Programme for Freshers</a></li>
-                  <li class="mb-3"><small class="text-muted">📅 22-07-2025</small><br><a href="culturalfest.pdf">Interdepartmental Cultural Fest 2025</a></li>
-                  <li class="mb-3"><small class="text-muted">📅 15-06-2025</small><br><a href="science_expo.pdf">State Level Science Expo Winner – Dept of Physics</a></li>
-                </ul>
-              </marquee>
+            <div class="icon-circle">
+              <i class="fa fa-video"></i>
             </div>
+            <h6>College Video</h6>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <a href="graduation.html" class="text-decoration-none">
+          <div class="info-box">
+            <div class="icon-circle">
+              <i class="fa fa-mortar-board"></i>
+            </div>
+            <h6>Graduation</h6>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <a href="placement.html" class="text-decoration-none">
+          <div class="info-box">
+            <div class="icon-circle">
+              <i class="fa fa-briefcase"></i>
+            </div>
+            <h6>Placement Cell</h6>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <a href="extension-activities.html" class="text-decoration-none">
+          <div class="info-box">
+            <div class="icon-circle">
+              <i class="fa fa-hands-helping"></i>
+            </div>
+            <h6>Extension Activities</h6>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT + NEWS -->
+<section class="container my-5">
+  <div class="row g-4 align-items-stretch">
+    
+    <!-- About -->
+    <div class="col-lg-7">
+      <h3 class="about-title">About Our College</h3>
+      <div class="about-underline"></div>
+      <p class="about-text" style="font-weight: bold;">
+        <strong>A.K.D. Dharma Raja Women's College</strong> is a renowned Arts & Science institution in Southern India and is affiliated to Madurai Kamaraj University. Established in 1990, to gratify the long-felt educational need of the women of Rajapalaiyam and neighboring community. It is administered by “Sri Rao Bahadur A.K.D.Dharma Raja Education Charity Trust, Rajapalaiyam” — one of the oldest pioneer Educational Charity Trusts in Virudhunagar District established in 1932. Our college campus is located amidst the green serenity of the Western Ghats, at Shenbagathoppu Road, Rajapalaiyam.
+      </p>
+    </div>
+
+    <!-- News & Events -->
+    <div class="col-lg-5">
+      <div class="news-card shadow-sm">
+        <div class="news-header">
+          <h6 style="background-color: #003366; color: #dbe9f2; padding: 30px; text-align: center;"><span>📰</span> News & Events</h6>
+        </div>
+        <div class="news-list" id="news-list">
+          <div class="news-item">
+            <small>📅 29-07-2025</small>
+            <a href="orientation.pdf">Orientation Programme for Freshers</a>
+          </div>
+          <div class="news-item">
+            <small>📅 22-07-2025</small>
+            <a href="culturalfest.pdf">Interdepartmental Cultural Fest 2025</a>
+          </div>
+          <div class="news-item">
+            <small>📅 15-06-2025</small>
+            <a href="science_expo.pdf">State Level Science Expo Winner – Dept of Physics</a>
           </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- STATS SECTION -->
-  <section class="stats-section">
-    <div class="container">
-      <div class="row text-center gy-3">
-        <div class="col-6 col-md-3">
-          <div class="stat-box">
-            <h2 class="counter" data-target="674">674</h2>
-            <p>Students</p>
-          </div>
+  </div>
+</section>
+
+<!-- STATS SECTION -->
+<section class="stats-section">
+  <div class="container">
+    <div class="row text-center gy-3">
+      <div class="col-6 col-md-3">
+        <div class="stat-box">
+          <h2 class="counter" data-target="674">0</h2>
+          <p>Students</p>
         </div>
+      </div>
 
-        <div class="col-6 col-md-3">
-          <div class="stat-box">
-            <h2 class="counter" data-target="52">52</h2>
-            <p>Faculty Members</p>
-          </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-box">
+          <h2 class="counter" data-target="52">0</h2>
+          <p>Faculty Members</p>
         </div>
+      </div>
 
-        <div class="col-6 col-md-3">
-          <div class="stat-box">
-            <h2 class="counter" data-target="8">8</h2>
-            <p>UG Programmes</p>
-          </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-box">
+          <h2 class="counter" data-target="8">0</h2>
+          <p>UG Programmes</p>
         </div>
+      </div>
 
-        <div class="col-6 col-md-3">
-          <div class="stat-box">
-            <h2 class="counter" data-target="6">6</h2>
-            <p>PG Programmes</p>
-          </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-box">
+          <h2 class="counter" data-target="6">0</h2>
+          <p>PG Programmes</p>
         </div>
       </div>
     </div>
-  </section>
-<!-- FOOTER START -->
-<style>
-  .footer img {
-    max-width: 100%;
-    border-radius: 8px;
-    border: 2px solid #004080;
-    margin-top: 10px;
-  }
-  /* Optional: link hover color */
-  .footer a.text-dark:hover {
-    color: #004080;
-    text-decoration: underline;
-  }
-
-  .map-container {
-    position: relative;
-    width: 250px;
-    max-width: 100%;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 2px solid #004080;
-  }
-  .map-container img {
-    display: block;
-    width: 100%;
-    height: auto;
-    user-select: none;
-    transition: transform 0.3s ease;
-    transform-origin: center center;
-    cursor: pointer;
-  }
-  .map-zoom-icons {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    user-select: none;
-  }
-  .map-zoom-icons span {
-    background: rgba(0, 64, 128, 0.8);
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    width: 28px;
-    height: 28px;
-    line-height: 28px;
-    border-radius: 4px;
-    text-align: center;
-    cursor: pointer;
-  }
-</style>
+  </div>
+</section>
 
 <footer class="footer text-white mt-5 pt-4" style="background-color: #004080;">
 
@@ -668,9 +928,8 @@
     <div class="row text-dark align-items-start">
 
       <!-- 📍 Reach Us -->
-      <div class="col-md-4 mb-3 d-flex flex-column">
+      <div class="col-md-3 mb-3 d-flex flex-column">
         <h5 class="mb-3"><i class="fas fa-map-marker-alt me-2"></i>Reach Us</h5>
-
         <div class="map-container" title="Click image to open Google Maps">
           <img src="maps.png" alt="College Location Map" id="mapImage" />
           <div class="map-zoom-icons" aria-hidden="true">
@@ -678,14 +937,10 @@
             <span id="zoomOutBtn" title="Zoom Out">−</span>
           </div>
         </div>
-
-        <a href="https://maps.google.com/?q=160/3, Shenbaga Thoppu Road, Rajapalayam, Tamilnadu" target="_blank" rel="noopener" class="mt-2 text-dark text-decoration-none" style="max-width:250px;">
-          Open full map in Google Maps
-        </a>
       </div>
 
       <!-- 📞 Call Us -->
-      <div class="col-md-4 mb-3 d-flex flex-column">
+      <div class="col-md-3 mb-3 d-flex flex-column">
         <h5 class="mb-3"><i class="fas fa-phone-alt me-2"></i>Call Us</h5>
         <p class="mb-0">
           Office : <a href="tel:+914563221717" class="text-dark text-decoration-none">+91 - 4563 221717</a><br>
@@ -696,13 +951,25 @@
       </div>
 
       <!-- 📧 Email Us -->
-      <div class="col-md-4 mb-3 d-flex flex-column">
+      <div class="col-md-3 mb-3 d-flex flex-column">
         <h5 class="mb-3"><i class="fas fa-envelope me-2"></i>Email Us</h5>
         <p class="mb-0">
           Enquiry : <a href="mailto:akddr@yahoo.in" class="text-dark text-decoration-none">akddr@yahoo.in</a><br>
           Admission : <a href="mailto:info@akddrect.co.in" class="text-dark text-decoration-none">info@akddrect.co.in</a><br>
           Hostel : <a href="mailto:principal@akddrect.co.in" class="text-dark text-decoration-none">principal@akddrect.co.in</a>
         </p>
+      </div>
+
+      <!-- 🔗 Quick Links -->
+      <div class="col-md-3 mb-3 d-flex flex-column">
+        <h5 class="mb-3"><i class="fas fa-link me-2"></i>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-dark text-decoration-none">🏠 Home</a></li>
+          <li><a href="about.html" class="text-dark text-decoration-none">ℹ️ About Us</a></li>
+          <li><a href="courses.html" class="text-dark text-decoration-none">🎓 Courses</a></li>
+          <li><a href="admissions.html" class="text-dark text-decoration-none">📝 Admissions</a></li>
+          <li><a href="contact.html" class="text-dark text-decoration-none">📩 Contact Us</a></li>
+        </ul>
       </div>
 
     </div>
@@ -757,6 +1024,64 @@
   mapImage.addEventListener('click', () => {
     window.open('https://maps.google.com/?q=160/3, Shenbaga Thoppu Road, Rajapalayam, Tamilnadu', '_blank', 'noopener');
   });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll('.counter');
+
+  counters.forEach(counter => {
+    counter.innerText = '0';
+
+    const updateCounter = () => {
+      const target = +counter.getAttribute('data-target');
+      const current = +counter.innerText;
+      const increment = target / 100; // speed control
+
+      if (current < target) {
+        counter.innerText = `${Math.ceil(current + increment)}`;
+        setTimeout(updateCounter, 20); // adjust speed
+      } else {
+        counter.innerText = target; // ensure exact end value
+      }
+    };
+
+    updateCounter();
+  });
+});
+
+
+  // Auto-scroll news list
+  const container = document.querySelector('.news-container');
+  let scrollAmount = 0;
+  setInterval(() => {
+    scrollAmount += 1;
+    if (scrollAmount >= container.scrollHeight - container.clientHeight) {
+      scrollAmount = 0;
+    }
+    container.scrollTop = scrollAmount;
+  }, 50);
+
+  function siteSearch() {
+    const query = document.getElementById("siteSearchInput").value.trim().toLowerCase();
+
+    // Map of search keywords to page URLs
+    const pages = {
+      "home":"/index.html",
+      "about": "/about.html",
+      "contact": "/contact.html",
+      "news": "/news.html",
+      "events": "/events.html",
+      "grievance": "/grievance.html"
+    };
+
+    if (pages[query]) {
+      window.location.href = pages[query]; // Redirect to matched page
+    } else {
+      alert("No matching page found for: " + query);
+    }
+    return false; // Prevent form default submit
+  }
+
 </script>
 
 
