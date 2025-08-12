@@ -176,30 +176,6 @@
     opacity: 0;
   }
 }
-/* Default container flex layout - icons may be side by side */
-.info-box-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-/* On small screens, stack vertically */
-@media (max-width: 576px) {
-  .info-box-container {
-    flex-direction: column !important;
-    align-items: center; /* center horizontally */
-  }
-
-  .info-box {
-    width: 90%; /* or 100% or a fixed max width */
-    margin-bottom: 20px;
-  }
-
-  .icon-circle {
-    margin: 0 auto 10px auto; /* center icon and add bottom spacing */
-  }
-}
 
 @media (hover: hover) {
   .info-box:hover {
@@ -229,7 +205,7 @@
 
   .info-box {
     padding: 1.2rem 0.8rem;
-    min-height: 150px;
+    min-height: auto;
   }
 
   .info-box h6 {
@@ -722,5 +698,29 @@
 
   .page-title {
     font-size: 1.2rem !important;
+  }
+}
+
+/* ======= Added: Stack icon boxes vertically on phone ======= */
+.info-box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+@media (max-width: 576px) {
+  .info-box-container {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .info-box {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .icon-circle {
+    margin: 0 auto 10px auto;
   }
 }
