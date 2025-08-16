@@ -1,47 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>A.K.D. Dharma Raja Women's College</title>
+ <link rel="stylesheet" href="style.css"> 
+
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"> 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
-  <div class="header-section">
-    <div class="logo-title-container">
-      <div class="logo-section">
-        <img src="static/logo.png" alt="College Logo">
-      </div>
-      <div class="title-section">
-        <div class="college-title">A.K.D. DHARMA RAJA WOMEN’S COLLEGE, RAJAPALAIYAM</div>
-        <div class="college-subtitle-affiliation">(Affiliated to Madurai Kamaraj University)</div>
-        <div class="college-subtitle-address">Rajapalayam - 626117, Tamilnadu</div>
-      </div>
-    </div>
-    <div>
-      <a href="application.html" class="btn btn-online">Online Application</a><br><br>
-      <a href="results.html" class="btn btn-outline-success animated-btn">View Results</a>
+<body>
 
+  <!-- TOP CONTACT BAR -->
+  <div class="top-contact">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center py-1">
+      <div class="left d-flex gap-3 align-items-center">
+        <div><i class="fa fa-envelope me-1"></i><a href="mailto:akddr@yahoo.in"> akddr@yahoo.in</a></div>
+        <div class="d-none d-sm-inline">|</div>
+        <div><i class="fa fa-phone me-1"></i><a href="tel:+914563221717"> +91 - 4563 221717</a></div>
+      </div>
+
+      <div class="right d-flex align-items-center gap-2 right-group mt-2 mt-md-0">
+                <a href="results.html" class="login-btn staff-btn m-1">View Results</a>
+
+        <a href="application.html" class="btn btn-sm btn-apply ms-1">Online Application</a>
+
+        <!-- Search -->
+<!-- Search -->
+<form class="d-flex ms-2" role="search" onsubmit="return siteSearch();">
+  <input id="siteSearchInput" class="form-control form-control-sm search-input" type="search" placeholder="Search site..." aria-label="Search">
+</form>
+
+      </div>
     </div>
   </div>
-</body>
-</html>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg w-100">
-  <div class="container-fluid">
+  <!-- LOGO + TITLE -->
+  <header class="site-header">
+    <div class="container d-flex flex-column flex-md-row align-items-center gap-3">
+      <div class="site-logo">
+        <!-- change src to your logo file -->
+        <img src="static/logo.png" alt="College Logo" onerror="this.src='https://via.placeholder.com/120x84.png?text=Logo'">
+      </div>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <div class="ms-md-3">
+        <div class="site-title">A.K.D. DHARMA RAJA WOMEN’S COLLEGE, RAJAPALAIYAM</div>
+        <div class="site-subtitle">(Affiliated to Madurai Kamaraj University) <br> Rajapalaiyam - 626117, Tamilnadu</div>
+      </div>
 
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <!-- HOME -->
-        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+    </div>
+  </header>
 
-        <!-- ABOUT -->
+  <!-- NAVBAR -->
+  <div class="main-nav">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand text-white fw-bold" href="#"></a>
+        <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon" style="filter:invert(1)"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+
+            <!-- ABOUT -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">ABOUT</a>
           <ul class="dropdown-menu">
@@ -75,7 +102,7 @@
     <li><a class="dropdown-item" href="scholarships.html">Scholarships</a></li>
     <li><a class="dropdown-item" href="rank.html">Rank Holders</a></li>
     <li><a class="dropdown-item" href="awards.html">Endowment Awards</a></li>
-    <li><a class="dropdown-item" href="conduct.html">Code of Conduct</a></li> <!-- ✅ Added this line -->
+    <li><a class="dropdown-item" href="conduct.html">Code of Conduct</a></li>
     <li><a class="dropdown-item" href="forms.html">Forms</a></li>
   </ul>
 </li>
@@ -103,42 +130,35 @@
             <li><a class="dropdown-item" href="iic.html">IIC</a></li>
           </ul>
         </li>
-<!-- LOGIN BUTTONS -->
-<li class="nav-item">
-  <a href="staff_login.html" class="btn login-button m-1">👩‍🏫 Staff Login</a>
-</li>
-<li class="nav-item">
-  <a href="student_login.html" class="btn login-button m-1">🎓 Student Login</a>
-</li>
+            <li class="nav-item"><a class="nav-link" href="contact.html" style="letter-spacing: 0.cqmax;">Contact</a></li>
 
-        
-      </ul>
+            <!-- Small-screen login buttons -->
+<a href="staff_login.html" class="login-btn staff-btn">
+    👩‍🏫 Staff Login
+</a>
+
+<a href="student_login.html" class="login-btn student-btn">
+    🎓 Student Login
+</a>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- NEWS MARQUEE -->
+  <div class="news-bar">
+    <div class="container">
+      <marquee behavior="scroll" direction="left" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();">
+        📢 29-07-2025 — Orientation Programme for Freshers &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+        22-07-2025 — Interdepartmental Cultural Fest 2025 &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+        25-07-2025 — Best Women's College Award – District Level
+      </marquee>
     </div>
   </div>
-</nav>
 
-<!-- Blue sub-navbar with #004080 -->
-<div class="blue-navbar" style="background:#004080;">
-  <div class="container d-flex justify-content-between text-white">
-    <div>
-      <span>Email: <a href="mailto:akddr@yahoo.in" class="text-white">akddr@yahoo.in</a></span>
-      <span class="ms-3">📞 +4563 – 221717 / 231727 / 223097</span>
-    </div>
-    <div>
-      <a href="#" class="text-white me-3">Library</a>
-      <a href="#" class="text-white">Contact</a>
-    </div>
-  </div>
-</div>
-
-<style>
-  .carousel-inner img {
-    height: 700px;
-    object-fit: cover;
-  }
-</style>
-
-<!-- Carousel Section -->
+  <!-- Carousel Section -->
 <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
@@ -173,180 +193,153 @@
   </button>
 </div>
 
-<!-- ✅ Info Section with Bootstrap Icons -->
-<div class="container-fluid py-5" style="background: linear-gradient(to right, #003366, #004080);">
+<!-- ICON / INFO  -->
+<section class="info-section">
   <div class="container">
-    <div class="row text-white text-center">
-
-      <!-- College Video -->
-      <div class="col-md-3 col-sm-6 mb-4">
-        <div class="info-box">
-          <div class="icon-circle">
-            <i class="bi bi-camera-video"></i>
+    <div class="row g-3">
+      
+      <div class="col-md-3 col-sm-6">
+        <a href="college-video.html" class="text-decoration-none">
+          <div class="info-box">
+            <div class="icon-circle">
+              <i class="fa fa-video"></i>
+            </div>
+            <h6>College Video</h6>
           </div>
-          <h6>College Video</h6>
-        </div>
+        </a>
       </div>
 
-      <!-- Graduation -->
-      <div class="col-md-3 col-sm-6 mb-4">
-        <div class="info-box">
-          <div class="icon-circle">
-            <i class="bi bi-mortarboard"></i>
+      <div class="col-md-3 col-sm-6">
+        <a href="graduation.html" class="text-decoration-none">
+          <div class="info-box">
+            <div class="icon-circle">
+              <i class="fa fa-mortar-board"></i>
+            </div>
+            <h6>Graduation</h6>
           </div>
-          <h6>Graduation</h6>
-        </div>
+        </a>
       </div>
 
-      <!-- Placement Cell -->
-      <div class="col-md-3 col-sm-6 mb-4">
-        <div class="info-box">
-          <div class="icon-circle">
-            <i class="bi bi-briefcase-fill"></i>
+      <div class="col-md-3 col-sm-6">
+        <a href="placement.html" class="text-decoration-none">
+          <div class="info-box">
+            <div class="icon-circle">
+              <i class="fa fa-briefcase"></i>
+            </div>
+            <h6>Placement Cell</h6>
           </div>
-          <h6>Placement Cell</h6>
-        </div>
+        </a>
       </div>
 
-      <!-- Extension Activities -->
-      <div class="col-md-3 col-sm-6 mb-4">
-        <div class="info-box">
-          <div class="icon-circle">
-            <i class="bi bi-emoji-smile"></i>
+      <div class="col-md-3 col-sm-6">
+        <a href="extension-activities.html" class="text-decoration-none">
+          <div class="info-box">
+            <div class="icon-circle">
+              <i class="fa fa-hands-helping"></i>
+            </div>
+            <h6>Extension Activities</h6>
           </div>
-          <h6>Extension Activities</h6>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-<!-- 🎓 About + News & Achievements Section -->
-<div class="container my-5">
-  <div class="row g-4">
-
-    <!-- 🎓 Left Side - About (no background, no box) -->
-    <div class="col-lg-7">
-      <div class="p-2">
-        <h2 style="color: #004080;">About Our College</h2>
-        <hr style="width: 70px; height: 4px; background-color: #006400; border: none; margin-bottom: 20px;">
-        <p style="font-weight: bold; font-size: 18px;">
-          A.K.D. Dharma Raja Women's College is a renowned Arts & Science institution in Southern India and is affiliated to Madurai Kamaraj University. Established in 1990, to gratify the long-felt educational need of the women of Rajapalaiyam and neighboring community. It is administered by “Sri Rao Bahadur A.K.D.Dharma Raja Education Charity Trust, Rajapalaiyam” one of the oldest pioneer Educational Charity Trust in Virudhunagar District which was established in 1932. Our college campus is located amidst the green serenity of the Western Ghats, at Shenbagathoppu Road, Rajapalaiyam.
-        </p>
-      </div>
-    </div>
-
-    <!-- 📦 Right Side - News + Achievements -->
-    <div class="col-lg-5 d-flex flex-column gap-4">
-
-      <!-- 📰 News -->
-      <div class="border border-primary rounded shadow p-3" style="background: #ffffff; height: 250px;">
-        <h4 class="text-center text-primary fw-bold mb-3" style="margin-bottom: 10px;">News & Events</h4>
-        <marquee behavior="scroll" direction="up" scrollamount="2" scrolldelay="100" 
-                 onmouseover="this.stop();" onmouseout="this.start();" height="180px">
-          <ul class="list-unstyled m-0">
-            <li class="mb-3 text-center">
-              <div class="text-muted" style="font-size: 14px;">📅 29-07-2025</div>
-                <a href="orientation.pdf" target="_blank">Orientation Programme for Freshers</a>
-              </div>
-            </li>
-            <li class="mb-3 text-center">
-              <div class="text-muted" style="font-size: 14px;">📅 22-07-2025</div>
-                <a href="culturalfest.pdf" target="_blank">Interdepartmental Cultural Fest 2025</a>
-              </div>
-            </li>
-          </ul>
-        </marquee>
-      </div>
-
-      <!-- 🏆 Achievements -->
-      <div class="border border-primary rounded shadow p-3" style="background: #ffffff; height: 250px;">
-        <h4 class="text-center text-primary fw-bold mb-3" style="margin-bottom: 10px;">Achievements</h4>
-        <marquee behavior="scroll" direction="up" scrollamount="2" scrolldelay="100" 
-                 onmouseover="this.stop();" onmouseout="this.start();" height="180px">
-          <ul class="list-unstyled m-0">
-            <li class="mb-3 text-center">
-              <div class="text-muted" style="font-size: 14px;">🏆 25-07-2025</div>
-                <a href="district_award.pdf" target="_blank">Best Women's College Award – District Level</a>
-              </div>
-            </li>
-            <li class="mb-3 text-center">
-              <div class="text-muted" style="font-size: 14px;">🏆 15-06-2025</div>
-                <a href="science_expo.pdf" target="_blank">State Level Science Expo Winner – Dept of Physics</a>
-              </div>
-            </li>
-          </ul>
-        </marquee>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- Statistics Section -->
-<section class="text-white py-5" style="background-color: #004080;">
-  <div class="container text-center">
-    <div class="row justify-content-center">
-
-      <!-- Students -->
-      <div class="col-md-2 col-6 mb-3 counter-box">
-        <h2 class="counter" data-target="674">0</h2>
-        <p>Students</p>
-      </div>
-
-      <!-- Staff -->
-      <div class="col-md-2 col-6 mb-3 counter-box">
-        <h2 class="counter" data-target="52">0</h2>
-        <p>Faculty Members</p>
-      </div>
-
-      <!-- UG Programme -->
-      <div class="col-md-2 col-6 mb-3 counter-box">
-        <h2 class="counter" data-target="8">0</h2>
-        <p>UG Programme</p>
-      </div>
-
-      <!-- PG Programme -->
-      <div class="col-md-2 col-6 mb-3 counter-box">
-        <h2 class="counter" data-target="6">0</h2>
-        <p>PG Programme</p>
+        </a>
       </div>
 
     </div>
   </div>
 </section>
 
+<!-- ABOUT + NEWS -->
+<section class="container my-5">
+  <div class="row g-4 align-items-stretch">
+    
+    <!-- About -->
+    <div class="col-lg-7">
+      <h3 class="about-title">About Our College</h3>
+      <div class="about-underline"></div>
+      <p class="about-text" style="font-weight: bold;">
+        <strong>A.K.D. Dharma Raja Women's College</strong> is a renowned Arts & Science institution in Southern India and is affiliated to Madurai Kamaraj University. Established in 1990, to gratify the long-felt educational need of the women of Rajapalaiyam and neighboring community. It is administered by “Sri Rao Bahadur A.K.D.Dharma Raja Education Charity Trust, Rajapalaiyam” — one of the oldest pioneer Educational Charity Trusts in Virudhunagar District established in 1932. Our college campus is located amidst the green serenity of the Western Ghats, at Shenbagathoppu Road, Rajapalaiyam.
+      </p>
+    </div>
 
-<style>
-  .footer img {
-    max-width: 100%;
-    border-radius: 8px;
-    border: 2px solid #004080;
-    margin-top: 10px;
-  }
-</style>
-<!-- FOOTER START -->
-<footer class="text-white mt-5 pt-4" style="background-color: #004080;">
+    <!-- News & Events -->
+    <div class="col-lg-5">
+      <div class="news-card shadow-sm">
+        <div class="news-header">
+          <h6 style="background-color: #003366; color: #dbe9f2; padding: 30px; text-align: center;"><span>📰</span> News & Events</h6>
+        </div>
+        <div class="news-list" id="news-list">
+          <div class="news-item">
+            <small>📅 29-07-2025</small>
+            <a href="orientation.pdf">Orientation Programme for Freshers</a>
+          </div>
+          <div class="news-item">
+            <small>📅 22-07-2025</small>
+            <a href="culturalfest.pdf">Interdepartmental Cultural Fest 2025</a>
+          </div>
+          <div class="news-item">
+            <small>📅 15-06-2025</small>
+            <a href="science_expo.pdf">State Level Science Expo Winner – Dept of Physics</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STATS SECTION -->
+<section class="stats-section">
+  <div class="container">
+    <div class="row text-center gy-3">
+      <div class="col-6 col-md-3">
+        <div class="stat-box">
+          <h2 class="counter" data-target="674">0</h2>
+          <p>Students</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="stat-box">
+          <h2 class="counter" data-target="52">0</h2>
+          <p>Faculty Members</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="stat-box">
+          <h2 class="counter" data-target="8">0</h2>
+          <p>UG Programmes</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="stat-box">
+          <h2 class="counter" data-target="6">0</h2>
+          <p>PG Programmes</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer text-white mt-5 pt-4" style="background-color: #004080;">
 
   <!-- 🔶 Yellow Info Bar -->
   <div class="container-fluid px-5 py-4" style="background-color: #f5c518;">
     <div class="row text-dark align-items-start">
 
       <!-- 📍 Reach Us -->
-      <div class="col-md-4 mb-3 d-flex flex-column">
+      <div class="col-md-3 mb-3 d-flex flex-column">
         <h5 class="mb-3"><i class="fas fa-map-marker-alt me-2"></i>Reach Us</h5>
-        <p class="mb-0">
-          <a href="https://maps.google.com/?q=160/3, Shenbaga Thoppu Road, Rajapalayam, Tamilnadu"
-             target="_blank" class="text-dark text-decoration-none">
-            160/3, Shenbaga Thoppu Road,<br>
-            Rajapalayam - 626117,<br>
-            Virudhunagar District, Tamilnadu.
-          </a>
-        </p>
+        <div class="map-container" title="Click image to open Google Maps">
+          <img src="maps.png" alt="College Location Map" id="mapImage" />
+          <div class="map-zoom-icons" aria-hidden="true">
+            <span id="zoomInBtn" title="Zoom In">+</span>
+            <span id="zoomOutBtn" title="Zoom Out">−</span>
+          </div>
+        </div>
       </div>
 
       <!-- 📞 Call Us -->
-      <div class="col-md-4 mb-3 d-flex flex-column">
+      <div class="col-md-3 mb-3 d-flex flex-column">
         <h5 class="mb-3"><i class="fas fa-phone-alt me-2"></i>Call Us</h5>
         <p class="mb-0">
           Office : <a href="tel:+914563221717" class="text-dark text-decoration-none">+91 - 4563 221717</a><br>
@@ -357,7 +350,7 @@
       </div>
 
       <!-- 📧 Email Us -->
-      <div class="col-md-4 mb-3 d-flex flex-column">
+      <div class="col-md-3 mb-3 d-flex flex-column">
         <h5 class="mb-3"><i class="fas fa-envelope me-2"></i>Email Us</h5>
         <p class="mb-0">
           Enquiry : <a href="mailto:akddr@yahoo.in" class="text-dark text-decoration-none">akddr@yahoo.in</a><br>
@@ -366,160 +359,168 @@
         </p>
       </div>
 
+      <!-- 🔗 Quick Links -->
+      <div class="col-md-3 mb-3 d-flex flex-column">
+        <h5 class="mb-3"><i class="fas fa-link me-2"></i>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-dark text-decoration-none">🏠 Home</a></li>
+          <li><a href="about.html" class="text-dark text-decoration-none">ℹ️ About Us</a></li>
+          <li><a href="courses.html" class="text-dark text-decoration-none">🎓 Courses</a></li>
+          <li><a href="admissions.html" class="text-dark text-decoration-none">📝 Admissions</a></li>
+          <li><a href="contact.html" class="text-dark text-decoration-none">📩 Contact Us</a></li>
+        </ul>
+      </div>
+
     </div>
   </div>
 
   <!-- 🔷 Social Media & Copyright -->
   <div class="text-center py-3 text-white" style="background-color: #003366;">
     <div class="mb-2">
-      <a href="https://facebook.com/" target="_blank" class="text-white me-4 fs-5">
+      <a href="https://facebook.com/" target="_blank" class="text-white me-4 fs-5" aria-label="Facebook">
         <i class="fab fa-facebook-f"></i>
       </a>
-      <a href="https://instagram.com/akddrcollege" target="_blank" class="text-white me-4 fs-5">
+      <a href="https://instagram.com/akddrcollege" target="_blank" class="text-white me-4 fs-5" aria-label="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
-      <a href="https://youtube.com/" target="_blank" class="text-white me-4 fs-5">
+      <a href="https://youtube.com/" target="_blank" class="text-white me-4 fs-5" aria-label="YouTube">
         <i class="fab fa-youtube"></i>
       </a>
     </div>
-    &copy; 2025 <strong>A.K.D. Dharma Raja Women's College - Rajapalayam</strong>. All rights reserved.
+    &copy; 2025 <strong>A.K.D. Dharma Raja Women's College - Rajapalaiyam</strong>. All rights reserved.
   </div>
+
 </footer>
 
-
-<!-- Counter Animation Script -->
 <script>
-  const counters = document.querySelectorAll('.counter');
-  let started = false;
+  const mapImage = document.getElementById('mapImage');
+  const zoomInBtn = document.getElementById('zoomInBtn');
+  const zoomOutBtn = document.getElementById('zoomOutBtn');
 
-  function animateCounters() {
-    counters.forEach(counter => {
-      const target = +counter.getAttribute('data-target');
-      let count = 0;
-      const step = Math.ceil(target / 100);
+  let currentScale = 1;
+  const scaleStep = 0.2;
+  const minScale = 1;
+  const maxScale = 3;
 
-      const interval = setInterval(() => {
-        count += step;
-        if (count >= target) {
-          counter.textContent = target + "";
-          clearInterval(interval);
-        } else {
-          counter.textContent = count;
-        }
-      }, 20);
-    });
-  }
-
-  function isInView(el) {
-    const rect = el.getBoundingClientRect();
-    return rect.top < window.innerHeight && rect.bottom >= 0;
-  }
-
-  window.addEventListener('scroll', () => {
-    const statsSection = document.querySelector('section');
-    if (!started && isInView(statsSection)) {
-      started = true;
-      animateCounters();
+  zoomInBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (currentScale < maxScale) {
+      currentScale += scaleStep;
+      if (currentScale > maxScale) currentScale = maxScale;
+      mapImage.style.transform = `scale(${currentScale})`;
     }
   });
+
+  zoomOutBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (currentScale > minScale) {
+      currentScale -= scaleStep;
+      if (currentScale < minScale) currentScale = minScale;
+      mapImage.style.transform = `scale(${currentScale})`;
+    }
+  });
+
+  mapImage.addEventListener('click', () => {
+    window.open('https://maps.google.com/?q=160/3, Shenbaga Thoppu Road, Rajapalayam, Tamilnadu', '_blank', 'noopener');
+  });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll('.counter');
+
+  counters.forEach(counter => {
+    counter.innerText = '0';
+
+    const updateCounter = () => {
+      const target = +counter.getAttribute('data-target');
+      const current = +counter.innerText;
+      const increment = target / 100; // speed control
+
+      if (current < target) {
+        counter.innerText = `${Math.ceil(current + increment)}`;
+        setTimeout(updateCounter, 20); // adjust speed
+      } else {
+        counter.innerText = target; // ensure exact end value
+      }
+    };
+
+    updateCounter();
+  });
+});
+
+
+  // Auto-scroll news list
+  const container = document.querySelector('.news-container');
+  let scrollAmount = 0;
+  setInterval(() => {
+    scrollAmount += 1;
+    if (scrollAmount >= container.scrollHeight - container.clientHeight) {
+      scrollAmount = 0;
+    }
+    container.scrollTop = scrollAmount;
+  }, 50);
+
+  function siteSearch() {
+    const query = document.getElementById("siteSearchInput").value.trim().toLowerCase();
+
+    // Map of search keywords to page URLs
+    const pages = {
+      "home":"/index.html",
+      "about": "/about.html",
+      "contact": "/contact.html",
+      "news": "/news.html",
+      "events": "/events.html",
+      "grievance": "/grievance.html"
+    };
+
+    if (pages[query]) {
+      window.location.href = pages[query]; // Redirect to matched page
+    } else {
+      alert("No matching page found for: " + query);
+    }
+    return false; // Prevent form default submit
+  }
+
 </script>
 
-  <!-- Bootstrap JS (Optional if needed) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Small JS: counters -->
+  <script>
+    // Simple counter animation when in view
+    function animateCounters() {
+      const counters = document.querySelectorAll('.counter');
+      const speed = 120; // smaller = faster
+      counters.forEach(counter => {
+        const update = () => {
+          const target = +counter.getAttribute('data-target');
+          const value = +counter.innerText;
+          const increment = Math.ceil(target / speed);
+          if (value < target) {
+            counter.innerText = value + increment;
+            setTimeout(update, 20);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        update();
+      });
+    }
+
+    // Run counters when stats section enters viewport
+    const statsSection = document.querySelector('.stats-section');
+    let countersStarted = false;
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !countersStarted) {
+          countersStarted = true;
+          animateCounters();
+        }
+      });
+    }, { threshold: 0.4 });
+    if (statsSection) obs.observe(statsSection);
+  </script>
 </body>
-</html>
-
-<style>
-  .login-button {
-  background-color: #004080;
-  color: #fff;
-  border-radius: 25px;
-  font-weight: 600;
-  padding: 6px 16px;
-  border: 2px solid transparent;
-  transition: all 0.3s ease;
-}
-
-.login-button:hover {
-  background-color: #f5c518;
-  color: #004080;
-  border: 2px solid #004080;
-  text-decoration: none;
-}
-    .header-section {
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo-title-container {
-      display: flex;
-      align-items: center;
-    }
-
-    .logo-section img {
-      width: 80px;
-      height: auto;
-      margin-right: 15px;
-    }
-
-    .title-section {
-      color: #004080;
-    }
-
-    .college-title {
-      font-size: 1.3rem;
-      font-weight: bold;
-    }
-
-    .college-subtitle-affiliation,
-    .college-subtitle-address {
-      font-size: 0.95rem;
-    }
-
-    .btn-online {
-      font-weight: 600;
-      color: #004080;
-      border: 2px solid #006400;
-      padding: 8px 18px;
-      transition: 0.3s ease-in-out;
-    }
-
-    .btn-online:hover {
-      background-color: #004080;
-      color: white;
-      transform: scale(1.05);
-    }
-
-    .result-section {
-      background-color: #e9ecef;
-      padding: 15px 20px;
-      text-align: center;
-    }
-
-    .result-section a {
-      color: #004080;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    .result-section a:hover {
-      text-decoration: underline;
-      color: #003060;
-    }
-
-.animated-btn {
-  transition: 0.4s ease;
-}
-.animated-btn:hover {
-  transform: scale(1.05);
-  background-color: #004080;
-  color: white;
-}
-
-
-</style>
-
+</html>  
