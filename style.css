@@ -43,12 +43,6 @@ body{
   border-bottom: 1px solid #e6e6e6;
 }
 
-.site-header-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .site-logo img {
   height: 84px;
   width: auto;
@@ -61,16 +55,14 @@ body{
   font-weight: 800;
   font-size: 1.3rem;
   letter-spacing: 0.2px;
-  margin-top: 8px;
-  text-align: center; /* ensure center in mobile also */
+  margin-top: 0;
 }
 
 .site-subtitle {
   color: #333;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 0.9px;
-  text-align: center;
+  letter-spacing: 0.5px;
 }
 
 /* 📱 Mobile View Fix */
@@ -80,34 +72,26 @@ body{
   }
 
   .site-logo img {
-    height: 60px; /* smaller for mobile */
-    width: auto;
-    display: block;
-    margin: 0 auto; /* center */
+    height: 55px; /* smaller logo for phone */
+    margin-right: 10px;
   }
 
   .site-title {
-    font-size: 1rem; /* little smaller */
-    font-weight: 800;
-    line-height: 1.3;
-    text-align: center;
+    font-size: 1rem;
+    line-height: 1.2;
+    text-align: left;   /* align with logo */
   }
 
   .site-subtitle {
-    font-size: 0.9rem;
-    line-height: 1.3;
-    text-align: center;
-  }
-}
-
-/* 📱 Very Small Mobile (less than 668px) */
-@media (max-width: 668px) {
-  .site-title {
-    font-size: 0.8rem; /* smaller so it fits */
+    font-size: 0.85rem;
+    line-height: 1.2;
+    text-align: left;   /* align with logo */
   }
 
-  .site-subtitle {
-    font-size: 0.8rem;
+  /* force logo + text to stay in same row */
+  .site-header .container {
+    flex-direction: row !important;
+    justify-content: flex-start;
   }
 }
 /* NAVBAR */
