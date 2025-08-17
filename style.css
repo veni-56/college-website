@@ -80,7 +80,7 @@ body{
   }
 
   .site-title {
-    font-size: 0.85rem;   /* ✅ shrink font in phone */
+    font-size: 0.75rem;   /* ✅ shrink font in phone */
     line-height: 1.2;
     text-align: left;     /* align with logo */
     white-space: nowrap;  /* ✅ keep in one line */
