@@ -104,9 +104,6 @@ body{
 @media (max-width: 668px) {
   .site-title {
     font-size: 0.8rem; /* smaller so it fits */
-    font-weight: 700;
-    line-height: 1.2;
-    white-space: normal; /* allow 2 lines if needed */
   }
 
   .site-subtitle {
