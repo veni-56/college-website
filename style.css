@@ -56,6 +56,9 @@ body{
   font-size: 1.3rem;
   letter-spacing: 0.2px;
   margin-top: 0;
+  white-space: nowrap;   /* ✅ prevent breaking into 2 lines */
+  overflow: hidden;
+  text-overflow: ellipsis; /* ✅ in case screen too small */
 }
 
 .site-subtitle {
@@ -66,31 +69,33 @@ body{
 }
 
 /* 📱 Mobile View Fix */
-@media (max-width: 575px) {
+@media (max-width: 768px) {
   .site-header {
     padding: 10px;
   }
 
   .site-logo img {
-    height: 55px; /* smaller logo for phone */
-    margin-right: 10px;
+    height: 50px; /* smaller logo for phone */
+    margin-right: 8px;
   }
 
   .site-title {
-    font-size: 1rem;
+    font-size: 0.85rem;   /* ✅ shrink font in phone */
     line-height: 1.2;
-    text-align: left;   /* align with logo */
+    text-align: left;     /* align with logo */
+    white-space: nowrap;  /* ✅ keep in one line */
   }
 
   .site-subtitle {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     line-height: 1.2;
-    text-align: left;   /* align with logo */
+    text-align: left;     /* align with logo */
   }
 
   /* force logo + text to stay in same row */
   .site-header .container {
     flex-direction: row !important;
+    align-items: center;
     justify-content: flex-start;
   }
 }
