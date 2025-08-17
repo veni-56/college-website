@@ -69,7 +69,7 @@ body{
 }
 
 /* 📱 Mobile View Fix */
-@media (max-width: 768px) {
+@media (max-width: 575px) {
   .site-header {
     padding: 10px;
   }
