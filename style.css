@@ -38,65 +38,81 @@ body{
 
 /* HEADER (logo + title) */
 .site-header {
-background: #fff;
-padding: 18px 0;
-border-bottom: 1px solid #e6e6e6;
+  background: #fff;
+  padding: 18px 0;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .site-header-container {
-display: flex;
-flex-direction: column;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .site-logo img {
-height: 84px;
-width: auto;
-border-radius: 6px;
-background: #fff;
+  height: 84px;
+  width: auto;
+  border-radius: 6px;
+  background: #fff;
 }
 
 .site-title {
-color: var(--brand-blue);
-font-weight: 800;
-font-size: 1.3rem;
-letter-spacing: 0.2px;
-margin-top: 8px;
+  color: var(--brand-blue);
+  font-weight: 800;
+  font-size: 1.3rem;
+  letter-spacing: 0.2px;
+  margin-top: 8px;
+  text-align: center; /* ensure center in mobile also */
 }
 
 .site-subtitle {
-color: #333;
-font-size: 1.1rem;
-font-weight: 700;
-letter-spacing: 0.9px;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.9px;
+  text-align: center;
 }
 
-/* Mobile View Fix */
+/* 📱 Mobile View Fix */
 @media (max-width: 768px) {
-.site-header {
-padding: 10px;
+  .site-header {
+    padding: 10px;
+  }
+
+  .site-logo img {
+    height: 60px; /* smaller for mobile */
+    width: auto;
+    display: block;
+    margin: 0 auto; /* center */
+  }
+
+  .site-title {
+    font-size: 1rem; /* little smaller */
+    font-weight: 800;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .site-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    text-align: center;
+  }
 }
 
-.site-logo img {
-height: 60px; /* smaller for mobile */
-width: auto;
-display: block;
-margin: 0 auto; /* center */
-}
-
+/* 📱 Very Small Mobile (less than 668px) */
 @media (max-width: 668px) {
-.site-title {
-font-size: 0.75rem; /* smaller so it fits */
-font-weight: bold;
-white-space: nowrap; /* keep in one line */
-}
-}
-.site-subtitle {
-font-size: 0.95rem;
-line-height: 1.3;
-}
-}
+  .site-title {
+    font-size: 0.85rem; /* smaller so it fits */
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: normal; /* allow 2 lines if needed */
+  }
 
+  .site-subtitle {
+    font-size: 0.8rem;
+  }
+}
 /* NAVBAR */
 .main-nav .navbar{
   background: var(--brand-blue);
