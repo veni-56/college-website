@@ -71,34 +71,35 @@ body{
 /* 📱 Mobile View Fix */
 @media (max-width: 575px) {
   .site-header {
-    padding: 10px;
+    padding: 8px;
   }
 
   .site-logo img {
-    height: 50px; /* smaller logo for phone */
-    margin-right: 8px;
+    height: 40px; /* smaller logo for phone */
+    margin-right: 6px;
   }
 
   .site-title {
-    font-size: 0.75rem;   /* ✅ shrink font in phone */
-    line-height: 1.2;
-    text-align: left;     /* align with logo */
-    white-space: nowrap;  /* ✅ keep in one line */
+    font-size: 0.65rem;   /* ✅ smaller font */
+    line-height: 1.1;
+    text-align: left;
+    white-space: normal;  /* ✅ allow wrapping */
   }
 
   .site-subtitle {
-    font-size: 0.75rem;
-    line-height: 1.2;
-    text-align: left;     /* align with logo */
+    font-size: 0.65rem;   /* ✅ smaller subtitle */
+    line-height: 1.1;
+    text-align: left;
   }
 
-  /* force logo + text to stay in same row */
+  /* logo + text in same row */
   .site-header .container {
     flex-direction: row !important;
     align-items: center;
     justify-content: flex-start;
   }
 }
+
 /* NAVBAR */
 .main-nav .navbar{
   background: var(--brand-blue);
