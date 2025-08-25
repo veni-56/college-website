@@ -148,7 +148,7 @@
     </nav>
   </div>
 
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -158,32 +158,38 @@
     body {
       padding: 30px;
       font-size: 16px;
+      background-color: #f8f9fa;
     }
     .form-title {
       text-align: center;
       font-weight: bold;
-      font-size: 24px;
-      margin-bottom: 20px;
+      font-size: 26px;
+      margin-bottom: 30px;
       text-transform: uppercase;
+      color: #2c3e50;
     }
     table {
       width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      background: white;
+      border-collapse: collapse;
     }
     th, td {
-      padding: 8px;
-      border: 1px solid #000;
+      padding: 10px;
+      border: 1px solid #dee2e6;
       vertical-align: top;
     }
     input, select {
       width: 100%;
       border: none;
       outline: none;
+      padding: 6px;
     }
     .section-title {
-      background-color: #f0f0f0;
+      background-color: #e9ecef;
       font-weight: bold;
-      padding: 5px;
+      padding: 8px;
+      margin-top: 20px;
     }
     #successMsg {
       display: none;
@@ -212,13 +218,13 @@
       <tr><td>Hostel Accommodation Needed?</td><td colspan="3"><input name="hostel"></td></tr>
     </table>
 
-    <div class="section-title">HSC / +2 EXAM DETAILS</div>
+    <div class="section-title">HSC / +2 Exam Details</div>
     <table>
       <tr><td>HSC Group</td><td><input name="hsc_group"></td><td>School Name</td><td><input name="school"></td></tr>
       <tr><td>Board</td><td><input name="board"></td><td>Medium</td><td><input name="medium"></td></tr>
     </table>
 
-    <div class="section-title">MARKS IN HSC EXAMINATION</div>
+    <div class="section-title">Marks in HSC Examination</div>
     <table>
       <tr>
         <th>Subject</th><th>Marks Obtained</th><th>Max Marks</th><th>Class</th><th>Percentage</th>
@@ -228,13 +234,18 @@
       <tr><td>Subject 1</td><td><input name="sub1_mark"></td><td><input name="sub1_max"></td><td><input name="sub1_class"></td><td><input name="sub1_percent"></td></tr>
       <tr><td>Subject 2</td><td><input name="sub2_mark"></td><td><input name="sub2_max"></td><td><input name="sub2_class"></td><td><input name="sub2_percent"></td></tr>
       <tr><td>Subject 3</td><td><input name="sub3_mark"></td><td><input name="sub3_max"></td><td><input name="sub3_class"></td><td><input name="sub3_percent"></td></tr>
-      <tr><td>Subject 4</td><td><input name="sub2_mark"></td><td><input name="sub2_max"></td><td><input name="sub2_class"></td><td><input name="sub2_percent"></td></tr>
+      <tr><td>Subject 4</td><td><input name="sub4_mark"></td><td><input name="sub4_max"></td><td><input name="sub4_class"></td><td><input name="sub4_percent"></td></tr>
     </table>
 
-    <p><strong>Year of Passing with Percentage:</strong> <input name="passing"></p>
+    <p><strong>Year of Passing with Percentage:</strong> <input name="passing" placeholder="e.g. 2024 - 85%"></p>
 
-    <button type="submit" class="btn btn-primary">Submit UG Application</button>
-    <div id="successMsg" class="alert alert-success mt-3">✅ Application submitted successfully!</div>
+    <div class="text-center mt-4">
+      <button type="submit" class="btn btn-success btn-lg px-5">Submit UG Application</button>
+    </div>
+
+    <div id="successMsg" class="alert alert-success mt-4 text-center">
+      ✅ Application submitted successfully!
+    </div>
   </form>
 
   <script>
@@ -245,6 +256,21 @@
       e.preventDefault();
       const formData = new FormData(form);
       const data = Object.fromEntries(formData.entries());
+
+      // Optional: Validate if all fields are filled
+      let allFilled = true;
+      for (let value of formData.values()) {
+        if (!value.trim()) {
+          allFilled = false;
+          break;
+        }
+      }
+
+      if (!allFilled) {
+        alert("❗ Please fill in all fields before submitting.");
+        return;
+      }
+
       localStorage.setItem("ug_application", JSON.stringify(data));
       successMsg.style.display = "block";
       form.reset();

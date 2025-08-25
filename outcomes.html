@@ -187,9 +187,7 @@
       </div>
     </nav>
   </div>
-
-
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -202,7 +200,6 @@
       text-decoration: none;
       color: #003366;
       border-bottom: 1px solid #ddd;
-      cursor: pointer;
     }
     .dept-list a:hover {
       background-color: #003366;
@@ -221,14 +218,14 @@
 <body>
 
 <div class="container py-4">
-  <h2 class="page-title">Programme Outcomes</h2>
+  <h2 class="page-title"></h2>
   <div class="row">
     
-    <!-- Left: Info Area -->
+    <!-- Left: Content Area -->
     <div class="col-md-8">
-      <div id="outcome-content" class="content-box">
-        <h4>Welcome!</h4>
-        <p>Please select a department from the right side to view Programme Outcomes (button will appear here).</p>
+      <div id="outcome-content" class="content-program">
+        <h4></h4>
+        <p></p>
       </div>
     </div>
 
@@ -236,35 +233,655 @@
     <div class="col-md-4">
       <div class="dept-list">
         <h5>Departments</h5>
-        <a onclick="showPDF('BA English','pdfs/ba_english.pdf')">BA English</a>
-        <a onclick="showPDF('BA Tamil','pdfs/ba_tamil.pdf')">BA Tamil</a>
-        <a onclick="showPDF('BBA','pdfs/bba.pdf')">BBA</a>
-        <a onclick="showPDF('B.Com','pdfs/bcom.pdf')">B.Com</a>
-        <a onclick="showPDF('B.Com (CA)','pdfs/bcom_ca.pdf')">B.Com (CA)</a>
-        <a onclick="showPDF('B.Sc Computer Science','pdfs/bsc_cs.pdf')">B.Sc Computer Science</a>
-        <a onclick="showPDF('B.Sc Mathematics','pdfs/bsc_maths.pdf')">B.Sc Mathematics</a>
-        <a onclick="showPDF('B.Sc Physics','pdfs/bsc_physics.pdf')">B.Sc Physics</a>
-        <a onclick="showPDF('MA Tamil','pdfs/ma_tamil.pdf')">MA Tamil</a>
-        <a onclick="showPDF('M.Com','pdfs/mcom.pdf')">M.Com</a>
-        <a onclick="showPDF('M.Sc Mathematics','pdfs/msc_maths.pdf')">M.Sc Mathematics</a>
-        <a onclick="showPDF('M.Sc Physics','pdfs/msc_physics.pdf')">M.Sc Physics</a>
+        <a href="#" onclick="showOutcome('ba_english')">BA English</a>
+        <a href="#" onclick="showOutcome('ba_tamil')">BA Tamil</a>
+        <a href="#" onclick="showOutcome('bba')">BBA</a>
+        <a href="#" onclick="showOutcome('bcom')">B.Com</a>
+        <a href="#" onclick="showOutcome('bcom_ca')">B.Com (CA)</a>
+        <a href="#" onclick="showOutcome('bsc_cs')">B.Sc Computer Science</a>
+        <a href="#" onclick="showOutcome('bsc_maths')">B.Sc Mathematics</a>
+        <a href="#" onclick="showOutcome('bsc_physics')">B.Sc Physics</a>
+        <a href="#" onclick="showOutcome('ma_tamil')">MA Tamil</a>
+        <a href="#" onclick="showOutcome('mcom')">M.Com</a>
+        <a href="#" onclick="showOutcome('msc_maths')">M.Sc Mathematics</a>
+        <a href="#" onclick="showOutcome('msc_physics')">M.Sc Physics</a>
       </div>
     </div>
   </div>
 </div>
 
 <script>
-  function showPDF(deptName, pdfPath) {
-    document.getElementById("outcome-content").innerHTML = `
-      <h4>${deptName} - Programme Outcomes</h4>
-      <p>Click the button below to view the Programme Outcomes PDF.</p>
-      <a href="${pdfPath}" target="_blank" class="btn btn-primary">View PDF</a>
-    `;
+  function showOutcome(dept) {
+    let content = {
+     "ba_english": `
+<div class="container my-4">
+  <h4 class="text-center text-success mb-2" style="font-size: 22px;">
+     Department of English
+  </h4>
+  <hr class="mx-auto" style="width: 50%; border: 1px solid green; margin-bottom: 20px;">
+
+  <!-- Course Outcomes -->
+  <h5 class="text-primary mt-4">Course Outcomes (COs)</h5>
+  <ul>
+    <li><strong>CO1:</strong> Develop critical thinking to analyze literary texts — exploring themes, characters, and literary devices.</li>
+    <li><strong>CO2:</strong> Communicate effectively in written and oral forms with clarity and persuasion.</li>
+    <li><strong>CO3:</strong> Understand major literary periods, genres, and movements across cultures and time.</li>
+    <li><strong>CO4:</strong> Contextualize literature within historical, cultural, and social frameworks.</li>
+    <li><strong>CO5:</strong> Build strong research and analytical writing skills.</li>
+  </ul>
+
+  <!-- Programme Outcomes -->
+  <h5 class="text-primary mt-4">Programme Outcomes (POs)</h5>
+  <p>Graduates of the B.A. English programme will demonstrate:</p>
+  <ul>
+    <li><strong>PO1:</strong> Literary competence in genres, movements, and global authors.</li>
+    <li><strong>PO2:</strong> Analytical skills using literary theories and criticism.</li>
+    <li><strong>PO3:</strong> Effective communication in English.</li>
+    <li><strong>PO4:</strong> Awareness of socio-cultural and historical literary contexts.</li>
+    <li><strong>PO5:</strong> Moral reasoning through engagement with ethical issues in literature.</li>
+    <li><strong>PO6:</strong> Capability in conducting independent literary research.</li>
+    <li><strong>PO7:</strong> Creative expression via writing, storytelling, or dramatics.</li>
+    <li><strong>PO8:</strong> Proficiency in advanced English language usage.</li>
+    <li><strong>PO9:</strong> Appreciation for global literatures and perspectives.</li>
+    <li><strong>PO10:</strong> Readiness for careers in teaching, publishing, or journalism.</li>
+  </ul>
+
+  <!-- Programme Specific Outcomes -->
+  <h5 class="text-primary mt-4">Programme Specific Outcomes (PSOs)</h5>
+  <p>On completion of the B.A. English programme, students will be able to:</p>
+  <ul>
+    <li><strong>PSO1:</strong> Demonstrate mastery in British, American, Indian, and World literatures.</li>
+    <li><strong>PSO2:</strong> Apply writing, editing, translation, and critical analysis skills effectively.</li>
+    <li><strong>PSO3:</strong> Pursue higher studies or careers in teaching, media, or content development.</li>
+  </ul>
+
+  <!-- Programme Educational Objectives -->
+  <h5 class="text-primary mt-4"> Programme Educational Objectives (PEOs)</h5>
+  <p>Within a few years of graduation, students will:</p>
+  <ul>
+    <li><strong>PEO1:</strong> Achieve strong literary and cultural literacy in English studies.</li>
+    <li><strong>PEO2:</strong> Grow intellectually and professionally through critical thinking and research.</li>
+    <li><strong>PEO3:</strong> Embrace ethical values, empathy, and global awareness in personal and professional life.</li>
+  </ul>
+</div>
+ `,
+
+      "ba_tamil": `
+    <h4 style="color: green; text-align: center; font-size: 22px; margin-bottom: 5px;">
+        Department of Tamil
+    </h4>
+    <hr style="width: 50%; border: 1px solid green; margin: 10px auto;">
+
+    <p><b>Course Outcomes (CO)</b></p>
+    <p>
+       <b> CO1: Appreciate Tamil Literature</b> — Demonstrate an understanding of classical and modern Tamil literature, poetry, prose, and drama.<br>
+       <b> CO2: Develop Language Proficiency</b> — Enhance their skills in reading, writing, speaking and interpreting Tamil with precision and clarity.<br>
+       <b> CO3: Analyze Literary Texts</b> — Critically evaluate literary works in Tamil, identifying themes, stylistic features, and cultural contexts.<br>
+       <b> CO4: Apply Literary Theories</b> — Use literary, linguistic and cultural theories to interpret Tamil texts.<br>
+       <b> CO5: Engage Creatively</b>.
+    </p>
+
+    <hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+    <p><b>Programme Outcomes (PO)</b></p>
+    <p>Graduates of the B.A. Tamil programme will demonstrate:</p>
+    <p><b>
+        PO1: Disciplinary Knowledge</b> — Comprehensive understanding of Tamil language, literature, grammar, and cultural heritage.<br>
+       <b> PO2:Communication Skills</b> — Ability to express ideas effectively in Tamil, both orally and in writing.<br>
+     <b>   PO3:Critical Thinking</b> — Capability to analyze, interpret and evaluate literary texts, cultural narratives and linguistic structures.<br>
+     <b>   PO4:Problem-Solving</b> — Apply learned concepts to interpret complex texts and socio-cultural issues.<br>
+     <b>   PO5:Analytical Reasoning</b> — Compare literary movements, styles and contexts.<br>
+     <b>   PO6:Research Skills</b> — Formulate research questions in Tamil studies and present findings.<br>
+        <b>PO7:Cooperation & Teamwork</b> — Work collaboratively in cultural, literary or community projects.<br>
+      <b>  PO8:Scientific Reasoning</b> — Apply structured analysis (prosody, grammar rules, historical methods).<br>
+     <b>   PO9:Reflective Thinking</b> — Awareness of personal, social and cultural identities.<br>
+       <b> PO10:Information & Digital Literacy</b> — Use digital tools for Tamil literature archives and creative outputs.
+    </p>
+
+    <hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+    <p><b>Programme Specific Outcomes (PSO)</b></p>
+    <p>On completion of the B.A. Tamil programme, students will be able to:</p>
+    <p>
+      <b>  PSO1:Master Tamil Literary Forms</b> — Knowledge of ancient, medieval and modern Tamil literature, including epics, bhakti literature, poetry and fiction.<br>
+      <b>  PSO2:Linguistic Structures</b> — Analyze the evolution and grammatical nuances of Tamil language.<br>
+      <b>  PSO3:Preserve and Promote Culture</b> — Participate in preserving, researching, and promoting Tamil traditions.
+    </p>
+
+    <hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+    <p><b>Programme Educational Objectives (PEO)</b></p>
+    <p>Within a few years of graduation, students of B.A. Tamil will:</p>
+    <p>
+       <b> PEO1:Pursue Careers & Higher Studies</b> — Teaching, journalism, translation, civil services, or higher studies.<br>
+       <b> PEO2:Contribute to Society</b> — Engage in activities that uphold Tamil culture and community welfare.<br>
+        <b>PEO3:Lifelong Learning & Leadership</b> — Continue learning in Tamil studies and take leadership roles in promoting culture.
+    </p>
+`
+,
+"bba": `
+    <h4 style="color: green; text-align: center; font-size: 22px; margin-bottom: 5px;">
+        Business Administration 
+    </h4>
+    <hr style="width: 50%; border: 1px solid green; margin: 10px auto;">
+
+    <p><b>Course Outcomes (CO)</b></p>
+    <p>
+        <b>CO1: Business Knowledge</b> — Understand and apply basic concepts of economics, finance, marketing, and management in business decision-making.<br>
+        <b>CO2: Communication</b> — Develop effective communication and interpersonal skills for business contexts.<br>
+        <b>CO3: Problem Solving</b> — Apply analytical and problem-solving techniques to address real-world business challenges.<br>
+        <b>CO4: Ethics & Responsibility</b> — Demonstrate ethical behavior, social responsibility, and environmental awareness.<br>
+        <b>CO5: Technology Skills</b> — Use IT effectively for data analysis, presentations, and decision-making.
+    </p>
+
+    <hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+    <p><b>Programme Outcomes (PO)</b></p>
+    <p>
+        <b>PO1: Disciplinary Knowledge</b> — Comprehensive understanding across business disciplines.<br>
+        <b>PO2: Communication Skills</b> — Express ideas effectively in oral and written form.<br>
+        <b>PO3: Critical Thinking</b> — Evaluate and apply knowledge analytically to arguments and evidence.<br>
+        <b>PO4: Problem Solving</b> — Apply learning to unfamiliar and real-life situations.<br>
+        <b>PO5: Analytical Reasoning</b> — Assess and synthesize information logically and coherently.<br>
+        <b>PO6: Research Skills</b> — Conduct research, formulate hypotheses, and draw conclusions.<br>
+        <b>PO7: Team Work</b> — Work collaboratively in diverse teams with mutual respect.<br>
+        <b>PO8: Scientific Reasoning</b> — Draw conclusions from data and evaluate evidence critically.<br>
+        <b>PO9: Reflective Thinking</b> — Develop self-awareness and sensitivity to social experiences.<br>
+        <b>PO10: Digital Literacy</b> — Use ICT effectively for learning and data analysis.
+    </p>
+
+    <hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+    <p><b>Programme Specific Outcomes (PSO)</b></p>
+    <p>
+        <b>PSO1: Economic Application</b> — Apply macroeconomic and monetary theories in real-life decision-making.<br>
+        <b>PSO2: Policy Analysis</b> — Analyze and interpret national and international economic development issues.<br>
+        <b>PSO3: Critical Evaluation</b> — Enhance analytical and critical thinking to evaluate economic policies effectively.
+    </p>
+
+    <hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+    <p><b>Programme Educational Objectives (PEO)</b></p>
+    <p>
+        <b>PEO1: Problem Solvers</b> — Apply business knowledge to solve economic and managerial problems effectively.<br>
+        <b>PEO2: Career Readiness</b> — Build strong foundations for careers in industry, government, and entrepreneurship.<br>
+        <b>PEO3: Values & Leadership</b> — Instill ethics, teamwork, and leadership qualities for serving society and promoting sustainable development.
+    </p>
+`
+,
+     
+      "bcom": `
+    <h4 style="color: blue; text-align: center; font-size: 22px; margin-bottom: 5px;">
+        Bachelor of Commerce 
+    </h4>
+    <hr style="width: 50%; border: 1px solid blue; margin: 10px auto;">
+
+    <p><b>Course Outcomes (CO)</b></p>
+    <p>
+        <b>CO1: Fundamental Commerce Knowledge</b> — Gain conceptual and practical knowledge in core commerce disciplines such as Accounting, Economics, Taxation, and Management.<br>
+        <b>CO2: Application of Business Skills</b> — Apply financial, managerial, and analytical skills in solving real-time business problems through case studies and project work.<br>
+        <b>CO3: Ethical and Legal Understanding</b> — Understand ethical frameworks and legal structures impacting commerce and demonstrate ethical reasoning in business practices.<br>
+        <b>CO4: Technological Adaptability</b> — Use information technology tools and software for accounting, business communication, data analysis, and decision-making.<br>
+        <b>CO5: Entrepreneurial Readiness</b> — Acquire entrepreneurial competencies and problem-solving skills to innovate and manage startups or small business enterprises.
+    </p>
+
+    <hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+    <p><b>Programme Outcomes (PO)</b></p>
+    <p>
+        <b>PO1: Disciplinary Knowledge</b> — Demonstrate comprehensive knowledge in commerce and allied fields with conceptual clarity.<br>
+        <b>PO2: Communication Skills</b> — Exhibit professional communication abilities in written and oral forms, suitable for various stakeholders.<br>
+        <b>PO3: Critical Thinking</b> — Apply logical and evidence-based thinking to evaluate policies, practices, and business environments.<br>
+        <b>PO4: Problem Solving</b> — Use acquired knowledge and skills to address non-routine business problems effectively.<br>
+        <b>PO5: Analytical Reasoning</b> — Synthesize information, assess evidence, and construct sound arguments for informed decisions.<br>
+        <b>PO6: Research-Related Skills</b> — Formulate hypotheses, interpret data, and draw meaningful conclusions through mini-projects and internships.<br>
+        <b>PO7: Teamwork and Collaboration</b> — Work effectively in diverse teams, demonstrating respect and coordination in achieving goals.<br>
+        <b>PO8: Digital Literacy</b> — Apply ICT tools for learning and business activities, including spreadsheet analysis, accounting software, and digital communication.<br>
+        <b>PO9: Moral and Ethical Awareness</b> — Understand and adhere to ethical practices in business, including integrity, fairness, and environmental responsibility.<br>
+        <b>PO10: Lifelong Learning</b> — Engage in continuous learning and skill development to adapt to changes in the business and economic environment.
+    </p>
+
+    <hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+    <p><b>Programme Specific Outcomes (PSO)</b></p>
+    <p>
+        <b>PSO1: Placement Orientation</b> — Prepare students for careers in accounting, finance, HR, and business management through curriculum aligned with industry needs.<br>
+        <b>PSO2: Entrepreneurial Development</b> — Develop entrepreneurial thinking and leadership skills to foster business innovation and self-employment.<br>
+        <b>PSO3: Research and Policy Application</b> — Equip students to conduct organizational research and implement business strategies based on data and legal compliance.
+    </p>
+
+    <hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+    <p><b>Programme Educational Objectives (PEO)</b></p>
+    <p>
+        <b>PEO1: Career Readiness</b> — Equip graduates with essential commerce and management knowledge for gainful employment or higher studies.<br>
+        <b>PEO2: Social and Ethical Responsibility</b> — Develop socially responsible professionals who contribute positively to economic development and community welfare.<br>
+        <b>PEO3: Adaptability and Innovation</b> — Foster lifelong learners capable of innovating and adapting to emerging trends in global and domestic business environments.
+    </p>
+`
+,
+"bcom_ca": `
+    <h4 style="color: purple; text-align: center; font-size: 22px; margin-bottom: 5px;">
+      Commerce
+    </h4>
+    <hr style="width: 50%; border: 1px solid purple; margin: 10px auto;">
+
+    <p><b>Course Outcomes (CO)</b></p>
+    <p>
+        <b>CO1: Core Commerce Proficiency</b> — Develop comprehensive knowledge of core commerce subjects such as Accounting, Economics, Business Law, and Taxation, with an integrated understanding of how they relate to modern business environments.<br>
+        <b>CO2: Computer Application Skills in Commerce</b> — Apply software tools like MS Office, Tally, Excel, Database Management Systems (DBMS), and e-Commerce platforms to perform business operations effectively.<br>
+        <b>CO3: Financial and Analytical Competence</b> — Use financial tools, spreadsheets, and data analysis techniques to interpret and solve business problems, supporting decision-making with evidence-based reasoning.<br>
+        <b>CO4: Programming and Automation in Business</b> — Gain working knowledge of programming languages (e.g., Python, C++, or Visual Basic) and understand how to automate accounting and business processes.<br>
+        <b>CO5: Digital Communication and IT in Business</b> — Demonstrate proficiency in digital business communication, internet tools, and cloud computing to enhance organizational productivity.<br>
+        <b>CO6: Ethical, Legal, and Social Responsibility</b> — Recognize ethical standards, legal provisions (like the IT Act and Cyber Laws), and social responsibilities in business operations, particularly in digital and e-commerce contexts.<br>
+        <b>CO7: Entrepreneurial and Innovation Readiness</b> — Acquire the skills to start and manage tech-enabled enterprises, fostering entrepreneurial thinking, digital marketing, and innovation-driven approaches.
+    </p>
+
+    <hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+    <p><b>Programme Outcomes (PO)</b></p>
+    <p>
+        <b>PO1: Disciplinary Knowledge</b> — Demonstrate comprehensive knowledge in commerce and allied fields with conceptual clarity.<br>
+        <b>PO2: Communication Skills</b> — Exhibit professional communication abilities in written and oral forms, suitable for various stakeholders.<br>
+        <b>PO3: Critical Thinking</b> — Apply logical and evidence-based thinking to evaluate policies, practices, and business environments.<br>
+        <b>PO4: Problem Solving</b> — Use acquired knowledge and skills to address non-routine business problems effectively.<br>
+        <b>PO5: Analytical Reasoning</b> — Synthesize information, assess evidence, and construct sound arguments for informed decisions.<br>
+        <b>PO6: Research-Related Skills</b> — Formulate hypotheses, interpret data, and draw meaningful conclusions through mini-projects and internships.<br>
+        <b>PO7: Teamwork and Collaboration</b> — Work effectively in diverse teams, demonstrating respect and coordination in achieving goals.<br>
+        <b>PO8: Digital Literacy</b> — Apply ICT tools for learning and business activities, including spreadsheet analysis, accounting software, and digital communication.
+    </p>
+
+    <hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+    <p><b>Programme Specific Outcomes (PSO)</b></p>
+    <p>
+        <b>PSO1: Placement Orientation</b> — Prepare students for careers in accounting, finance, HR, and business management through curriculum aligned with industry needs.<br>
+        <b>PSO2: Entrepreneurial Development</b> — Develop entrepreneurial thinking and leadership skills to foster business innovation and self-employment.<br>
+        <b>PSO3: Research and Policy Application</b> — Equip students to conduct organizational research and implement business strategies based on data and legal compliance.
+    </p>
+
+    <hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+    <p><b>Programme Educational Objectives (PEO)</b></p>
+    <p>
+        <b>PEO1: Career Readiness</b> — Equip graduates with essential commerce and management knowledge for gainful employment or higher studies.<br>
+        <b>PEO2: Social and Ethical Responsibility</b> — Develop socially responsible professionals who contribute positively to economic development and community welfare.<br>
+        <b>PEO3: Adaptability and Innovation</b> — Foster lifelong learners capable of innovating and adapting to emerging trends in global and domestic business environments.
+    </p>
+`
+,
+    
+  "bsc_cs": `
+    <h4 style="color: blue; text-align: center; font-size: 22px; margin-bottom: 5px;">
+        Computer Science 
+    </h4>
+    <hr style="width: 50%; border: 1px solid blue; margin: 10px auto;">
+
+    <p><b>Course Outcomes (CO)</b></p>
+    <p>
+        <b>CO1: Apply Computational Principles</b> — Use fundamental concepts of computer science to solve various computational problems.<br>
+        <b>CO2: Develop Programming Solutions</b> — Design and implement efficient algorithms using appropriate programming languages.<br>
+        <b>CO3: Utilize Analytical Tools</b> — Employ software tools and techniques for data analysis, processing, and visualization.<br>
+        <b>CO4: Communicate Effectively</b> — Demonstrate professional communication and teamwork skills in technical environments.<br>
+        <b>CO5: Practice Ethics</b> — Understand and apply ethical principles, professional responsibilities, and social norms in computing.
+    </p>
+
+    <hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+    <p><b>Programme Outcomes (PO)</b></p>
+    <p>
+        <b>PO1: Develop Scientific Aptitude</b> — Build logical reasoning and a scientific approach to problem-solving.<br>
+        <b>PO2: Acquire Comprehensive Knowledge</b> — Gain fundamental and advanced knowledge of Computer Science along with insights into humanities and allied subjects.<br>
+        <b>PO3: Demonstrate Practical and Technical Skills</b> — Apply practical laboratory skills and technical competencies to solve computational problems.<br>
+        <b>PO4: Employ Computational Thinking</b> — Utilize programming and algorithmic concepts to address theoretical and applied problems.<br>
+        <b>PO5: Enhance Employability</b> — Be eligible for diverse career opportunities in education, industry, or become entrepreneurs.<br>
+        <b>PO6: Prepare for Higher Education</b> — Possess foundational knowledge required for pursuing higher studies, professional and applied courses in Computer Science and related domains.<br>
+        <b>PO7: Adopt a Solution-Oriented Approach</b> — Develop awareness and solutions for addressing social and environmental challenges using technological skills.<br>
+        <b>PO8: Apply Analytical Reasoning</b> — Identify patterns, analyze data and develop models to solve complex real-world problems.<br>
+        <b>PO9: Collaborate and Communicate Effectively</b> — Share ideas, seek knowledge from others, and function effectively in teams.<br>
+        <b>PO10: Become Responsible Citizens</b> — Uphold ethical standards, cultural sensitivity and social responsibilities in a rapidly changing, interconnected world.
+    </p>
+
+    <hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+    <p><b>Programme Specific Outcomes (PSO)</b></p>
+    <p>
+        <b>PSO1: Master Core Areas</b> — Gain in-depth knowledge of areas such as data structures, algorithms, databases, software engineering, networking, and emerging technologies.<br>
+        <b>PSO2: Develop Software Applications</b> — Design, develop, and test software systems to address real-world problems and industry needs.<br>
+        <b>PSO3: Engage in Research and Innovation</b> — Employ computational tools and methodologies to support research, innovation, and continued learning in computer science.
+    </p>
+
+    <hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+    <p><b>Programme Educational Objectives (PEO)</b></p>
+    <p>
+        <b>PEO1: Build Successful Careers or Pursue Higher Studies</b> — Establish themselves in rewarding professional careers or higher education in computer science and allied fields.<br>
+        <b>PEO2: Demonstrate Leadership and Ethics</b> — Exhibit leadership qualities, ethical behavior, and social responsibility in personal and professional spheres.<br>
+        <b>PEO3: Contribute to Technological and Societal Growth</b> — Engage in lifelong learning and contribute meaningfully to technological advancements and community development.
+    </p>
+`
+,   
+  "bsc_maths": `
+    <h4 style="color: blue; text-align: center; font-size: 22px; margin-bottom: 5px;">
+        B.Sc Mathematics
+    </h4>
+    <hr style="width: 50%; border: 1px solid blue; margin: 10px auto;">
+
+    <p><b>Course Outcomes (CO)</b></p>
+    <p>
+        <b>CO1: Apply Mathematical Concepts</b> — Understand and apply fundamental concepts of calculus, algebra, differential equations, and linear algebra to solve real-world and theoretical problems.<br>
+        <b>CO2: Develop Analytical Thinking</b> — Enhance logical reasoning and analytical skills through the study of abstract mathematics and problem-solving techniques.<br>
+        <b>CO3: Use Mathematical Tools and Techniques</b> — Gain proficiency in using mathematical software and tools (like MATLAB, Mathematica, or R) for modeling, simulations, and complex computations.<br>
+        <b>CO4: Formulate and Solve Problems</b> — Translate physical, social, and economic problems into mathematical models and analyze them for viable solutions.<br>
+        <b>CO5: Communicate Mathematical Ideas</b> — Present mathematical arguments and conclusions clearly and effectively, both in writing and orally.
+    </p>
+
+    <hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+    <p><b>Programme Outcomes (PO)</b></p>
+    <p>
+        <b>PO1: Disciplinary Knowledge</b> — Demonstrate comprehensive knowledge and understanding of core mathematical concepts, including calculus, algebra, geometry, and statistics.<br>
+        <b>PO2: Problem Solving and Analytical Thinking</b> — Analyze and solve complex mathematical problems using logical reasoning, critical thinking, and appropriate mathematical tools.<br>
+        <b>PO3: Computational Skills</b> — Apply appropriate computational techniques and use mathematical software to model, analyze, and interpret data and equations.<br>
+        <b>PO4: Communication Skills</b> — Communicate mathematical concepts and solutions clearly and effectively in written, oral, and symbolic forms.<br>
+        <b>PO5: Research and Inquiry</b> — Develop the ability to engage in independent research, apply mathematical methods to real-life scenarios, and interpret results logically.<br>
+        <b>PO6: Modern Tool Usage</b> — Utilize modern tools, software, and technology for solving mathematical problems and for conducting simulations or experiments.<br>
+        <b>PO7: Ethics and Professional Responsibility</b> — Apply ethical principles and commit to professional responsibilities in academic and applied mathematical contexts.<br>
+        <b>PO8: Lifelong Learning</b> — Develop the ability to pursue continuous learning and adapt to the evolving trends in mathematics and related disciplines.<br>
+        <b>PO9: Interdisciplinary Applications</b> — Apply mathematical knowledge and techniques to solve problems in allied fields such as physics, computer science, economics, and engineering.<br>
+        <b>PO10: Teamwork and Leadership</b> — Demonstrate the ability to work effectively in teams, take initiative, and develop leadership qualities in academic, research, and professional environments.
+    </p>
+
+    <hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+    <p><b>Programme Specific Outcomes (PSO)</b></p>
+    <p>
+        <b>PSO1: Mastery of Core Mathematical Concepts</b> — Acquire in-depth knowledge of core areas of mathematics such as algebra, calculus, real and complex analysis, number theory, differential equations, and linear algebra.<br>
+        <b>PSO2: Application of Mathematics in Other Disciplines</b> — Apply mathematical techniques and reasoning in interdisciplinary contexts such as physics, computer science, economics, and engineering.<br>
+        <b>PSO3: Mathematical Modeling and Problem Solving</b> — Formulate real-world problems as mathematical models and use analytical and numerical methods to find effective solutions.
+    </p>
+
+    <hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+    <p><b>Programme Educational Objectives (PEO)</b></p>
+    <p>
+        <b>PEO1: Foundation in Mathematical Sciences</b> — Provide students with a solid foundation in pure and applied mathematics to understand and solve complex mathematical problems.<br>
+        <b>PEO2: Higher Education and Research</b> — Prepare graduates for successful admission into postgraduate programs, research, and professional courses in mathematics and related disciplines.<br>
+        <b>PEO3: Employability and Professional Development</b> — Equip students with analytical, logical, and quantitative skills to pursue careers in education, data analysis, actuarial science, finance, and other mathematics-intensive professions.
+    </p>
+`
+,    
+    "bsc_physics": `
+    <h4 style="color: blue; text-align: center; font-size: 22px; margin-bottom: 5px;">
+         Physics
+    </h4>
+    <hr style="width: 50%; border: 1px solid blue; margin: 10px auto;">
+
+    <p><b>Course Outcomes (CO)</b></p>
+    <p>
+        <b>CO1: Understand Basic Concepts</b> — Grasp the fundamental concepts and laws of physics.<br>
+        <b>CO2: Apply Physics Principles</b> — Use physics knowledge to solve real-life and practical problems.<br>
+        <b>CO3: Experimental Skills</b> — Perform laboratory experiments and analyze their outcomes.<br>
+        <b>CO4: Computational Proficiency</b> — Utilize mathematical and computer tools in solving physics problems.<br>
+        <b>CO5: Career and Research Readiness</b> — Prepare for higher studies, research, and employment in science-related fields.
+    </p>
+
+    <hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+    <p><b>Programme Outcomes (PO)</b></p>
+    <p>
+        <b>PO1: Disciplinary Knowledge</b> — Demonstrate comprehensive knowledge of core physics.<br>
+        <b>PO2: Communication Skills</b> — Express scientific ideas clearly in oral and written forms.<br>
+        <b>PO3: Critical Thinking</b> — Apply logical reasoning and evaluate scientific arguments effectively.<br>
+        <b>PO4: Problem Solving</b> — Use concepts of physics to solve unfamiliar or real-world problems.<br>
+        <b>PO5: Analytical Reasoning</b> — Analyze and synthesize data to draw valid conclusions.<br>
+        <b>PO6: Research-Related Skills</b> — Formulate hypotheses and conduct investigations systematically.<br>
+        <b>PO7: Teamwork and Collaboration</b> — Work effectively in groups for collaborative scientific success.<br>
+        <b>PO8: Scientific Reasoning</b> — Interpret and evaluate both quantitative and qualitative data.<br>
+        <b>PO9: Reflective Thinking</b> — Practice self-awareness and reflect on the societal context of science.<br>
+        <b>PO10: Information and Digital Literacy</b> — Use ICT tools and digital resources efficiently for learning and research.
+    </p>
+
+    <hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+    <p><b>Programme Specific Outcomes (PSO)</b></p>
+    <p>
+        <b>PSO1: Career and Placement Readiness</b> — Equip students for careers in academia, industry, and public sectors.<br>
+        <b>PSO2: Entrepreneurial Skills</b> — Develop the ability to innovate and engage in startup ventures or science-based enterprises.<br>
+        <b>PSO3: Research and Development</b> — Foster capabilities to pursue advanced studies and contribute effectively to R&D fields.
+    </p>
+
+    <hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+    <p><b>Programme Educational Objectives (PEO)</b></p>
+    <p>
+        <b>PEO1: Theoretical and Experimental Foundation</b> — Provide graduates with strong grounding in physics theory and experimentation.<br>
+        <b>PEO2: Higher Studies and Professional Growth</b> — Prepare students for higher education, research, and professional careers in physics and allied domains.<br>
+        <b>PEO3: Ethical and Social Contribution</b> — Enable graduates to contribute ethically and effectively to society using their scientific knowledge and skills.
+    </p>
+`
+,  
+"ma_tamil": `<h4 style="color: green; text-align: center; font-size: 22px; margin-bottom: 5px;">
+    MA Tamil 
+</h4>
+<hr style="width: 50%; border: 1px solid green; margin: 10px auto;">
+
+<!-- Course Outcomes -->
+<p style="font-weight: bold; font-size: 18px; color: #004d00;">Course Outcomes (CO)</p>
+<p style="line-height: 1.6;">
+    <b>CO1 – Apply Subject Knowledge</b>: Apply subject knowledge effectively in real-world situations.<br>
+    <b>CO2 – Decision Making</b>: Make informed decisions through data analysis.<br>
+    <b>CO3 – Communication Skills</b>: Enhance clear and confident communication skills.<br>
+    <b>CO4 – Integrity & Responsibility</b>: Act with integrity and social responsibility.<br>
+    <b>CO5 – Employability Skills</b>: Improve skills that increase employability.
+</p>
+
+<hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+<!-- Programme Outcomes -->
+<p style="font-weight: bold; font-size: 18px; color: #004d00;">Programme Outcomes (PO)</p>
+<p style="line-height: 1.6;">
+    <b>PO1 – Problem Solving Skill</b>: Apply management theories and HR practices to solve business problems.<br>
+    <b>PO2 – Decision Making Skill</b>: Make precise decisions using analytical and critical thinking based on data.<br>
+    <b>PO3 – Ethical Value</b>: Incorporate quality, ethical, and legal values in organizational activities.<br>
+    <b>PO4 – Communication Skill</b>: Develop strong communication, managerial, and interpersonal skills.<br>
+    <b>PO5 – Individual and Team Leadership</b>: Lead individually and in teams to achieve organizational goals.<br>
+    <b>PO6 – Employability Skill</b>: Learn contemporary business practices to enhance employability skills.<br>
+    <b>PO7 – Entrepreneurial Skill</b>: Gain skills and competencies to become successful entrepreneurs.<br>
+    <b>PO8 – Contribution to Society</b>: Excel in careers and contribute meaningfully to society.<br>
+    <b>PO9 – Multicultural Competence</b>: Understand multiple cultural values and develop a global perspective.<br>
+    <b>PO10 – Moral and Ethical Awareness</b>: Embrace moral and ethical values in personal and professional life.
+</p>
+
+<hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+<!-- Programme Specific Outcomes -->
+<p style="font-weight: bold; font-size: 18px; color: #004d00;">Programme Specific Outcomes (PSO)</p>
+<p style="line-height: 1.6;">
+    <b>PSO1 – Professional Skills</b>: Acquire professional skills in management and human resources.<br>
+    <b>PSO2 – Proficiency in Business Applications</b>: Attain proficiency in business and computer applications.<br>
+    <b>PSO3 – Team & Organizational Goals</b>: Formulate plans to achieve team and organizational goals.
+</p>
+
+<hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+<!-- Programme Educational Objectives -->
+<p style="font-weight: bold; font-size: 18px; color: #004d00;">Programme Educational Objectives (PEO)</p>
+<p style="line-height: 1.6;">
+    <b>PEO1 – Professional Development</b>: Develop as competent professionals in the field of management.<br>
+    <b>PEO2 – Social Contribution</b>: Contribute positively to social development with good character.<br>
+    <b>PEO3 – Lifelong Learning</b>: Engage in lifelong learning and research for continuous growth.
+</p>
+`,
+
+  "mcom": `<h4 style="color: #2E8B57; text-align: center; font-size: 22px; margin-bottom: 5px;">
+    M.Com
+</h4>
+<hr style="width: 50%; border: 1px solid #2E8B57; margin: 10px auto;">
+
+<!-- Course Outcomes -->
+<p style="font-weight: bold; font-size: 18px; color: #006400;">Course Outcomes (COs)</p>
+<p style="line-height: 1.6;">
+    <b>CO1 – Advanced Knowledge Acquisition</b>: Develop comprehensive and specialized knowledge in core areas such as finance, taxation, management, marketing, and accounting.<br>
+    <b>CO2 – Research & Analytical Thinking</b>: Apply logical and analytical skills through research methodologies and project work, promoting evidence-based decision-making.<br>
+    <b>CO3 – Technology & Application</b>: Utilize software tools and computer applications relevant to commerce, enabling digital literacy in financial and business processes.<br>
+    <b>CO4 – Professional Competency</b>: Gain real-world experience through internships and fieldwork to build confidence and readiness for employment or entrepreneurship.<br>
+    <b>CO5 – Ethics and Legal Awareness</b>: Understand and apply ethical, legal, and corporate governance principles in business operations and decision-making.
+</p>
+
+<hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+<!-- Programme Outcomes -->
+<p style="font-weight: bold; font-size: 18px; color: #006400;">Programme Outcomes (POs)</p>
+<p style="line-height: 1.6;">
+    <b>PO1 – Problem Solving Skill</b>: Apply commerce and management theories to solve business problems using strategic and research-oriented approaches.<br>
+    <b>PO2 – Decision-Making Skill</b>: Demonstrate data-driven decision-making by employing critical thinking and statistical analysis.<br>
+    <b>PO3 – Ethical Value</b>: Integrate ethics and values into all business and professional practices, upholding corporate social responsibility.<br>
+    <b>PO4 – Communication Skill</b>: Exhibit effective oral, written, and interpersonal communication skills suitable for professional and academic contexts.<br>
+    <b>PO5 – Leadership Skill</b>: Take initiative and demonstrate leadership qualities in team-based environments to achieve organizational goals.<br>
+    <b>PO6 – Employability Skill</b>: Master practical skills aligned with current industry needs to enhance job opportunities and workplace effectiveness.<br>
+    <b>PO7 – Entrepreneurial Skill</b>: Cultivate entrepreneurial thinking to create, plan, and manage new business ventures effectively.<br>
+    <b>PO8 – Contribution to Society</b>: Use knowledge and skills to make meaningful contributions to society, fostering sustainable and inclusive development.<br>
+    <b>PO9 – Multicultural Competence</b>: Demonstrate awareness of cultural diversity and global business practices in professional decision-making.<br>
+    <b>PO10 – Moral & Ethical Reasoning</b>: Recognize ethical dilemmas and apply ethical reasoning to maintain integrity and accountability.
+</p>
+
+<hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+<!-- Programme Specific Outcomes -->
+<p style="font-weight: bold; font-size: 18px; color: #006400;">Programme Specific Outcomes (PSOs)</p>
+<p style="line-height: 1.6;">
+    <b>PSO1 – Placement</b>: Prepare students for diverse roles in public and private sectors by equipping them with domain-specific knowledge and soft skills.<br>
+    <b>PSO2 – Entrepreneur</b>: Inspire entrepreneurial ventures by enhancing decision-making, innovation, and leadership skills.<br>
+    <b>PSO3 – Research and Development</b>: Promote a research-driven approach to organizational development, complying with legal frameworks and HR practices.
+</p>
+
+<hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+<!-- Programme Educational Objectives -->
+<p style="font-weight: bold; font-size: 18px; color: #006400;">Programme Educational Objectives (PEOs)</p>
+<p style="line-height: 1.6;">
+    <b>PEO1 – Professional Excellence</b>: Produce postgraduates who demonstrate mastery in commerce disciplines and succeed in industry, research, and academia.<br>
+    <b>PEO2 – Social Contribution</b>: Instill a sense of ethical responsibility and community engagement for inclusive and sustainable societal development.<br>
+    <b>PEO3 – Lifelong Learning & Innovation</b>: Encourage continuous personal and professional development through critical thinking, adaptability, and innovation.
+</p>
+ `, 
+    "msc_maths": ` <h4 style="color: #4B0082; text-align: center; font-size: 22px; margin-bottom: 5px;">
+    M.Sc Mathematics
+</h4>
+<hr style="width: 50%; border: 1px solid #4B0082; margin: 10px auto;">
+
+<!-- Course Outcomes -->
+<p style="font-weight: bold; font-size: 18px; color: #483D8B;">Course Outcomes (COs)</p>
+<p style="line-height: 1.6;">
+    <b>CO1 – Advanced Mathematical Knowledge</b>: Understand and apply advanced concepts in pure and applied mathematics, including topology, functional analysis, algebra, and complex analysis.<br>
+    <b>CO2 – Problem Solving and Research Skills</b>: Formulate, analyze, and solve complex mathematical problems using modern analytical techniques and logical reasoning.<br>
+    <b>CO3 – Mathematical Modeling and Applications</b>: Develop and apply mathematical models to solve real-world problems in science, engineering, economics, and other interdisciplinary fields.<br>
+    <b>CO4 – Computational Proficiency</b>: Utilize programming languages and mathematical software (e.g., MATLAB, Mathematica, Python) to perform computations, simulations, and research-related tasks.<br>
+    <b>CO5 – Independent Research and Critical Thinking</b>: Conduct independent research, critically evaluate mathematical literature, and present findings in a clear and coherent manner.
+</p>
+
+<hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+<!-- Programme Outcomes -->
+<p style="font-weight: bold; font-size: 18px; color: #483D8B;">Programme Outcomes (POs)</p>
+<p style="line-height: 1.6;">
+    <b>PO1 – Advanced Mathematical Understanding</b>: Attain in-depth knowledge of advanced mathematics, including pure and applied branches such as algebra, analysis, topology, differential equations, and mathematical modeling.<br>
+    <b>PO2 – Analytical and Logical Thinking</b>: Develop strong analytical and logical reasoning skills to approach and solve complex mathematical and interdisciplinary problems.<br>
+    <b>PO3 – Research and Innovation</b>: Engage in independent research, formulate hypotheses, design experiments or theoretical models, and contribute to the advancement of mathematical knowledge.<br>
+    <b>PO4 – Computational and Technological Proficiency</b>: Use modern mathematical tools, programming languages, and software such as MATLAB, Python, LaTeX, and Mathematica for modeling, analysis, and visualization.<br>
+    <b>PO5 – Effective Communication</b>: Communicate mathematical ideas clearly and effectively through presentations, research papers, and collaborative projects.<br>
+    <b>PO6 – Interdisciplinary Applications</b>: Apply mathematical concepts to solve problems in physics, computer science, economics, biology, and engineering, encouraging a multidisciplinary approach.<br>
+    <b>PO7 – Critical Evaluation and Problem-Solving</b>: Cultivate the ability to critically evaluate mathematical theories, proofs, and models, identifying limitations and developing alternative approaches for problem-solving.<br>
+    <b>PO8 – Ethical and Professional Responsibility</b>: Demonstrate professional integrity, academic honesty, and ethical responsibility in research, teaching, and applications of mathematics.<br>
+    <b>PO9 – Lifelong Learning and Adaptability</b>: Develop the capacity for self-directed learning to stay updated with emerging trends in mathematics, technology, and related fields.<br>
+    <b>PO10 – Leadership and Teamwork</b>: Exhibit leadership qualities and the ability to work collaboratively in academic, research, and professional settings, contributing to collective knowledge and innovation.
+</p>
+
+<hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+<!-- Programme Specific Outcomes -->
+<p style="font-weight: bold; font-size: 18px; color: #483D8B;">Programme Specific Outcomes (PSOs)</p>
+<p style="line-height: 1.6;">
+    <b>PSO1 – In-Depth Knowledge of Mathematical Disciplines</b>: Demonstrate mastery in advanced areas of mathematics such as real and complex analysis, abstract algebra, topology, functional analysis, and differential equations.<br>
+    <b>PSO2 – Mathematical Modeling and Applications</b>: Construct and analyze mathematical models for solving real-world problems in fields like physics, engineering, computer science, economics, and biology.<br>
+    <b>PSO3 – Research Competency and Problem Solving</b>: Conduct independent research using advanced mathematical techniques and develop innovative solutions to theoretical and applied problems.
+</p>
+
+<hr style="border: 0.5px dashed #999; margin: 15px 0;">
+
+<!-- Programme Educational Objectives -->
+<p style="font-weight: bold; font-size: 18px; color: #483D8B;">Programme Educational Objectives (PEOs)</p>
+<p style="line-height: 1.6;">
+    <b>PEO1 – Advanced Knowledge and Understanding</b>: Provide students with a deep and broad understanding of advanced mathematical theories, structures, and techniques across pure and applied mathematics.<br>
+    <b>PEO2 – Research and Innovation</b>: Develop the ability to conduct independent research, formulate mathematical models, and contribute to innovative solutions in both theoretical and applied contexts.<br>
+    <b>PEO3 – Professional and Academic Growth</b>: Prepare graduates for successful careers in academia, research institutions, education, data science, finance, and industry, as well as for doctoral and post-doctoral studies.
+</p>
+`, 
+      "msc_physics": `<div class="container my-4">
+  <div class="">
+    <div class="card-body">
+
+      <h4 class="text-center text-primary mb-3">
+        <i class="bi bi-lightning-fill"></i> M.Sc Physics
+      </h4>
+      <hr class="mx-auto" style="width: 50%; ">
+
+      <!-- Course Outcomes -->
+      <h5 class="text-success mt-4">Course Outcomes (COs)</h5>
+      <ul>
+        <li><strong>CO1:</strong> Understand core concepts like quantum mechanics, classical mechanics, electromagnetism, and statistical mechanics.</li>
+        <li><strong>CO2:</strong> Apply mathematics and programming tools (MATLAB, FORTRAN, C) to solve physics problems.</li>
+        <li><strong>CO3:</strong> Gain hands-on experience through lab experiments, internships, and research projects.</li>
+        <li><strong>CO4:</strong> Analyze and interpret experimental and simulated data effectively.</li>
+        <li><strong>CO5:</strong> Prepare for academic, research, teaching, or industry careers.</li>
+      </ul>
+
+      <!-- Programme Outcomes -->
+      <h5 class="text-success mt-4">Programme Outcomes (POs)</h5>
+      <ul>
+        <li><strong>PO1:</strong> Acquire advanced knowledge in core areas of physics.</li>
+        <li><strong>PO2:</strong> Apply analytical and critical thinking to solve complex scientific problems.</li>
+        <li><strong>PO3:</strong> Conduct independent scientific research using modern tools and techniques.</li>
+        <li><strong>PO4:</strong> Communicate scientific ideas effectively through reports and presentations.</li>
+        <li><strong>PO5:</strong> Demonstrate ethical responsibility and integrity in research and professional practice.</li>
+        <li><strong>PO6:</strong> Engage in lifelong learning and stay updated with recent developments in physics.</li>
+        <li><strong>PO7:</strong> Work effectively as part of interdisciplinary teams in academic and industrial settings.</li>
+        <li><strong>PO8:</strong> Use computational methods and modern instruments to explore and model physical phenomena.</li>
+        <li><strong>PO9:</strong> Foster scientific temper and contribute to knowledge dissemination in society.</li>
+        <li><strong>PO10:</strong> Adapt to emerging technologies and global trends in physics and related fields.</li>
+      </ul>
+
+      <!-- Programme Specific Outcomes -->
+      <h5 class="text-success mt-4">Programme Specific Outcomes (PSOs)</h5>
+      <ul>
+        <li><strong>PSO1:</strong> Demonstrate a deep understanding of advanced physics topics and their applications.</li>
+        <li><strong>PSO2:</strong> Design, execute, and analyze experiments independently using appropriate tools and methods.</li>
+        <li><strong>PSO3:</strong> Develop computational models and simulations for physical systems.</li>
+      </ul>
+
+      <!-- Programme Educational Objectives -->
+      <h5 class="text-success mt-4">Programme Educational Objectives (PEOs)</h5>
+      <ul>
+        <li><strong>PEO1:</strong> Build a strong foundation in physics to pursue higher education, research, and careers in academia or industry.</li>
+        <li><strong>PEO2:</strong> Promote innovation, scientific ethics, and leadership through practical and research-based learning.</li>
+        <li><strong>PEO3:</strong> Contribute to societal development through scientific thinking, responsibility, and sustainable practices.</li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+ `, 
+
+    };
+
+    document.getElementById("outcome-content").innerHTML = content[dept] || "<h4>No data available</h4>";
   }
 </script>
 
 </body>
 </html>
+
 
 
 <footer class="footer text-white mt-5 pt-4" style="background-color: #004080;">
