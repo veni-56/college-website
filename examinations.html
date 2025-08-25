@@ -148,7 +148,130 @@
     </nav>
   </div>
 
-  
+<style>
+
+    h2 {
+        text-align: center;
+        margin-bottom: 40px;
+        color: #343a40;
+        font-weight: 700;
+    }
+
+    .card {
+        border: none;
+        border-radius: 15px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    .card-body {
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .card-text {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        color: #495057;
+    }
+
+    .card-link {
+        font-weight: bold;
+        color: #fff;
+        background-color: #0d6efd;
+        padding: 10px 20px;
+        border-radius: 50px;
+        transition: background-color 0.3s;
+        text-decoration: none;
+    }
+
+    .card-link:hover {
+        background-color: #0056b3;
+    }
+
+    .pdf-icon {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: #dc3545;
+    }
+
+    .col-md-4 {
+        margin-bottom: 20px;
+    }
+.section-heading {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #343a40;
+}
+
+.section-heading::after {
+    content: "";
+    position: absolute;
+    width: 60px;      /* width of divider */
+    height: 3px;      /* thickness of divider */
+    background-color:rgb(183, 240, 183) ; /* color of divider */
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    border-radius: 2px;
+}
+
+</style>
+
+<div class="container text-center">
+    <h2 class="section-heading">Examination</h2>
+</div>
+
+
+    <div class="row justify-content-center">
+        <!-- I-Internal Time Table -->
+        <div class="col-md-4">
+            <div class="card shadow-sm text-center">
+                <div class="card-body">
+                    <i class="fa-solid fa-file-pdf pdf-icon"></i>
+                    <p class="card-text">I-Internal Time Table</p>
+                    <a href="pdfs/Circular-I-2019-2020.pdf" target="_blank" class="card-link">View PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- II-Internal Time Table -->
+        <div class="col-md-4">
+            <div class="card shadow-sm text-center">
+                <div class="card-body">
+                    <i class="fa-solid fa-file-pdf pdf-icon"></i>
+                    <p class="card-text">II-Internal Time Table</p>
+                    <a href="pdfs/Hall-Arrangement-I-2019-2020.pdf" target="_blank" class="card-link">View PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Model Time Table -->
+        <div class="col-md-4">
+            <div class="card shadow-sm text-center">
+                <div class="card-body">
+                    <i class="fa-solid fa-file-pdf pdf-icon"></i>
+                    <p class="card-text">Model Time Table</p>
+                    <a href="pdfs/Time-Table-I-2019-2020.pdf" target="_blank" class="card-link">View PDF</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
 
 <footer class="footer text-white mt-5 pt-4" style="background-color: #004080;">
 
@@ -170,11 +293,10 @@
 
       <!-- 📞 Call Us -->
       <div class="col-md-3 mb-3 d-flex flex-column">
-        <h5 class="mb-3"><i class="fas fa-phone-alt me-2"></i>Call Us</h5>
+        <h5 class="mb-3"><i class="fa-solid fa-phone-volume"></i></i> Call Us</h5>
         <p class="mb-0">
           Office : <a href="tel:+914563221717" class="text-dark text-decoration-none">+91 - 4563 221717</a><br>
           Admission : <a href="tel:+914563221717" class="text-dark text-decoration-none">+91 - 4563 221717</a><br>
-          Hostel : <a href="tel:+914563221717" class="text-dark text-decoration-none">+91 - 4563 221717</a><br>
           WhatsApp : <a href="https://wa.me/914563221717" target="_blank" class="text-dark text-decoration-none">+91 - 4563 221717</a>
         </p>
       </div>
@@ -193,11 +315,11 @@
       <div class="col-md-3 mb-3 d-flex flex-column">
         <h5 class="mb-3"><i class="fas fa-link me-2"></i>Quick Links</h5>
         <ul class="list-unstyled">
-          <li><a href="index.html" class="text-dark text-decoration-none">🏠 Home</a></li>
-          <li><a href="about.html" class="text-dark text-decoration-none">ℹ️ About Us</a></li>
-          <li><a href="courses.html" class="text-dark text-decoration-none">🎓 Courses</a></li>
-          <li><a href="admissions.html" class="text-dark text-decoration-none">📝 Admissions</a></li>
-          <li><a href="contact.html" class="text-dark text-decoration-none">📩 Contact Us</a></li>
+          <li><a href="index.html" class="text-dark text-decoration-none">Home</a></li>
+          <li><a href="outcomes.html" class="text-dark text-decoration-none">Outcomes</a></li>
+          <li><a href="Department.html" class="text-dark text-decoration-none">Courses</a></li>
+          <li><a href="application.html" class="text-dark text-decoration-none">Admissions</a></li>
+          <li><a href="contact.html" class="text-dark text-decoration-none">Contact Us</a></li>
         </ul>
       </div>
 
@@ -207,20 +329,25 @@
   <!-- 🔷 Social Media & Copyright -->
   <div class="text-center py-3 text-white" style="background-color: #003366;">
     <div class="mb-2">
-      <a href="https://facebook.com/" target="_blank" class="text-white me-4 fs-5" aria-label="Facebook">
+      <a href="https://www.facebook.com/profile.php?id=61561307447819" target="_blank" class="text-white me-4 fs-5" aria-label="Facebook">
         <i class="fab fa-facebook-f"></i>
       </a>
-      <a href="https://instagram.com/akddrcollege" target="_blank" class="text-white me-4 fs-5" aria-label="Instagram">
+      <a href="https://www.instagram.com/a.k.d.dharma_raja_womens_clg/" target="_blank" class="text-white me-4 fs-5" aria-label="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
-      <a href="https://youtube.com/" target="_blank" class="text-white me-4 fs-5" aria-label="YouTube">
+      <a href="https://www.youtube.com/@akddrconnect" target="_blank" class="text-white me-4 fs-5" aria-label="YouTube">
         <i class="fab fa-youtube"></i>
       </a>
+      <a href="https://www.linkedin.com/in/a-k-d-dharma-raja-women-s-college-rajapalayam-478915325/" target="_blank" class="text-white me-4 fs-5" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      
     </div>
     &copy; 2025 <strong>A.K.D. Dharma Raja Women's College - Rajapalaiyam</strong>. All rights reserved.
   </div>
 
 </footer>
+
 
 <script>
   const mapImage = document.getElementById('mapImage');
