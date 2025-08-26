@@ -148,7 +148,7 @@
     </nav>
   </div>
 
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -157,6 +157,8 @@
   <style>
     body {
       font-weight: bold; /* ALL TEXT BOLD */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
     }
     .divider-line {
       width: 80px;
@@ -191,6 +193,24 @@
       text-align: center;
       vertical-align: middle;
     }
+    .faculty-table img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .faculty-table img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+    .btn-syllabus {
+      margin-right: 10px;
+      margin-top: 5px;
+    }
   </style>
 </head>
 <body>
@@ -219,10 +239,8 @@
       <h4 class="custom-heading mb-2">About the Department</h4>
       <div class="divider-line"></div>
       <p class="text-dark" style="text-align: justify; font-size: 17px; line-height: 1.8;">
-        The B.A. (Corporate Secretaryship) programme was launched in 1993. In 2006, the programme was restructured and renamed as B.Com. (Corporate Secretaryship). 
-        With the rise of the Information Technology era and student interest in computer-based studies, the department transitioned to B.Com. (Computer Applications) in the academic year 2008–2009.
-        <br><br>
-        The B.Com (CA) programme combines core commerce subjects with computer applications, preparing students for careers in finance, accounting, software, and business analytics.
+        The B.Com (Computer Applications) programme was introduced in 2008–2009 to combine core commerce subjects with computer applications.
+        This program prepares students for careers in finance, accounting, software, and business analytics.
       </p>
     </div>
 
@@ -230,7 +248,7 @@
     <div class="tab-pane fade" id="vision">
       <h4 class="custom-heading mb-2">Vision</h4>
       <div class="divider-line"></div>
-      <p>
+      <p style="font-size:16px; line-height:1.6;">
         To equip students with comprehensive knowledge in commerce and computer applications, nurturing critical thinking, digital competence, and ethical values to excel in the evolving global business landscape.
       </p>
       <h4 class="custom-heading mb-2 mt-4">Mission</h4>
@@ -247,20 +265,46 @@
     <!-- Faculty -->
     <div class="tab-pane fade" id="faculty">
       <div class="table-responsive">
-        <table class="table table-bordered faculty-table">
+        <table class="table table-bordered faculty-table align-middle">
           <thead style="background-color: #004080; color: white;">
             <tr>
+              <th>Photo</th>
               <th>Name</th>
               <th>Qualification</th>
               <th>Designation</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>Mrs. A. Dhanalakshmi</td><td>M.Com., M.Phil., PGDCA., PGDFM.</td><td>Head & Assistant Professor</td></tr>
-            <tr><td>Mrs. C. Revathi</td><td>M.Com (CA)., M.Phil.</td><td>Assistant Professor</td></tr>
-            <tr><td>Mrs. R. Muthuramya</td><td>M.Com (CA)., M.Phil.</td><td>Assistant Professor</td></tr>
-            <tr><td>Dr. (Mrs.) T. Kalarani</td><td>M.Com., M.Phil., M.Ed., Ph.D., HDCA.</td><td>Assistant Professor</td></tr>
-            <tr><td>Mrs. G. Thenamutha</td><td>M.Sc., M.Phil., B.Ed.</td><td>Assistant Professor</td></tr>
+            <tr>
+              <td><img src="static/images/dhanalakshmi.jpg" alt="Mrs. A. Dhanalakshmi"></td>
+              <td>Mrs. A. Dhanalakshmi</td>
+              <td>M.Com., M.Phil., PGDCA., PGDFM.</td>
+              <td>Head & Assistant Professor</td>
+            </tr>
+            <tr>
+              <td><img src="static/images/revathi.jpg" alt="Mrs. C. Revathi"></td>
+              <td>Mrs. C. Revathi</td>
+              <td>M.Com (CA)., M.Phil.</td>
+              <td>Assistant Professor</td>
+            </tr>
+            <tr>
+              <td><img src="static/images/muthuramya.jpg" alt="Mrs. R. Muthuramya"></td>
+              <td>Mrs. R. Muthuramya</td>
+              <td>M.Com (CA)., M.Phil.</td>
+              <td>Assistant Professor</td>
+            </tr>
+            <tr>
+              <td><img src="static/images/kalarani.jpg" alt="Dr. (Mrs.) T. Kalarani"></td>
+              <td>Dr. (Mrs.) T. Kalarani</td>
+              <td>M.Com., M.Phil., M.Ed., Ph.D., HDCA.</td>
+              <td>Assistant Professor</td>
+            </tr>
+            <tr>
+              <td><img src="static/images/thenamutha.jpg" alt="Mrs. G. Thenamutha"></td>
+              <td>Mrs. G. Thenamutha</td>
+              <td>M.Sc., M.Phil., B.Ed.</td>
+              <td>Assistant Professor</td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -285,12 +329,16 @@
       <h4 class="custom-heading mb-2">Syllabus</h4>
       <div class="divider-line"></div>
       <p>Download the latest syllabus:</p>
-      <a href="static/syllabus/B.COM(CA) New Syllabus 2025.pdf" target="_blank" class="btn btn-outline-primary btn-sm">B.Com (CA) - New Syllabus</a>
-      <a href="static/syllabus/B.COM(CA) New Syllabus 2025.pdf" target="_blank" class="btn btn-outline-secondary btn-sm ms-2">B.Com (CA) - Old Syllabus</a>
+      <a href="static/syllabus/B.COM(CA) New Syllabus 2025.pdf" target="_blank" class="btn btn-outline-primary btn-sm btn-syllabus">B.Com (CA) - New Syllabus</a>
+      <a href="static/syllabus/B.COM(CA) Old Syllabus 2025.pdf" target="_blank" class="btn btn-outline-secondary btn-sm btn-syllabus">B.Com (CA) - Old Syllabus</a>
     </div>
 
   </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 
 
 

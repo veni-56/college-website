@@ -148,8 +148,7 @@
     </nav>
   </div>
 
-  
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -158,6 +157,8 @@
   <style>
     body {
       font-weight: bold; /* ALL TEXT BOLD */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
     }
     .divider-line {
       width: 80px;
@@ -192,6 +193,24 @@
       text-align: center;
       vertical-align: middle;
     }
+    .faculty-table img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .faculty-table img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+    .btn-syllabus {
+      margin-right: 10px;
+      margin-top: 5px;
+    }
   </style>
 </head>
 <body>
@@ -220,9 +239,8 @@
       <h4 class="custom-heading mb-2">About the Department</h4>
       <div class="divider-line"></div>
       <p class="text-dark" style="text-align: justify; font-size: 17px; line-height: 1.8;">
-        The Department of Computer Science was established in 1990. It currently has 4 faculty members and over 110 students.
-        The department is well-equipped with modern laboratories and provides quality education, 
-        focusing on activity-based learning, industry exposure, and career readiness for students.
+        The Department of Computer Science was established in 1990. It currently has 5 faculty members and over 110 students.
+        The department is well-equipped with modern laboratories and provides quality education, focusing on activity-based learning, industry exposure, and career readiness for students.
       </p>
     </div>
 
@@ -230,7 +248,7 @@
     <div class="tab-pane fade" id="vision">
       <h4 class="custom-heading mb-2">Vision</h4>
       <div class="divider-line"></div>
-      <p>
+      <p style="font-size:16px; line-height:1.6;">
         To empower students to reach the zenith by offering quality education and producing excellent computer professionals with strong ethical values and industry-ready skills.
       </p>
       <h4 class="custom-heading mb-2 mt-4">Mission</h4>
@@ -246,20 +264,46 @@
     <!-- Faculty -->
     <div class="tab-pane fade" id="faculty">
       <div class="table-responsive">
-        <table class="table table-bordered faculty-table">
+        <table class="table table-bordered faculty-table align-middle">
           <thead style="background-color: #004080; color: white;">
             <tr>
+              <th>Photo</th>
               <th>Name</th>
               <th>Qualification</th>
               <th>Designation</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>Mrs. R. Dhanalakshmi</td><td>MCA</td><td>Head & Assistant Professor</td></tr>
-            <tr><td>Mrs. D. Ruth</td><td>MCA., M.Phil., B.Ed.</td><td>Assistant Professor</td></tr>
-            <tr><td>Mrs. U. Devi</td><td>B.Tech (IT)</td><td>Assistant Professor</td></tr>
-            <tr><td>Mrs. R. Sowbaranika</td><td>M.Sc., M.Ed.</td><td>Assistant Professor</td></tr>
-            <tr><td>Mrs. K. Devi</td><td>B.E (CSE)., B.Ed.</td><td>Assistant Professor</td></tr>
+            <tr>
+              <td><img src="static/images/dhanalakshmi.jpg" alt="Mrs. R. Dhanalakshmi"></td>
+              <td>Mrs. R. Dhanalakshmi</td>
+              <td>MCA</td>
+              <td>Head & Assistant Professor</td>
+            </tr>
+            <tr>
+              <td><img src="static/images/ruth.jpg" alt="Mrs. D. Ruth"></td>
+              <td>Mrs. D. Ruth</td>
+              <td>MCA., M.Phil., B.Ed.</td>
+              <td>Assistant Professor</td>
+            </tr>
+            <tr>
+              <td><img src="static/images/devi.jpg" alt="Mrs. U. Devi"></td>
+              <td>Mrs. U. Devi</td>
+              <td>B.Tech (IT)</td>
+              <td>Assistant Professor</td>
+            </tr>
+            <tr>
+              <td><img src="static/images/sowbaranika.jpg" alt="Mrs. R. Sowbaranika"></td>
+              <td>Mrs. R. Sowbaranika</td>
+              <td>M.Sc., M.Ed.</td>
+              <td>Assistant Professor</td>
+            </tr>
+            <tr>
+              <td><img src="static/images/kdevi.jpg" alt="Mrs. K. Devi"></td>
+              <td>Mrs. K. Devi</td>
+              <td>B.E (CSE)., B.Ed.</td>
+              <td>Assistant Professor</td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -283,8 +327,8 @@
       <h4 class="custom-heading mb-2">Syllabus</h4>
       <div class="divider-line"></div>
       <p>Download the latest syllabus:</p>
-      <a href="static/syllabus/B.Sc. Computer Science - New Syllabus 2023.pdf" target="_blank" class="btn btn-outline-primary btn-sm">B.Sc. Computer Science - New Syllabus</a>
-      <a href="static/syllabus/B.SC._COMPUTER_SCIENCE old.pdf" target="_blank" class="btn btn-outline-secondary btn-sm ms-2">B.Sc. Computer Science - Old Syllabus</a>
+      <a href="static/syllabus/B.Sc. Computer Science - New Syllabus 2023.pdf" target="_blank" class="btn btn-outline-primary btn-sm btn-syllabus">B.Sc. Computer Science - New Syllabus</a>
+      <a href="static/syllabus/B.Sc. Computer Science - Old Syllabus.pdf" target="_blank" class="btn btn-outline-secondary btn-sm btn-syllabus">B.Sc. Computer Science - Old Syllabus</a>
     </div>
 
   </div>
@@ -293,6 +337,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 <footer class="footer text-white mt-5 pt-4" style="background-color: #004080;">
 

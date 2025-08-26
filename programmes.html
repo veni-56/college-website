@@ -147,13 +147,66 @@
       </div>
     </nav>
   </div>
-  <style>
-    th { background:#0a7d34; color:#fff; text-align:center; }
-    .level-head { background:#ff6f6f; color:#fff; text-align:center; font-weight:700; }
-    td, th { vertical-align:middle; }
-    a { text-decoration:none; color:#0d6efd; }
-    a:hover { text-decoration:underline; }
-  </style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Courses</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body {
+    background: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  th.level-head {
+    background: #0a7d34;
+    color: #fff;
+    text-align: center;
+    font-weight: 700; /* Bold header */
+  }
+
+  th {
+    background: #0a7d34;
+    color: #fff;
+    text-align: center;
+    font-weight: 700; /* Bold header */
+  }
+
+  td, th {
+    vertical-align: middle;
+  }
+
+  /* Row hover effect */
+  tbody tr:hover {
+    background: #e8f5e9;
+  }
+
+  /* Bold links */
+  a.course-link {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 700; /* Bold */
+  }
+
+  a.course-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Bold eligibility badge */
+  .eligibility-badge {
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 700; /* Bold */
+  }
+
+  /* Bold course name */
+  td:nth-child(2) {
+    font-weight: 700;
+  }
+</style>
 </head>
 <body>
 <div class="container my-4">
@@ -173,50 +226,50 @@
       <tr>
         <td class="text-center">1</td>
         <td>English</td>
-        <td>H.S.C with English</td>
-        <td class="text-center"><a href="cs_department.html">Click Here</a></td>
+        <td><span class="eligibility-badge">H.S.C with English</span></td>
+        <td class="text-center"><a href="department_english.html" class="course-link">Click Here</a></td>
       </tr>
       <tr>
         <td class="text-center">2</td>
         <td>Tamil</td>
-        <td>H.S.C with Tamil</td>
-        <td class="text-center"><a href="english_department.html">Click Here</a></td>
+        <td><span class="eligibility-badge">H.S.C with Tamil</span></td>
+        <td class="text-center"><a href="department_tamil.html" class="course-link">Click Here</a></td>
       </tr>
       <tr>
         <td class="text-center">3</td>
-        <td>Business Administration</td>
-        <td>H.S.C with(Any Group)</td>
-        <td class="text-center">—</td>
+        <td>BBA</td>
+        <td><span class="eligibility-badge">H.S.C Any Group</span></td>
+        <td class="text-center"><a href="department_bba.html" class="course-link">Click Here</a></td>
       </tr>
       <tr>
         <td class="text-center">4</td>
         <td>Commerce</td>
-        <td>H.S.C with Commerce & Accountancy</td>
-        <td class="text-center"><a href="cs_department.html">Click Here</a></td>
+        <td><span class="eligibility-badge">H.S.C Commerce & Accountancy</span></td>
+        <td class="text-center"><a href="department_bcom.html" class="course-link">Click Here</a></td>
       </tr>
       <tr>
         <td class="text-center">5</td>
-        <td></td>
-        <td>H.S.C with Commerce, Accountancy & Computer Application</td>
-        <td class="text-center"><a href="english_department.html">Click Here</a></td>
+        <td>Commerce with CA</td>
+        <td><span class="eligibility-badge">H.S.C Commerce + Computer</span></td>
+        <td class="text-center"><a href="department_bcomca.html" class="course-link">Click Here</a></td>
       </tr>
       <tr>
         <td class="text-center">6</td>
-        <td>computer Science</td>
-        <td>H.S.C With Maths & Physics/computer Science</td>
-        <td class="text-center"><a href="english_department.html">Click Here</a></td>
+        <td>Computer Science</td>
+        <td><span class="eligibility-badge">H.S.C Maths & Physics</span></td>
+        <td class="text-center"><a href="department_cs.html" class="course-link">Click Here</a></td>
       </tr>
       <tr>
         <td class="text-center">7</td>
         <td>Mathematics</td>
-        <td>H.S.C With Maths & Physics</td>
-        <td class="text-center"><a href="english_department.html">Click Here</a></td>
+        <td><span class="eligibility-badge">H.S.C Maths & Physics</span></td>
+        <td class="text-center"><a href="department_math.html" class="course-link">Click Here</a></td>
       </tr>
       <tr>
         <td class="text-center">8</td>
         <td>Physics</td>
-        <td>H.S.C With Maths & Physics</td>
-        <td class="text-center"><a href="english_department.html">Click Here</a></td>
+        <td><span class="eligibility-badge">H.S.C Maths & Physics</span></td>
+        <td class="text-center"><a href="department_physics.html" class="course-link">Click Here</a></td>
       </tr>
     </tbody>
   </table>
@@ -234,55 +287,47 @@
     </thead>
     <tbody>
       <tr>
-        <th style="width:60px;">S.No</th>
-        <th>Course Name</th>
-        <th>Eligibility</th>
-        <th style="width:150px;">Course Outcomes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
         <td class="text-center">1</td>
         <td>M.A Tamil</td>
-        <td>B.A (Tamil)</td>
-        <td class="text-center"><a href="cs_department.html">Click Here</a></td>
+        <td><span class="eligibility-badge">B.A Tamil</span></td>
+        <td class="text-center"><a href="#" class="course-link">Click Here</a></td>
       </tr>
       <tr>
         <td class="text-center">2</td>
         <td>M.Com</td>
-        <td>B.Com / B.B.A. / B.C.S / B.B.M / B.Com(CA)</td>
-        <td class="text-center"><a href="english_department.html">Click Here</a></td>
+        <td><span class="eligibility-badge">B.Com / BBA / BCS / BBM / B.Com(CA)</span></td>
+        <td class="text-center"><a href="#" class="course-link">Click Here</a></td>
       </tr>
       <tr>
         <td class="text-center">3</td>
         <td>M.Com(CA)</td>
-        <td>B.com / B.Com(CA)</td>
-        <td class="text-center">—</td>
+        <td><span class="eligibility-badge">B.Com / B.Com(CA)</span></td>
+        <td class="text-center"><a href="#" class="course-link">Click Here</a></td>
       </tr>
       <tr>
         <td class="text-center">4</td>
         <td>M.Sc Computer Science</td>
-        <td>B.Sc(CS) / B.C.A / B.Sc(IT)</td>
-        <td class="text-center"><a href="cs_department.html">Click Here</a></td>
+        <td><span class="eligibility-badge">B.Sc CS / BCA / BSc IT</span></td>
+        <td class="text-center"><a href="#" class="course-link">Click Here</a></td>
       </tr>
       <tr>
         <td class="text-center">5</td>
         <td>M.Sc Physics</td>
-        <td>B.Sc(physics)</td>
-        <td class="text-center"><a href="cs_department.html">Click Here</a></td>
+        <td><span class="eligibility-badge">B.Sc Physics</span></td>
+        <td class="text-center"><a href="#" class="course-link">Click Here</a></td>
       </tr>
       <tr>
         <td class="text-center">6</td>
-        <td>B.Sc Physical education</td>
-        <td>H.S.C (Any Group)</td>
-        <td class="text-center"><a href="cs_department.html">Click Here</a></td>
+        <td>B.Sc Physical Education</td>
+        <td><span class="eligibility-badge">H.S.C Any Group</span></td>
+        <td class="text-center"><a href="#" class="course-link">Click Here</a></td>
       </tr>
+    </tbody>
   </table>
 
 </div>
 </body>
 </html>
-
 
 <footer class="footer text-white mt-5 pt-4" style="background-color: #004080;">
 

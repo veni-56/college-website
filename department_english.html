@@ -148,8 +148,7 @@
     </nav>
   </div>
 
-  
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -158,6 +157,8 @@
   <style>
     body {
       font-weight: bold; /* ALL TEXT BOLD */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
     }
     .divider-line {
       width: 80px;
@@ -192,6 +193,24 @@
       text-align: center;
       vertical-align: middle;
     }
+    .faculty-table img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .faculty-table img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+    .btn-syllabus {
+      margin-right: 10px;
+      margin-top: 5px;
+    }
   </style>
 </head>
 <body>
@@ -221,7 +240,7 @@
       <div class="divider-line"></div>
       <p class="text-dark" style="text-align: justify; font-size: 17px; line-height: 1.8;">
         The Department of English was established in 1990 to empower women in and around Rajapalayam to meet global challenges.
-        The B.A. English programme began in 2003 with 28 students and 4 faculty members. Today, it has grown to 200 students and 8 faculty.
+        The B.A. English programme began in 2003 with 28 students and 4 faculty members. Today, it has grown to 200 students and 9 faculty.
         The department fosters a global literary and communicative environment, nurturing students with professional expertise and essential life skills.
       </p>
     </div>
@@ -230,14 +249,14 @@
     <div class="tab-pane fade" id="vision">
       <h4 class="custom-heading mb-2">Vision</h4>
       <div class="divider-line"></div>
-      <p>
+      <p style="font-size:16px; line-height:1.6;">
         To foster personal and intellectual growth through the study of literature by developing critical thinking,
         creativity, cultural understanding, and ethical values. The department aims to nurture confident, articulate,
         and socially responsible individuals who can contribute meaningfully to education, society, and the world.
       </p>
       <h4 class="custom-heading mb-2 mt-4">Mission</h4>
       <div class="divider-line"></div>
-      <p>
+      <p style="font-size:16px; line-height:1.6;">
         Transforming lives through the power of literature and language, nurturing scholars, writers, and thinkers for a brighter future.
       </p>
     </div>
@@ -245,24 +264,70 @@
     <!-- Faculty -->
     <div class="tab-pane fade" id="faculty">
       <div class="table-responsive">
-        <table class="table table-bordered faculty-table">
+        <table class="table table-bordered faculty-table align-middle">
           <thead style="background-color: #004080; color: white;">
             <tr>
+              <th>Photo</th>
               <th>Name</th>
               <th>Qualification</th>
               <th>Designation</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>Mrs. R. Lakshmi</td><td>M.A., M.LI.Sc.</td><td>Head & Assistant Professor</td></tr>
-            <tr><td>Mrs. N. Gayathri</td><td>M.A., M.Ed.</td><td>Assistant Professor</td></tr>
-            <tr><td>Dr. (Mrs.) P. Subathra Devi</td><td>M.A., M.Phil., B.Ed., Ph.D., PGDJMC</td><td>Assistant Professor</td></tr>
-            <tr><td>Mrs. G. Vaitheeswari</td><td>M.A.</td><td>Assistant Professor</td></tr>
-            <tr><td>Mrs. I. Mathavi</td><td>M.A., M.Phil., M.Ed.</td><td>Assistant Professor</td></tr>
-            <tr><td>Mrs. S. Vigneshwari</td><td>M.A., M.Phil., B.Ed.</td><td>Assistant Professor</td></tr>
-            <tr><td>Mrs. S. Vishnupriya</td><td>M.A., M.Phil.</td><td>Assistant Professor</td></tr>
-            <tr><td>Ms. R. Aishwarya</td><td>M.A.</td><td>Assistant Professor</td></tr>
-            <tr><td>Mrs. Simi</td><td>M.A., B.Ed.</td><td>Assistant Professor</td></tr>
+            <tr>
+              <td><img src="static/images/lakshmi.jpg" alt="Mrs. R. Lakshmi"></td>
+              <td>Mrs. R. Lakshmi</td>
+              <td>M.A., M.LI.Sc.</td>
+              <td>Head & Assistant Professor</td>
+            </tr>
+            <tr>
+              <td><img src="static/images/gayathri.jpg" alt="Mrs. N. Gayathri"></td>
+              <td>Mrs. N. Gayathri</td>
+              <td>M.A., M.Ed.</td>
+              <td>Assistant Professor</td>
+            </tr>
+            <tr>
+              <td><img src="static/images/subathra.jpg" alt="Dr. (Mrs.) P. Subathra Devi"></td>
+              <td>Dr. (Mrs.) P. Subathra Devi</td>
+              <td>M.A., M.Phil., B.Ed., Ph.D., PGDJMC</td>
+              <td>Assistant Professor</td>
+            </tr>
+            <tr>
+              <td><img src="static/images/vaitheeswari.jpg" alt="Mrs. G. Vaitheeswari"></td>
+              <td>Mrs. G. Vaitheeswari</td>
+              <td>M.A.</td>
+              <td>Assistant Professor</td>
+            </tr>
+            <tr>
+              <td><img src="static/images/mathavi.jpg" alt="Mrs. I. Mathavi"></td>
+              <td>Mrs. I. Mathavi</td>
+              <td>M.A., M.Phil., M.Ed.</td>
+              <td>Assistant Professor</td>
+            </tr>
+            <tr>
+              <td><img src="static/images/vigneshwari.jpg" alt="Mrs. S. Vigneshwari"></td>
+              <td>Mrs. S. Vigneshwari</td>
+              <td>M.A., M.Phil., B.Ed.</td>
+              <td>Assistant Professor</td>
+            </tr>
+            <tr>
+              <td><img src="static/images/vishnupriya.jpg" alt="Mrs. S. Vishnupriya"></td>
+              <td>Mrs. S. Vishnupriya</td>
+              <td>M.A., M.Phil.</td>
+              <td>Assistant Professor</td>
+            </tr>
+            <tr>
+              <td><img src="static/images/aishwarya.jpg" alt="Ms. R. Aishwarya"></td>
+              <td>Ms. R. Aishwarya</td>
+              <td>M.A.</td>
+              <td>Assistant Professor</td>
+            </tr>
+            <tr>
+              <td><img src="static/images/simi.jpg" alt="Mrs. Simi"></td>
+              <td>Mrs. Simi</td>
+              <td>M.A., B.Ed.</td>
+              <td>Assistant Professor</td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -287,8 +352,8 @@
       <h4 class="custom-heading mb-2">Syllabus</h4>
       <div class="divider-line"></div>
       <p>Download the latest syllabus:</p>
-      <a href="static/syllabus/B.A. English New Syllabus.pdf" target="_blank" class="btn btn-outline-primary btn-sm">B.A. English - New Syllabus</a>
-      <a href="static/syllabus/B.A._ENGLISH-Old Syllabus.pdf" target="_blank" class="btn btn-outline-secondary btn-sm ms-2">B.A. English - Old Syllabus</a>
+      <a href="static/syllabus/B.A. English New Syllabus.pdf" target="_blank" class="btn btn-outline-primary btn-sm btn-syllabus">B.A. English - New Syllabus</a>
+      <a href="static/syllabus/B.A. English Old Syllabus.pdf" target="_blank" class="btn btn-outline-secondary btn-sm btn-syllabus">B.A. English - Old Syllabus</a>
     </div>
 
   </div>
@@ -297,6 +362,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 <footer class="footer text-white mt-5 pt-4" style="background-color: #004080;">
 
