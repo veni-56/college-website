@@ -180,6 +180,17 @@
       color: white !important;
       border: none;
     }
+    
+  .faculty-table img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;       /* uniform crop */
+    border-radius: 50%;      /* circle shape */
+    border: 2px solid #ccc;  /* optional border */
+    display: block;
+    margin: auto;            /* center align inside td */
+  }
+
     .tab-pane {
       animation: fadeIn 0.4s ease-in-out;
     }
@@ -244,29 +255,88 @@
       </ul>
     </div>
 
-    <!-- Faculty -->
-    <div class="tab-pane fade" id="faculty">
-      <div class="table-responsive">
-        <table class="table table-bordered faculty-table">
-          <thead style="background-color: #004080; color: white;">
-            <tr>
-              <th>Name</th>
-              <th>Qualification</th>
-              <th>Designation</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Mrs. P. Meenakshi</td><td>M.Sc., M.Phil., B.Ed.</td><td>Head & Assistant Professor</td></tr>
-            <tr><td>Mrs. B. Jagadeeswari</td><td>M.Sc., M.Phil., PGDCA</td><td>Assistant Professor</td></tr>
-            <tr><td>Mrs. S. Manimala</td><td>M.Sc., M.Phil., DCA</td><td>Assistant Professor</td></tr>
-            <tr><td>Mrs. K. Vijayalakshmi</td><td>M.Sc., B.Ed.</td><td>Assistant Professor</td></tr>
-            <tr><td>Ms. S. Jaya Bala Sundhari</td><td>M.Sc., DMLT</td><td>Assistant Professor</td></tr>
-            <tr><td>Mrs. R. Muthulakshmi</td><td>M.Sc., DCA</td><td>Assistant Professor</td></tr>
-            <tr><td>Mrs. S. Mukila</td><td>M.Sc., M.Phil.</td><td>Assistant Professor</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+   
+<!-- Faculty -->
+<div class="tab-pane fade" id="faculty">
+  <div class="table-responsive">
+    <table class="table table-bordered faculty-table align-middle">
+      <thead style="background-color: #004080; color: white;">
+        <tr>
+          <th>Photo & Name</th>
+          <th>Qualification</th>
+          <th>Designation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center;">
+            <img src="static/photos/Meenakshi-maths.JPG" alt="Mrs. P. Meenakshi" style="width: 100px;"><br>
+            <strong>Mrs. P. Meenakshi</strong>
+          </td>
+          <td>M.Sc., M.Phil., B.Ed.</td>
+          <td>Head & Assistant Professor</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <img src="static/photos/Jegatheswari-maths.JPG" alt="Mrs. B. Jagadeeswari" style="width: 100px;"><br>
+            <strong>Mrs. B. Jagadeeswari</strong>
+          </td>
+          <td>M.Sc., M.Phil., PGDCA</td>
+          <td>Assistant Professor</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <img src="static/photos/manimala-maths.JPG" alt="Mrs. S. Manimala" style="width: 100px;"><br>
+            <strong>Mrs. S. Manimala</strong>
+          </td>
+          <td>M.Sc., M.Phil., DCA</td>
+          <td>Assistant Professor</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <img src="static/photos/Vijayalakshmi-maths.JPG" alt="Mrs. K. Vijayalakshmi" style="width: 100px;"><br>
+            <strong>Mrs. K. Vijayalakshmi</strong>
+          </td>
+          <td>M.Sc., B.Ed.</td>
+          <td>Assistant Professor</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <img src="static/photos/JayaBalaSundhari-Maths.JPG" alt="Ms. S. Jaya Bala Sundhari" style="width: 100px;"><br>
+            <strong>Ms. S. Jaya Bala Sundhari</strong>
+          </td>
+          <td>M.Sc., DMLT</td>
+          <td>Assistant Professor</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <!-- Photo missing: Add placeholder if needed -->
+            <img src="static/photos/muthulakshmi-maths.JPG" alt="Mrs. R. Muthulakshmi" style="width: 100px;"><br>
+            <strong>Mrs. R. Muthulakshmi</strong>
+          </td>
+          <td>M.Sc., DCA</td>
+          <td>Assistant Professor</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <img src="static/photos/Mukila.JPG" alt="Mrs. S. Mukila" style="width: 100px;"><br>
+            <strong>Mrs. S. Mukila</strong>
+          </td>
+          <td>M.Sc., M.Phil.</td>
+          <td>Assistant Professor</td>
+        </tr>
+<td style="text-align: center;">
+            <img src="static/photos/Mukila.JPG" alt="Mrs. S. Mukila" style="width: 100px;"><br>
+            <strong>Mrs. S. Vishnupriya</strong>
+          </td>
+          <td>M.Sc., M.Phil.</td>
+          <td>Assistant Professor</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
 
     <!-- Activities -->
     <div class="tab-pane fade" id="activities">

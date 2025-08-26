@@ -50,6 +50,25 @@
       text-align: center;
       vertical-align: middle;
     }
+
+  .faculty-table img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;   /* crop neatly */
+    border-radius: 50%;  /* round shape */
+    border: 2px solid #ccc;
+    display: block;
+    margin: auto;        /* center inside cell */
+  }
+  .faculty-table td {
+    text-align: center;
+    vertical-align: middle;
+  }
+  .faculty-table td b {
+    font-weight: bold;
+  }
+
+
   </style>
 
 </head>
@@ -238,28 +257,82 @@
     </div>
 
     <!-- Faculty -->
-    <div class="tab-pane fade" id="faculty">
-      <div class="table-responsive">
-        <table class="table table-bordered faculty-table">
-          <thead style="background-color: #004080; color: white;">
-            <tr>
-              <th>Name</th>
-              <th>Qualification</th>
-              <th>Designation</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Mrs. J.A. Bal Nandhini</td><td>M.A., M.Phil., SET., NET.</td><td>Head & Assistant Professor</td></tr>
-            <tr><td>Mrs. M. Kasimani</td><td>M.A., M.Phil., B.Ed.</td><td>Assistant Professor</td></tr>
-            <tr><td>Mrs. S. Rajalakshmi</td><td>M.A., M.Phil., M.Ed., NET.</td><td>Assistant Professor</td></tr>
-            <tr><td>Ms. M. Lalitha</td><td>M.A., M.Phil.</td><td>Assistant Professor</td></tr>
-            <tr><td>Mrs. C. Karthigeswari</td><td>M.A., M.Phil., B.Ed.</td><td>Assistant Professor</td></tr>
-            <tr><td>Mrs. M. Vanitha</td><td>M.A., B.Ed.</td><td>Assistant Professor</td></tr>
-            <tr><td>Mrs. S. Shunmuga Vanam</td><td>M.A., M.A (Philosophy), M.Phil., SLET.</td><td>Assistant Professor</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+<div class="tab-pane fade" id="faculty">
+  <div class="table-responsive">
+    <table class="table table-bordered faculty-table align-middle">
+      <thead style="background-color: #004080; color: white; text-align: center;">
+        <tr>
+          <th>Photo</th>
+          <th>Name</th>
+          <th>Qualification</th>
+          <th>Designation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="static/photos/Balanandhini-Tamil.JPG" alt="Mrs. J.A. Bal Nandhini"></td>
+          <td><b>Mrs. J.A. Bal Nandhini</b></td>
+          <td>M.A., M.Phil., SET., NET.</td>
+          <td>Head & Assistant Professor</td>
+        </tr>
+        <tr>
+          <td><img src="static/photos/Kasimani.JPG" alt="Mrs. M. Kasimani"></td>
+          <td><b>Mrs. M. Kasimani</b></td>
+          <td>M.A., M.Phil., B.Ed.</td>
+          <td>Assistant Professor</td>
+        </tr>
+        <tr>
+          <td><img src="static/photos/RajaLakshmi-Tamil.JPG" alt="Mrs. S. Rajalakshmi"></td>
+          <td><b>Mrs. S. Rajalakshmi</b></td>
+          <td>M.A., M.Phil., M.Ed., NET.</td>
+          <td>Assistant Professor</td>
+        </tr>
+        <tr>
+          <td><img src="static/photos/Lalitha-Tamil.JPG" alt="Ms. M. Lalitha"></td>
+          <td><b>Ms. M. Lalitha</b></td>
+          <td>M.A., M.Phil.</td>
+          <td>Assistant Professor</td>
+        </tr>
+        <tr>
+          <td><img src="static/photos/kartheeswari-tam.JPG" alt="Mrs. C. Karthigeswari"></td>
+          <td><b>Mrs. C. Karthigeswari</b></td>
+          <td>M.A., M.Phil., B.Ed.</td>
+          <td>Assistant Professor</td>
+        </tr>
+        <tr>
+          <td><img src="static/photos/Vanitha.JPG" alt="Mrs. M. Vanitha"></td>
+          <td><b>Mrs. M. Vanitha</b></td>
+          <td>M.A., B.Ed.</td>
+          <td>Assistant Professor</td>
+        </tr>
+        <tr>
+          <td><img src="static/photos/Vanam.jpeg" alt="Mrs. S. Shunmuga Vanam"></td>
+          <td><b>Mrs. S. Shunmuga Vanam</b></td>
+          <td>M.A., M.A (Philosophy), M.Phil., SLET.</td>
+          <td>Assistant Professor</td>
+        </tr>
+        <td><img src="static/photos/goma.jpeg" alt="Mrs. M. Goma"></td>
+          <td><b>Mrs. M. Goma</b></td>
+          <td>M.A., M.Phil., M.Ed., M.A.(LING), M.Sc.(Psy), NET, SET
+</td>
+          <td>Assistant Professor</td>
+        </tr>
+        <tr>
+          <td><img src="static/photos/diana.jpeg" alt="Dr. R. Dayana"></td>
+          <td><b>Dr. R. Dayana</b></td>
+          <td>M.A., M.Phil., Ph.D., B.Ed.</td>
+          <td>Assistant Professor</td>
+        </tr>
+        <tr>
+          <td><img src="static/photos/vidhya.jpeg" alt="A.P. Vidya"></td>
+          <td><b>A.P. Vidya</b></td>
+          <td>M.A., B.Ed., SET</td>
+          <td>Assistant Professor</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
     <!-- Activities -->
     <div class="tab-pane fade" id="activities">

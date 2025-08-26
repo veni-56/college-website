@@ -242,28 +242,81 @@
         <li>To relate physics concepts to social needs and competitive examinations.</li>
       </ul>
     </div>
+<!-- Faculty -->
+<div class="tab-pane fade" id="faculty">
+  <div class="table-responsive">
+    <table class="table table-bordered faculty-table align-middle">
+      <thead style="background-color: #004080; color: white; text-align: center;">
+        <tr>
+          <th>Photo</th>
+          <th>Name</th>
+          <th>Qualification</th>
+          <th>Designation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="static/photos/Jenifer.jpg" alt="Mrs. M. Jenifer"></td>
+          <td><b>Mrs. M. Jenifer</b></td>
+          <td>M.Sc., M.Phil.</td>
+          <td>Head & Assistant Professor</td>
+        </tr>
+        <tr>
+          <td><img src="static/photos/Revathi-Physics.JPG" alt="Mrs. P. Revathi"></td>
+          <td><b>Mrs. P. Revathi</b></td>
+          <td>M.Sc., M.Phil.</td>
+          <td>Assistant Professor</td>
+        </tr>
+        <tr>
+          <td><img src="static/photos/tamileeswari-physics.JPG" alt="Mrs. T. Tamileswari"></td>
+          <td><b>Mrs. T. Tamileswari</b></td>
+          <td>M.Sc., B.Ed.</td>
+          <td>Assistant Professor</td>
+        </tr>
+        <tr>
+          <td><img src="static/photos/Gurulakshmi.jpeg" alt="Mrs. S. Gurulakshmi"></td>
+          <td><b>Mrs. S. Gurulakshmi</b></td>
+          <td>M.Sc., B.Ed.</td>
+          <td>Assistant Professor</td>
+        </tr>
+         <tr>
+          <td><img src="static/photos/kiruthika.jpeg" alt="Mrs. M. Kiruthika"></td>
+          <td><b>Mrs. M. Kiruthika</b></td>
+          <td>M.Sc., B.Ed.</td>
+          <td>Assistant Professor</td>
+        </tr>
+        <tr>
+          <td><img src="static/photos/kamatchi.jpeg" alt="Mrs. S. Kamatchi Devi"></td>
+          <td><b>Mrs. S. Kamatchi Devi</b></td>
+          <td>M.Sc., Ph.D.</td>
+          <td>Assistant Professor</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
-    <!-- Faculty -->
-    <div class="tab-pane fade" id="faculty">
-      <div class="table-responsive">
-        <table class="table table-bordered faculty-table">
-          <thead style="background-color: #004080; color: white;">
-            <tr>
-              <th>Name</th>
-              <th>Qualification</th>
-              <th>Designation</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Mrs. M. Jenifer</td><td>M.Sc., M.Phil.</td><td>Head & Assistant Professor</td></tr>
-            <tr><td>Mrs. P. Revathi</td><td>M.Sc., M.Phil.</td><td>Assistant Professor</td></tr>
-            <tr><td>Mrs. T. Tamileswari</td><td>M.Sc., B.Ed.</td><td>Assistant Professor</td></tr>
-            <tr><td>Mrs. S. Gurulakshmi</td><td>M.Sc., B.Ed.</td><td>Assistant Professor</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+<!-- CSS for round images -->
+<style>
+  .faculty-table img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;   /* crop neatly */
+    border-radius: 50%;  /* round shape */
+    border: 2px solid #ccc;
+    display: block;
+    margin: auto;        /* center inside cell */
+  }
+  .faculty-table td {
+    text-align: center;  /* align text center */
+    vertical-align: middle;
+  }
+  .faculty-table td b {
+    font-weight: bold;   /* name bold */
+  }
+</style>
 
+    
     <!-- Activities -->
     <div class="tab-pane fade" id="activities">
       <h4 class="custom-heading mb-2">Activities</h4>
