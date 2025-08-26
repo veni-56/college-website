@@ -83,13 +83,16 @@ body{
     font-size: 0.65rem;   /* ✅ smaller font */
     line-height: 1.1;
     text-align: left;
-    white-space: normal;  /* ✅ allow wrapping */
+    white-space: nowrap;  /* ✅ keep in one line */
+    overflow: hidden;
+    text-overflow: ellipsis; /* optional - if text too long */
   }
 
   .site-subtitle {
-    font-size: 0.65rem;   /* ✅ smaller subtitle */
+    font-size: 0.65rem;   
     line-height: 1.1;
     text-align: left;
+    white-space: nowrap;  /* ✅ also in one line */
   }
 
   /* logo + text in same row */
@@ -99,6 +102,7 @@ body{
     justify-content: flex-start;
   }
 }
+
 
 /* NAVBAR */
 .main-nav .navbar{
