@@ -487,25 +487,89 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 50);
 
   function siteSearch() {
-    const query = document.getElementById("siteSearchInput").value.trim().toLowerCase();
+  const query = document.getElementById("siteSearchInput").value.trim().toLowerCase();
 
-    // Map of search keywords to page URLs
-    const pages = {
-      "home":"/index.html",
-      "about": "/about.html",
-      "contact": "/contact.html",
-      "news": "/news.html",
-      "events": "/events.html",
-      "grievance": "/grievance.html"
-    };
+  const pages = {
+    "home": "/index.html",
+    "about": "/About_iqac.html",
+    "academic": "/academic.html",
+    "activities": "/activities_extension.html",
+    "administrative": "/administrative.html",
+    "application": "/application.html",
+    "awards": "/awards.html",
+    "events": "/events.html",
+    "news": "/news.html",
+    "contact": "/contact.html",
+    "mission": "/mission.html",
+    "vision": "/mission.html",
+    "programmes": "/programmes.html",
 
-    if (pages[query]) {
-      window.location.href = pages[query]; // Redirect to matched page
-    } else {
-      alert("No matching page found for: " + query);
-    }
-    return false; // Prevent form default submit
+    "bba": "/department_bba.html",
+    "bcom": "/department_bcom.html",
+    "bcomca": "/department_bcomca.html",
+    "cs": "/department_cs.html",
+    "english": "/department_english.html",
+    "math": "/department_math.html",
+    "physics": "/department_physics.html",
+    "tamil": "/department_tamil.html",
+
+    "faculty": "/faculty.html",
+    "faculty bba": "/faculty_bba.html",
+    "faculty bcom": "/faculty_bcom.html",
+    "faculty bcomca": "/faculty_bcomca.html",
+    "faculty cs": "/faculty_cs.html",
+    "faculty english": "/faculty_english.html",
+    "faculty math": "/faculty_maths.html",
+    "faculty physics": "/faculty_physics.html",
+    "faculty tamil": "/faculty_tamil.html",
+    "faculty pd": "/faculty_pd.html",
+    "faculty librarian": "/faculty_librarian.html",
+    "faculty cslab": "/faculty_cslab.html",
+    "faculty plab": "/faculty_plab.html",
+
+    "ba results": "/ba_results.html",
+    "bba results": "/bba_results.html",
+    "bcom results": "/bcom_results.html",
+    "bsc results": "/bsc_results.html",
+    "pg results": "/pg_results.html",
+    "ug results": "/ug_results.html",
+    "pg revaluation": "/pg_revaluation.html",
+    "ug revaluation": "/ug_revaluation.html",
+
+    "committee": "/committee.html",
+    "grievance": "/committee-grievance.html",
+    "ragging": "/committee-ragging.html",
+    "sexual": "/committee-sexual.html",
+    "drug": "/committee-drug.html",
+
+    "iqac": "/About_iqac.html",
+    "library": "/faculty_librarian.html",
+    "cells": "/cells.html",
+    "scholarships": "/scholarships.html",
+    "sports": "/sports.html",
+    "staff login": "/staff_login.html",
+    "student login": "/student_login.html",
+    "forms": "/forms.html",
+    "gallery": "/gallery.html",
+    "magazine": "/magazine.html",
+    "naac": "/naac.html",
+    "nss": "/nss.html",
+    "rrc": "/rrc.html",
+    "yrc": "/yrc.html",
+    "conduct": "/conduct.html",
+    "rank": "/rank.html",
+    "secretary": "/secretary.html",
+    "principal": "/principal.html",
+  };
+
+  if (pages[query]) {
+    window.location.href = pages[query];
+    return false; // 🔴 stop form default submit
+  } else {
+    alert("No results found for: " + query);
+    return false; // 🔴 still stop refresh
   }
+}
 
 </script>
 
