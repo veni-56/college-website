@@ -68,40 +68,6 @@ body{
   letter-spacing: 0.5px;
 }
 
-/* 📱 Mobile View Fix */
-@media (max-width: 575px) {
-  .site-header {
-    padding: 8px;
-  }
-
-  .site-logo img {
-    height: 40px; /* smaller logo for phone */
-    margin-right: 6px;
-  }
-
-  .site-title {
-    font-size: 0.45rem;   /* ✅ smaller font */
-    line-height: 1.1;
-    text-align: left;
-    white-space: nowrap;  /* ✅ keep in one line */
-    overflow: hidden;
-    text-overflow: ellipsis; /* optional - if text too long */
-  }
-
-  .site-subtitle {
-    font-size: 0.65rem;   
-    line-height: 1.1;
-    text-align: left;
-    white-space: nowrap;  /* ✅ also in one line */
-  }
-
-  /* logo + text in same row */
-  .site-header .container {
-    flex-direction: row !important;
-    align-items: center;
-    justify-content: flex-start;
-  }
-}
 
 
 /* NAVBAR */
