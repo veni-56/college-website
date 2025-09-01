@@ -80,7 +80,7 @@ body{
   }
 
   .site-title {
-    font-size: 0.45rem;   /* ✅ smaller font */
+    font-size: 0.15rem;   /* ✅ smaller font */
     line-height: 1.1;
     text-align: left;
     white-space: nowrap;  /* ✅ keep in one line */
