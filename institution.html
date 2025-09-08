@@ -12,19 +12,90 @@
 
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<!-- Custom CSS -->
 <style>
-  .about-heading-banner {
-  background: url('static/images/akddr2_VEdwC3b.jpg') center/cover no-repeat;
-  color: white;
-  padding: 80px 20px;
-  margin-top: auto;
-}
-.about-heading-banner h1 {
-  font-size: 3rem;
-  font-weight: 700;
+  .about-block {
+    margin-bottom: 50px;
+  }
+
+  .about-text {
+    color: #111;
+    font-size: 17px;
+    line-height: 1.8;
+    text-align: justify;
+  }
+
+  .about-heading {
+    font-weight: bold;
+    font-size: 22px;
+    color: #004080;
+  }
+
+  .about-divider {
+    width: 80px;
+    height: 4px;
+    background-color: #006400;
+    margin: 10px 0 20px 0;
+    border: none;
+  }
+
+  .about-image img {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+
+  .about-image img:hover {
+    transform: scale(1.03);
+  }
+
+  .about-text {
+    color: #111;
+    font-size: 17px;
+    font-weight: bold;   /* 🔹 make all text bold */
+    line-height: 1.8;
+    text-align: justify;
+  }
+
+  .about-heading {
+    font-weight: bold;
+    font-size: 22px;
+    color: #004080;
+    margin-bottom: 5px;   /* 🔹 reduce bottom space */
+  }
+
+  .about-divider {
+    width: 80px;
+    height: 4px;
+    background-color: #006400;
+    margin: 5px 0 15px 0; /* 🔹 less space around divider */
+    border: none;
+  }
+
+  .about-text p {
+    margin-bottom: 10px;  /* 🔹 less spacing between paragraphs */
+  }
+
+  .about-block {
+    margin-bottom: 30px;  /* 🔹 reduce space after first row */
+  }
+h3 {
+  margin-top: 20px;  /* Reduce space */
 }
 
+.about-section {
+  margin-top: 10px;   /* Optional - adjust if needed */
+  padding-top: 0;     /* Avoid extra gap */
+}
+
+
+  @media (max-width: 768px) {
+    .about-text {
+      margin-top: 20px;
+    }
+  }
 </style>
+
   
 </head>
 <body>
@@ -165,20 +236,15 @@
 <!-- PAGE CONTENT -->
 <div class="container my-5">
 
-  <!-- College Heading Banner -->
-  <div class="about-heading-banner text-center">
-    <h1 class="display-4 fw-bold">The College</h1>
-  </div>
-
   <!-- First Row: Image Left + Text Right -->
-  <div class="row align-items-center my-5">
+  <div class="row align-items-center my-5 about-block">
     <!-- Image Left -->
-    <div class="col-md-5">
-      <img src="static/images/institution.jpg" alt="Our College" class="img-fluid rounded shadow">
+    <div class="col-md-5 about-image">
+      <img src="./static/images/institution.jpg" alt="Our College" class="img-fluid rounded shadow">
     </div>
     <!-- Text Right -->
-    <div class="col-md-7">
-      <h3 class="mb-3">Welcome to A.K.D. Dharma Raja Women's College</h3>
+    <div class="col-md-7 about-text">
+      <h3 class="about-heading mb-3">Welcome to A.K.D. Dharma Raja Women's College</h3>
       <p>
         A.K.D. Dharma Raja Women's College is a prestigious Arts and Science Institution in Southern India,
         affiliated with Madurai Kamaraj University. Established in 1990, the college was founded to meet
@@ -193,7 +259,7 @@
 
   <!-- About Us Section -->
   <div class="about-text my-5">
-    <h3>About Us</h3>
+    <h3 class="about-heading">About Us</h3>
     <hr class="about-divider">
     <p>
       A.K.D. Dharma Raja Women’s College was established in September 1990 to meet the educational needs
@@ -205,7 +271,7 @@
 
   <!-- Courses Offered Section -->
   <div class="about-text my-5">
-    <h3>Courses Offered</h3>
+    <h3 class="about-heading">Courses Offered</h3>
     <hr class="about-divider">
     <p>
       <b>Undergraduate degrees:</b> English, Tamil, Business Administration, Commerce, Commerce with Computer Application,
@@ -218,6 +284,7 @@
     </p>
   </div>
 </div>
+
 
 <footer class="footer text-white mt-5 pt-4" style="background-color: #004080;">
 
