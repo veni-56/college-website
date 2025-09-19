@@ -152,37 +152,22 @@
       </div>
     </nav>
   </div>
+   <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>NAAC Section</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
         }
-        header {
-            background: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-        }
-        header img {
-            height: 60px;
-            vertical-align: middle;
-        }
-        nav {
-            background: #f1f1f1;
-            padding: 10px 20px;
-        }
-        nav a {
-            margin-right: 15px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
+
         .main {
             padding: 20px;
+            text-align: center;
         }
-        .highlight {
-            color: green;
-            font-weight: bold;
-        }
+
         .button-link {
             background: #e0e0e0;
             padding: 5px 10px;
@@ -190,53 +175,48 @@
             border-radius: 5px;
             text-decoration: none;
             font-size: 14px;
-        }
-        .section {
-            background-color: #8bc34a;
-            margin: 15px 0;
-            padding: 10px;
+            display: inline-block;
+            margin: 5px 10px;
+            color: #333;
             font-weight: bold;
-            color: white;
-        }
-        .naac-btn {
-      background-color: #003366; /* green */
-      color: white;
-      text-align: center;
-      padding: 30px;
-      margin: 7px;
-      display: block;
-      font-weight: bold;
-      border-radius: 5px;
-      text-decoration: none;
-  
-    }
-    .naac-btn:hover {
-      background-color: #006400;
-      color: #fff;
-    }
-    .accordion {
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
-            padding: 14px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            font-size: 18px;
-            font-weight: bold;
-            transition: 0.4s;
         }
 
-        .active, .accordion:hover {
-            background-color: #45a049;
+        .highlight {
+            color: green;
+            font-weight: bold;
         }
 
-        .panel {
-            padding: 0 18px;
-            display: none;
-            background-color: #f9f9f9;
-            overflow: hidden;
-        }
+        /* accordion design */
+.accordion {
+    background-color: #002B5C; /* dark blue */
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 70%;               
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.4s;
+    margin: 15px auto;         
+    border-radius: 5px;
+    display: block;
+}
+
+.active, .accordion:hover {
+    background-color: #003B80;
+}
+
+.panel {
+    padding: 0 18px 15px 18px;
+    display: none;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    width: 66%;                
+    margin: 0 auto 15px auto;  
+    border: 1px solid #ddd;
+    border-top: none;
+}
 
         table {
             width: 100%;
@@ -245,7 +225,7 @@
         }
 
         table, th, td {
-            border: 1px solid #4CAF50;
+            border: 1px solid #003366;
         }
 
         th, td {
@@ -254,13 +234,13 @@
         }
 
         th {
-            background-color: #4CAF50;
+            background-color: #003366;
             color: white;
         }
 
         .link-btn {
             color: white;
-            background-color: #4CAF50;
+            background-color: #003366;
             padding: 6px 12px;
             border-radius: 4px;
             text-decoration: none;
@@ -268,126 +248,127 @@
         }
 
         .link-btn:hover {
-            background-color: #388E3C;
+            background-color:#003366;
         }
-    </style>
+       h4 {
+    
+    color: #003366;
+    cursor: pointer;
+    padding: 18px;
+    width: 70%;               
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.4s;
+    margin: 15px auto;         
+    border-radius: 5px;
+    display: block;
+}
 
+
+
+    </style>
 </head>
 <body>
 
-
-    <div class="main">
-       
-        <p>
-            Best Practices – <a href="#" class="button-link">Click Here</a><br>
-            Institutional Distinctiveness – <a href="#" class="button-link">Click Here</a><br>
-            HR Manual – <a href="#" class="button-link">Click Here</a>
-        </p>
- <h3>GREEN CAMPUS – A.K.D. DHARMA RAJA WOMEN’S COLLEGE – <span class="highlight">YouTube Video</span></h3>
-
-      
-        
-
-<button class="accordion">Extended Profile</button>
-<div class="panel">
-    <table>
-        <tr>
-            <th>Sl. No</th>
-            <th>Description</th>
-            <th>Link</th>
-        </tr>
-        <tr>
-            <td>1. Student</td>
-            <td>1.1 Number of students year wise during the last five years</td>
-            <td><a href="student-data.pdf" class="link-btn" target="_blank">LINK</a></td>
-        </tr>
-        <tr>
-            <td>2. Teachers</td>
-            <td>2.1 Number of full-time teachers during the last five years (Without repeat count)</td>
-            <td><a href="teachers-data.pdf" class="link-btn" target="_blank">LINK</a></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>2.2 Number of full-time teachers year wise during the last five years</td>
-            <td><a href="teachers-yearwise.pdf" class="link-btn" target="_blank">LINK</a></td>
-        </tr>
-        <tr>
-            <td>3. Expenditure</td>
-            <td>3.1 Expenditure excluding salary component year wise during the last five years (INR in lakhs)</td>
-            <td><a href="expenditure-data.pdf" class="link-btn" target="_blank">LINK</a></td>
-        </tr>
-    </table>
+  <div class="main">
+    <p class="center-text">
+        Best Practices – <a href="#" class="button-link">Click Here</a><br>
+        Institutional Distinctiveness – <a href="#" class="button-link">Click Here</a><br>
+        HR Manual – <a href="#" class="button-link">Click Here</a>
+    </p>
+    <h3>GREEN CAMPUS – A.K.D. DHARMA RAJA WOMEN’S COLLEGE – <span class="highlight">YouTube Video</span></h3>
 </div>
 
-<script>
-    const acc = document.querySelector(".accordion");
-    const panel = document.querySelector(".panel");
 
-    acc.addEventListener("click", function () {
-        this.classList.toggle("active");
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
+<h4>| NAAC Extended Profile</h4>
+    <!-- Extended Profile -->
+    <button class="accordion">Extended Profile</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <th>Sl. No</th>
+                <th>Description</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Number of students year wise during the last five years</td>
+                <td><a href="student-data.pdf" class="link-btn" target="_blank">LINK</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Number of full-time teachers during the last five years (Without repeat count)</td>
+                <td><a href="teachers-data.pdf" class="link-btn" target="_blank">LINK</a></td>
+            </tr>
+        </table>
+    </div>
+<h4>| NAAC Qualitative and Quantitative Metrics</h4>
+    <!-- Criterion Accordions -->
+    <button class="accordion">Criterion 1</button>
+    <div class="panel">
+        <p>Criterion 1 related files and links...</p>
+    </div>
+
+    <button class="accordion">Criterion 2</button>
+    <div class="panel">
+        <p>Criterion 2 related files and links...</p>
+    </div>
+
+    <button class="accordion">Criterion 3</button>
+    <div class="panel">
+        <p>Criterion 3 related files and links...</p>
+    </div>
+
+    <button class="accordion">Criterion 4</button>
+    <div class="panel">
+        <p>Criterion 4 related files and links...</p>
+    </div>
+
+    <button class="accordion">Criterion 5</button>
+    <div class="panel">
+        <p>Criterion 5 related files and links...</p>
+    </div>
+
+    <button class="accordion">Criterion 6</button>
+    <div class="panel">
+        <p>Criterion 6 related files and links...</p>
+    </div>
+
+    <button class="accordion">Criterion 7</button>
+    <div class="panel">
+        <p>Criterion 7 related files and links...</p>
+    </div>
+<button class="accordion">Criterion 8</button>
+    <div class="panel">
+        <p>Criterion 8 related files and links...</p>
+    </div>
+
+    <button class="accordion">Criterion 9</button>
+    <div class="panel">
+        <p>Criterion 9 related files and links...</p>
+    </div>
+
+    <button class="accordion">Criterion 10</button>
+    <div class="panel">
+        <p>Criterion 10 related files and links...</p>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
         }
-    });
-</script>
-
-</body>
-</html>
-
-        <div class="container my-4">
-  <div class="row">
-    <div class="col-md-4 col-6">
-      <a href="pdfs/IQAC.pdf" target="_blank" class="naac-btn">IQAC</a>
-    </div>
-    <div class="col-md-4 col-6">
-      <a href="pdfs/SSR.pdf" target="_blank" class="naac-btn">SSR</a>
-    </div>
-    <div class="col-md-4 col-6">
-      <a href="pdfs/Criterion1.pdf" target="_blank" class="naac-btn">Criterion-1</a>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-4 col-6">
-      <a href="pdfs/Criterion2.pdf" target="_blank" class="naac-btn">Criterion-2</a>
-    </div>
-    <div class="col-md-4 col-6">
-      <a href="pdfs/Criterion3.pdf" target="_blank" class="naac-btn">Criterion-3</a>
-    </div>
-    <div class="col-md-4 col-6">
-      <a href="pdfs/Criterion4.pdf" target="_blank" class="naac-btn">Criterion-4</a>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-4 col-6">
-      <a href="pdfs/Criterion5.pdf" target="_blank" class="naac-btn">Criterion-5</a>
-    </div>
-    <div class="col-md-4 col-6">
-      <a href="pdfs/Criterion6.pdf" target="_blank" class="naac-btn">Criterion-6</a>
-    </div>
-    <div class="col-md-4 col-6">
-      <a href="pdfs/Criterion7.pdf" target="_blank" class="naac-btn">Criterion-7</a>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-4 col-6">
-      <a href="pdfs/Criterion5.pdf" target="_blank" class="naac-btn">Criterion-8</a>
-    </div>
-    <div class="col-md-4 col-6">
-      <a href="pdfs/Criterion6.pdf" target="_blank" class="naac-btn">Criterion-9</a>
-    </div>
-    <div class="col-md-4 col-6">
-      <a href="pdfs/Criterion7.pdf" target="_blank" class="naac-btn">Criterion-10</a>
-    </div>
-  </div>
-  </div>
-</div>
-
-    </div>
+    </script>
 
 </body>
 </html>
