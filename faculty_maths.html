@@ -650,6 +650,22 @@ document.addEventListener("DOMContentLoaded", () => {
         update();
       });
     }
+// 🚫 Disable all right-clicks on the page
+  document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+  });
+
+  // 🚫 Optional: Block keys like F12, Ctrl+U (view source), Ctrl+S (save)
+  document.addEventListener('keydown', function (e) {
+    if (
+      e.key === 'F12' ||
+      (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+      (e.ctrlKey && e.key.toLowerCase() === 'u') ||
+      (e.ctrlKey && e.key.toLowerCase() === 's')
+    ) {
+      e.preventDefault();
+    }
+  });
 
     // Run counters when stats section enters viewport
     const statsSection = document.querySelector('.stats-section');

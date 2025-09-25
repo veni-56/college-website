@@ -622,6 +622,24 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }, { threshold: 0.4 });
     if (statsSection) obs.observe(statsSection);
+
+    // 🚫 Disable all right-clicks on the page
+  document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+  });
+
+  // 🚫 Optional: Block keys like F12, Ctrl+U (view source), Ctrl+S (save)
+  document.addEventListener('keydown', function (e) {
+    if (
+      e.key === 'F12' ||
+      (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+      (e.ctrlKey && e.key.toLowerCase() === 'u') ||
+      (e.ctrlKey && e.key.toLowerCase() === 's')
+    ) {
+      e.preventDefault();
+    }
+  });
+
   </script>
 </body>
 </html>  
